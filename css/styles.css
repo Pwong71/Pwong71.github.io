@@ -200,7 +200,7 @@ wrapper {
     display: flex;
     flex-flow: column nowrap;
     margin-left: 3rem;
-    margin-top: 
+    margin-top: 40vh;
 }
 
 .title h1{
