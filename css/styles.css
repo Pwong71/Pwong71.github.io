@@ -194,23 +194,36 @@ wrapper {
     grid-template-columns: 1fr 1.5fr 150px;
     /*max-width: 1200px; */
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 .title{
     display: flex;
     flex-flow: column nowrap;
     margin-left: 3rem;
-    margin-top: 40vh;
+    margin-top: 250px;
+    width: 100%;
 }
 
 .title h1{
-    font-size: calc(1.5em + 2vw);
+    font-size: calc(2em + 2vw);
     font-family: 'hatton';
     font-weight: 400;
+    margin-bottom: 15px;
 }
-.title h2{
+
+.title p{
     font-size: calc(0.1em + 1vw);
-    font-family: 'IBM Plex Mono', monospace; 
+    font-family: 'IBM Plex Mono', monospace;
+    line-height: 25px;
+}
+
+.line{
+    height: .5px;
+    width: 290px;
+    background-color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .wrapper1 img{
@@ -227,6 +240,32 @@ wrapper {
     letter-spacing: 1px;
     margin-top: 5rem;
     margin-left: 1rem;
+}
+
+.casestudy {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 150px;
+    margin: 0 auto;  
+    font-family: 'IBM Plex Mono', monospace; 
+    font-size: calc(0.1em + 1vw);
+    margin-bottom: 100px;
+}
+
+.rainbowflag{
+    list-style: none;
+    box-sizing: border-box;
+    width: 350px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.rainbowflag li{
+    padding: 1.5rem 2rem;
+}
+
+
+.side {
+    margin-left: 3rem;
 }
 
 .arrow1 {
