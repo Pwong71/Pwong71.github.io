@@ -1,16 +1,4 @@
-@font-face {
- src: url(fonts/Hatton-light.otf);
-font-family: 'hatton';
-font-style: normal;
-font-weight: 100;
-}
 
-@font-face {
- src: url(fonts/Hatton-Medium.otf);
-font-family: 'hatton';
-font-style: normal;
-font-weight: 400;
-}
 
 
 @charset "UTF-8";
@@ -44,7 +32,7 @@ wrapper {
 }
 
 .name {
-    font-family: 'hatton';
+    font-family: 'Hatton';
     font-weight: 400;
    font-size: 1.3rem;
     padding: 1rem;
@@ -137,7 +125,7 @@ wrapper {
     line-height: 5rem;
 }
 
-.font1{font-family: hatton}
+.font1{font-family: Hatton}
 .font1{font-weight: 400}
 .font2{font-family: 'Quantico', sans-serif;}
 
@@ -188,84 +176,131 @@ wrapper {
     font-size: 1rem;
 }
 
-
-.wrapper1 {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 150px;
-    /*max-width: 1200px; */
-    margin: 0 auto;
-    margin-bottom: 100px;
-}
-
-.title{
-    display: flex;
-    flex-flow: column nowrap;
-    margin-left: 3rem;
-    margin-top: 250px;
-    width: 100%;
-}
-
-.title h1{
-    font-size: calc(2em + 2vw);
-    font-family: 'hatton';
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-
-.title p{
-    font-size: calc(0.1em + 1vw);
+#comdes{
+    box-sizing: border-box;
     font-family: 'IBM Plex Mono', monospace;
-    line-height: 25px;
+    font-size: 15px
 }
 
-.line{
-    height: .5px;
-    width: 290px;
-    background-color: black;
-    margin-top: 15px;
-    margin-bottom: 15px;
+.wrapper1{
+    margin-bottom: 50px;
+    margin-top: calc(50px + 5vw);
+    margin-left: 3.5rem;
+    max-width: 3840px;
+    height: 110vh;
+    display: grid;
+    grid-template-columns: 0.85fr 1.5fr 0.25fr;
 }
 
 .wrapper1 img{
     width: 100%;
-    margin-top: 5rem;
+    max-width: 90vh;
+    height: 100%;
+    justify-self: end;
+    object-fit: contain;
+    object-position: top right;
 }
 
-.wrapper1 h3 {
-    text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
+.title{
+    margin-top: calc(2vw + 50px);
+    margin-right: 35px;
+    position: sticky;
+    top: calc(2vw + 50px);
+    width: 100%;
+    height: 55vh;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.title h1{
+    font-family: "Hatton", serif;
+    font-size: calc(1.3rem + 2.5vw);
+    margin-bottom: 25px;
+}
+
+hr{
+    margin: 10px 0px 20px 0px;
+    flex: 0 0 0.5px;
+    width: 250px;
+    background-color: black;
+    display: block;
+}
+
+.wrapper1 h3{
+    margin-left: 12px;
     writing-mode: vertical-lr;
-    color: #434343;
-    font-size: .8rem;
-    letter-spacing: 1px;
-    margin-top: 5rem;
-    margin-left: 1rem;
+    width: auto;
+    
 }
 
-.casestudy {
+.casestudy{
+    margin-left: 3.5rem;
     display: grid;
-    grid-template-columns: 1fr 1.5fr 150px;
-    margin: 0 auto;  
-    font-family: 'IBM Plex Mono', monospace; 
-    font-size: calc(0.1em + 1vw);
-    margin-bottom: 100px;
+    grid-template-columns: 0.85fr 1.5fr 0.25fr;
+}
+
+.side{
+    padding-top: 50px;
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 75vh;
+    justify-content: space-between
+}
+
+.side span{
+    margin-bottom: 20px;
+    transition: 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.side a{
+    text-decoration: none;
+    color: black;
+}
+
+.side a:hover{
+    text-decoration: line-through;
+}
+
+.side span:first-child{
+    flex-grow: 1;
+}
+
+
+.content{
+    grid-column: 2/3;
+    width: 100%;
+    max-width: 82.5vh;
+    height: 90vh;
+    justify-self: end;
+}
+
+#one{
+    padding-top: 50px;
+}
+
+#two{
+    height: auto;
+    margin-bottom: 25vh;
+}
+
+#two, #three, #four, #five{
+    padding-top: 100px;
 }
 
 .rainbowflag{
     list-style: none;
     box-sizing: border-box;
-    width: 350px;
+    max-width: 350px;
     margin-top: 70px;
     margin-bottom: 70px;
 }
 
 .rainbowflag li{
     padding: 1.5rem 2rem;
-}
-
-
-.side {
-    margin-left: 3rem;
 }
 
 .arrow1 {
@@ -298,7 +333,7 @@ wrapper {
 
 .wrapper2 h1 {
     font-size: 3.5rem;
-    font-family: 'hatton';
+    font-family: 'Hatton';
     font-weight: 400;
     position: absolute;
     left: 60px;
@@ -346,7 +381,7 @@ wrapper {
 
 .wrapper3 h1 {
     font-size: 3.5rem;
-    font-family: 'hatton';
+    font-family: 'Hatton';
     font-weight: 400;
     position: absolute;
     left: 60px;
@@ -394,7 +429,7 @@ wrapper {
 
 .wrapper4 h1 {
     font-size: 3.5rem;
-    font-family: 'hatton';
+    font-family: 'Hatton';
     font-weight: 400;
     position: absolute;
     left: 60px;
