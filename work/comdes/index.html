@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/master.css">
-  <link rel="stylesheet" href="/css/all-works.css">
+  <link rel="stylesheet" href="/styles/master.css">
+  <link rel="stylesheet" href="/styles/all-works.css">
   <link rel="stylesheet" href="./comdes.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css">
   <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+  <script defer src="https://unpkg.com/scrollreveal"></script>
+  <script defer src="/scripts/reveal.js"></script>
   <title>Phoebe Wong</title>
 </head>
 <body>
@@ -45,15 +47,15 @@
   <main>
     <div>
       <ol class="sticky">
-        <li><h2 id="header-1">01. Overview</h2></li>
-        <li><h2 id="header-2">02. Research</h2></li>
-        <li><h2 id="header-3">03. Approach</h2></li>
-        <li><h2 id="header-4">04. Final</h2></li>
-        <li><h2 id="header-5">05. Key Takeaways</h2></li>
+        <li class="active"><h2 id="header-1"><a href="#content-1">01. Overview</a></h2></li>
+        <li><h2 id="header-2"><a href="#content-2">02. Research</a></h2></li>
+        <li><h2 id="header-3"><a href="#content-3">03. Approach</a></h2></li>
+        <li><h2 id="header-4"><a href="#content-4">04. Final</a></h2></li>
+        <li><h2 id="header-5"><a href="#content-5">05. Key Takeaways</a></h2></li>
       </ol>
     </div>
     <div>
-      <div class="content" aria-labelledby="header-1">
+      <div id="content-1" class="content" aria-labelledby="header-1">
         <p>
           While many schools are becoming more diverse and inclusive, many
           report not yet having the knowledge in creating a safer environment
@@ -64,7 +66,7 @@
         </p>
       </div>
 
-      <div class="content" aria-labelledby="header-2">
+      <div id="content-2" class="content" aria-labelledby="header-2">
         <h3>2a. Challenge</h3>
         <p>
           To create a new social communication campaign of my own design.
@@ -102,7 +104,7 @@
         </p>
       </div>
 
-      <div class="content" aria-labelledby="header-3">
+      <div id="content-3" class="content" aria-labelledby="header-3">
         <p>
           I’ll be creating digital collages to present this idea. Inspirations
           for this campaign are drawn from nostalgic illustration books and
@@ -112,7 +114,7 @@
         </p>
       </div>
 
-      <div class="content" aria-labelledby="header-4">
+      <div id="content-4" class="content" aria-labelledby="header-4">
         <p>
           I'll be creating digital collages to present this idea. Inspirations
           for this for this campaign are drawn from nostalgic illustration books
@@ -141,7 +143,7 @@
         </div>
       </div>
 
-      <div class="content" aria-labelledby="header-5">
+      <div id="content-5" class="content" aria-labelledby="header-5">
         <p>
           The campaign currently only includes a poster and 8 collages with a
           word that represents a color of the rainbow flag. I would like to

@@ -13,11 +13,15 @@ h2, h3 {
 
 /* The Left/Right CSS Grid */
 header, main {
-  margin: 4.5rem 10rem 4.5rem 4.5rem;
+  margin: 4.5rem 10rem 0 4.5rem;
   display: grid;
   grid-template-columns: minmax(15rem, 3fr) 7fr;
   grid-template-rows: 1fr;
   column-gap: 10rem;
+}
+
+main {
+  margin-top: 1rem;
 }
 
 /* The Right side of the Grid */
@@ -48,12 +52,9 @@ header .about {
   border-bottom: 1px solid rgb(25, 25, 25);
 }
 
-.sticky {
-  position: sticky;
-  top: calc(3.125rem + 2vw);
-}
-
 ol.sticky {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-flow: column nowrap;
   text-align: right;
@@ -62,6 +63,7 @@ ol.sticky {
 }
 
 ol.sticky li {
+  transition: flex-grow 350ms ease;
   flex-basis: 1.25em;
   flex-grow: 0;
 }
@@ -70,20 +72,48 @@ ol.sticky li.active {
   flex-grow: 1;
 }
 
+ol.sticky a {
+  color: black;
+  text-decoration: none;
+}
+
+ol.sticky a:hover {
+  text-decoration: line-through;
+}
+
 main>div>* {
-  margin-top: 6.25rem;
   margin-bottom: 6.25rem;
 }
 
+/* For ScrollReveal, spacing */
+.content {
+  margin-bottom: 50vh;
+}
+
+.content:last-of-type {
+  margin-bottom: 65vh;
+}
+
+.content, ol.sticky {
+  padding-top: 6.25rem;
+}
+
 /* All body/text elements */
-.content p, .content ol, .content ul {
+.content p:not(:first-child),
+.content ol:not(:first-child),
+.content ul:not(:first-child) {
   margin-top: 0.6em;
 }
 
 /* Carousel, headers, and body elements after the larger body elements (p's
  * after a ul, etc.) */
-.content .carousel, .content h3, .content ol+p, .content ul+p,
-.content .carousel+p, .content .carousel+ul, .content .carousel+ol {
+.content .carousel:not(:first-child),
+.content h3:not(:first-child),
+.content ol+p,
+.content ul+p,
+.content .carousel+p,
+.content .carousel+ul,
+.content .carousel+ol {
   margin-top: 1.8em;
 }
 
