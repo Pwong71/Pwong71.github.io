@@ -40,48 +40,13 @@ main>div {
   padding: 0 3.5rem;
 }
 
-.keen-slider {
-  margin-top: 1.25rem;
-  position: relative;
-  cursor: grab;
+.carousel {
+  margin-top: 1.25em;
 }
 
-.keen-slider:active {
-  cursor: grabbing;
-}
-
-.keen-slider__slide {
-  z-index: 1;
-}
-
-.keen-slider .arrow {
-  outline: none;
-  cursor: pointer;
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
+#main-header {
   display: flex;
-  justify-content: center;
-  align-items: baseline;
-  font-size: 3.25rem;
-  width: 1.2em;
-  height: 1.2em;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.45);
-  color: white;
-  transition: background-color 500ms ease, box-shadow 500ms ease;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.keen-slider .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 0.25rem 0.1rem white;
-}
-
-.keen-slider .arrow:focus {
-  background-color: rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 0.25rem 0.1rem #9cbbe4;
-}
-
-#slider-l { left: 0.5em; }
-#slider-r { right: 0.5em; }

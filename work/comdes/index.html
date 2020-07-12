@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="/css/master.css">
   <link rel="stylesheet" href="/css/all-works.css">
   <link rel="stylesheet" href="./comdes.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
   <title>Phoebe Wong</title>
 </head>
 <body>
@@ -112,8 +114,31 @@
 
       <div class="content" aria-labelledby="header-4">
         <p>
-          Stuff will go here.
+          I'll be creating digital collages to present this idea. Inspirations
+          for this for this campaign are drawn from nostalgic illustration books
+          and collective childhood memories. Since I'm twisting an old song into
+          a new concept, making collages digitally will achieve a futuristic
+          retro look.
         </p>
+        <div class="carousel">
+          <div class="keen-slider">
+            <img src="/images/PINK.png" class="keen-slider__slide" aria-hidden="true" alt="">
+            <img src="/images/RED.png" class="keen-slider__slide" aria-hidden="true" alt="">
+            <img src="/images/ORANGE.png" class="keen-slider__slide" aria-hidden="true" alt="">
+            <img src="/images/YELLOW.png" class="keen-slider__slide" aria-hidden="true" alt="">
+            <img src="/images/GREEN.png" class="keen-slider__slide" aria-hidden="true" alt="">
+            <img src="/images/TOUR.png" class="keen-slider__slide" aria-hidden="true" alt="">
+            <img src="/images/INDIGO.png" class="keen-slider__slide" aria-hidden="true" alt="">
+            <img src="/images/PURPLE.png" class="keen-slider__slide" aria-hidden="true" alt="">
+          </div>
+          <div class="carousel-controls">
+            <button id="slider-l">&lt;</button>
+            <div class="numbers">
+              <span class="current">1</span> / <span class="total">8</span>
+            </div>
+            <button id="slider-r">&gt;</button>
+          </div>
+        </div>
       </div>
 
       <div class="content" aria-labelledby="header-5">
@@ -133,5 +158,19 @@
       </div>
     </div>
   </main>
+  <footer>&copy; 2020 Phoebe Wong</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+  <script>
+    const slider = new KeenSlider('main .keen-slider', {
+      created: instance => {
+        document.querySelector('#slider-l').addEventListener('click', () => instance.prev());
+        document.querySelector('#slider-r').addEventListener('click', () => instance.next());
+      },
+      slideChanged: instance => {
+        document.querySelector('.carousel .current').innerText = instance.details().relativeSlide + 1;
+      }
+    });
+  </script>
 </body>
 </html>

@@ -46,7 +46,6 @@ header .about {
   margin-top: 1.8em;
   padding-bottom: 0.8em;
   border-bottom: 1px solid rgb(25, 25, 25);
-  max-width: 20em;
 }
 
 .sticky {
@@ -55,7 +54,6 @@ header .about {
 }
 
 ol.sticky {
-  margin-bottom: 12.5rem;
   display: flex;
   flex-flow: column nowrap;
   text-align: right;
@@ -77,10 +75,30 @@ main>div>* {
   margin-bottom: 6.25rem;
 }
 
+/* All body/text elements */
 .content p, .content ol, .content ul {
   margin-top: 0.6em;
 }
 
-.content h3 {
+/* Carousel, headers, and body elements after the larger body elements (p's
+ * after a ul, etc.) */
+.content .carousel, .content h3, .content ol+p, .content ul+p,
+.content .carousel+p, .content .carousel+ul, .content .carousel+ol {
   margin-top: 1.8em;
+}
+
+.carousel {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.carousel img {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+.keen-slider {
+  height: 100%;
 }

@@ -148,3 +148,40 @@ span.line {
   opacity: initial;
   transition: initial;
 }
+
+.keen-slider {
+  cursor: grab;
+}
+
+.keen-slider:active {
+  cursor: grabbing;
+}
+
+.keen-slider__slide {
+  z-index: 1;
+}
+
+.carousel-controls {
+  margin-top: 0.3em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-controls button {
+  color: black;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 1.75rem;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+}
+
+#slider-l { left: 0.5em; }
+#slider-r { right: 0.5em; }
