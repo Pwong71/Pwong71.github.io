@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css");
+
+h1 {
+  display: inline-block;
+  font-size: inherit;
+}
+
+h2 {
+  margin: 0.5em 0;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+header {
+  padding: 6rem;
+  margin: 3.5rem;
+  font-size: 3.5rem;
+  font-family: 'Quantico', sans-serif;
+  font-weight: 700; /* bold */
+  line-height: 5rem;
+  text-align: center;
+}
+
+header .hatton {
+  font-family: 'Hatton', serif;
+  font-weight: 400;
+}
+
+main {
+  margin: 0 3.5rem;
+}
+
+main>div {
+  box-sizing: border-box;
+  padding: 0 3.5rem;
+}
+
+.work {
+  position: relative;
+  overflow: initial;
+}
+
+.work a {
+  text-decoration: none;
+  color: black;
+}
+
+.work img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.work .title {
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 0.5rem;
+  right: -0.85em;
+  opacity: 0;
+  transition: right 300ms ease, opacity 250ms ease;
+}
+
+.work:hover .title {
+  right: -1.25em;
+  opacity: 1;
+}
+
+.keen-slider {
+  margin-top: 1.25rem;
+  position: relative;
+  cursor: grab;
+}
+
+.keen-slider:active {
+  cursor: grabbing;
+}
+
+.keen-slider__slide {
+  z-index: 1;
+}
+
+.keen-slider .arrow {
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 3.25rem;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: white;
+  transition: background-color 500ms ease, box-shadow 500ms ease;
+}
+
+.keen-slider .arrow:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 0.25rem 0.1rem white;
+}
+
+.keen-slider .arrow:focus {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 0.25rem 0.1rem #9cbbe4;
+}
+
+#slider-l { left: 0.5em; }
+#slider-r { right: 0.5em; }

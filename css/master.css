@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;700&display=swap');
+@import url('/fonts/Hatton/stylesheet.css');
+
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain)
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of CSS Reset */
+
+
+:root {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  color: black;
+  background-color: #d1d1c5;
+}
+
+footer {
+  padding: 0.5rem;
+  margin-top: 4rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+h1, h2 {
+  font-weight: 400;
+  font-family: 'Hatton';
+}
+
+h1 { font-size: 2.00rem; }
+h2 { font-size: 1.67rem; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.05rem solid black;
+}
+
+nav a {
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 1rem;
+  padding: 1.3rem;
+}
+
+#name {
+  font-family: 'Hatton';
+  font-size: 1.3em;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}

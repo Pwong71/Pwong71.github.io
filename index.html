@@ -1,48 +1,64 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Phoebe Wong</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/fonts/stylesheet.css">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/master.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+  <script defer src="/js/index.js"></script>
+  <title>Phoebe Wong</title>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="name"><a href="/about">Phoebe Wong</a></div>
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-    <div class="navbar-links">
-      <ul>
-        <li><a href="index.html">Work</a></li>
-        <li><a href="/play">Play</a></li>
-      </ul>
-    </div>
+  <nav>
+    <a id="name" href="/" title="Home">Phoebe Wong</a>
+    <ul id="navbar-links">
+      <li><a href="/work/" title="Work">Work</a></li>
+      <li><a href="/play/" title="Play">Play</a></li>
+    </ul>
   </nav>
-  <div class="header">
-    <h1>
-      <span class="font1">Phoebe Wong</span>
-      <span class="font2">is a student at</span> <br />
-      <span class="font1">York/Sheridan Design</span>
-      <span class="font2">focusing in <br />areas of </span>
-      <span class="font1">branding* + editorial*</span><br />
-      <span class="font2">and</span>
-      <span class="font1">graphic design*.</span>
-    </h1>
-  </div>
-  <div class="work">
-    <a href="projects/comdes"><img src="/images/talkshowpromo-04.png" alt="project1 image"><h1>Somewhere over the rainbow</h1></a>
-    <a href="projects/lost_in_space"><img src="/images/kac.png" alt="project image"><h1>Lost in space</h1></a>
-    <a href="projects/remix_type"><img src="/images/remixtypepromo-01.png" alt="project image"><h1>Remix type</h1></a>
-    <a href="projects/Info_des"><img src="/images/info%20process2-02.png" alt="project image"><h1>untitled</h1></a>
-  </div>
-  <div class="arrow">
-    <p>→ Scroll to view projects</p>
-  </div>
+
+  <header>
+    <div class="line"><h1 class="hatton">Phoebe Wong</h1> is a student at</div>
+    <div class="line"><span class="hatton">York/Sheridan Design</span> focusing in</div>
+    <div class="line">areas of <span class="hatton">branding* + editorial*</span></div>
+    <div class="line">and <span class="hatton">graphic design*.</span></div>
+  </header>
+
+  <main>
+    <div>
+      <h2>Work</h2>
+      <p>Drag left and right to view projects.</p>
+    </div>
+    <div class="keen-slider">
+      <button id="slider-l" class="arrow">&larr;</button>
+      <button id="slider-r" class="arrow">&rarr;</button>
+      <div class="work keen-slider__slide">
+        <a href="/work/comdes/" title="Somewhere Over the Rainbow">
+          <span class="title">Somewhere Over the Rainbow</span>
+          <img src="/images/talkshowpromo-04.png" />
+        </a>
+      </div>
+      <div class="work keen-slider__slide">
+        <a href="/work/lost_in_space/" title="Lost in Space">
+          <span class="title">Lost in Space</span>
+          <img src="/images/kac.png" />
+        </a>
+      </div>
+      <div class="work keen-slider__slide">
+        <a href="/work/remix_type/" title="Remix Type">
+          <span class="title">Remix Type</span>
+          <img src="/images/remixtypepromo-01.png" />
+        </a>
+      </div>
+      <div class="work keen-slider__slide">
+        <a href="/work/info_des/" title="Untitled">
+          <span class="title">Untitled</span>
+          <img src="/images/info%20process2-02.png" />
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer>&copy; 2020 Phoebe Wong</footer>
 </body>
 </html>
