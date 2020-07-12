@@ -4,13 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/master.css">
-  <link rel="stylesheet" href="/styles/all-works.css">
-  <link rel="stylesheet" href="./comdes.css">
+  <link rel="stylesheet" href="/styles/works.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css">
   <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
   <script defer src="https://unpkg.com/scrollreveal"></script>
   <script defer src="/scripts/reveal.js"></script>
   <title>Phoebe Wong</title>
+  <style>
+    #rainbow {
+      box-sizing: border-box;
+      max-width: 20rem;
+    }
+
+    #rainbow li {
+      display: block;
+      padding: 1rem 1.5rem;
+    }
+
+    #rainbow li:nth-child(n + 1) { color: black; background-color: deeppink; }
+    #rainbow li:nth-child(n + 2) { color: black; background-color: red; }
+    #rainbow li:nth-child(n + 3) { color: black; background-color: orangered; }
+    #rainbow li:nth-child(n + 4) { color: black; background-color: yellow; }
+    #rainbow li:nth-child(n + 5) { color: white; background-color: darkgreen; }
+    #rainbow li:nth-child(n + 6) { color: black; background-color: mediumturquoise; }
+    #rainbow li:nth-child(n + 7) { color: white; background-color: darkblue; }
+    #rainbow li:nth-child(n + 8) { color: white; background-color: rebeccapurple; }
+  </style>
 </head>
 <body>
   <nav>
@@ -115,13 +134,6 @@
       </div>
 
       <div id="content-4" class="content" aria-labelledby="header-4">
-        <p>
-          I'll be creating digital collages to present this idea. Inspirations
-          for this for this campaign are drawn from nostalgic illustration books
-          and collective childhood memories. Since I'm twisting an old song into
-          a new concept, making collages digitally will achieve a futuristic
-          retro look.
-        </p>
         <div class="carousel">
           <div class="keen-slider">
             <img src="/images/PINK.png" class="keen-slider__slide" aria-hidden="true" alt="">
@@ -166,8 +178,8 @@
   <script>
     const slider = new KeenSlider('main .keen-slider', {
       created: instance => {
-        document.querySelector('#slider-l').addEventListener('click', () => instance.prev());
-        document.querySelector('#slider-r').addEventListener('click', () => instance.next());
+        document.querySelector('#slider-l').addEventListener('click', instance.prev);
+        document.querySelector('#slider-r').addEventListener('click', instance.next);
       },
       slideChanged: instance => {
         document.querySelector('.carousel .current').innerText = instance.details().relativeSlide + 1;
