@@ -20,6 +20,11 @@ header, main {
   column-gap: 10rem;
 }
 
+header .sticky {
+  position: sticky;
+  top: 6.25rem;
+}
+
 main {
   margin-top: 1rem;
 }

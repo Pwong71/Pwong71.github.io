@@ -113,6 +113,10 @@ span.line {
 
 .work-panel {
   position: relative;
+}
+
+.work-panel .keen-slider__slide,
+.work-panel.keen-slider__slide {
   overflow: initial;
 }
 
@@ -138,7 +142,7 @@ span.line {
   transition: right 300ms ease, opacity 250ms ease;
 }
 
-.work-panel:hover .title {
+.work-panel:not(.static):hover .title {
   right: -1.25em;
   opacity: 1;
 }
