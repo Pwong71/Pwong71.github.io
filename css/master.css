@@ -1,3 +1,5 @@
+/* For all pages */
+
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;700&display=swap');
 @import url('/fonts/Hatton/stylesheet.css');
 
@@ -55,9 +57,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 /* End of CSS Reset */
-
 
 :root {
   font-family: 'IBM Plex Mono', monospace;
@@ -73,13 +73,12 @@ footer {
   font-weight: 700;
 }
 
-h1, h2 {
+h1 {
   font-weight: 400;
   font-family: 'Hatton';
 }
 
 h1 { font-size: 2.00rem; }
-h2 { font-size: 1.67rem; }
 
 nav {
   display: flex;
@@ -106,4 +105,46 @@ nav a {
 nav ul {
   list-style-type: none;
   display: flex;
+}
+
+span.line {
+  display: block;
+}
+
+.work-panel {
+  position: relative;
+  overflow: initial;
+}
+
+.work-panel a {
+  text-decoration: none;
+  color: black;
+}
+
+.work-panel img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.work-panel .title {
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 0.5rem;
+  right: -0.85em;
+  opacity: 0;
+  transition: right 300ms ease, opacity 250ms ease;
+}
+
+.work-panel:hover .title {
+  right: -1.25em;
+  opacity: 1;
+}
+
+.work-panel.static .title {
+  right: -1.25em;
+  opacity: initial;
+  transition: initial;
 }

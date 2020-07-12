@@ -1,0 +1,19 @@
+/* For this specific works page only */
+#rainbow {
+  box-sizing: border-box;
+  max-width: 20rem;
+}
+
+#rainbow li {
+  display: block;
+  padding: 1rem 1.5rem;
+}
+
+#rainbow li:nth-child(n + 1) { color: black; background-color: deeppink; }
+#rainbow li:nth-child(n + 2) { color: black; background-color: red; }
+#rainbow li:nth-child(n + 3) { color: black; background-color: orangered; }
+#rainbow li:nth-child(n + 4) { color: black; background-color: yellow; }
+#rainbow li:nth-child(n + 5) { color: white; background-color: darkgreen; }
+#rainbow li:nth-child(n + 6) { color: black; background-color: mediumturquoise; }
+#rainbow li:nth-child(n + 7) { color: white; background-color: darkblue; }
+#rainbow li:nth-child(n + 8) { color: white; background-color: rebeccapurple; }

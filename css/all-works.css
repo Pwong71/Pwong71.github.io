@@ -1,0 +1,86 @@
+/* For all works pages */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 4rem;
+  line-height: 1.25em;
+}
+
+h2, h3 {
+  font-weight: 700;
+}
+
+/* The Left/Right CSS Grid */
+header, main {
+  margin: 4.5rem 10rem 4.5rem 4.5rem;
+  display: grid;
+  grid-template-columns: minmax(15rem, 3fr) 7fr;
+  grid-template-rows: 1fr;
+  column-gap: 10rem;
+}
+
+/* The Right side of the Grid */
+header>:last-child, main>:last-child {
+  max-width: 800px;
+  justify-self: flex-end;
+}
+
+header img {
+  object-fit: contain;
+  object-position: top right;
+  margin-left: auto;
+}
+
+header .about span {
+  font-weight: 700;
+  font-style: italic;
+}
+
+header .about p {
+  margin-top: 0.25em;
+}
+
+header .about {
+  font-size: 1em;
+  margin-top: 1.8em;
+  padding-bottom: 0.8em;
+  border-bottom: 1px solid rgb(25, 25, 25);
+  max-width: 20em;
+}
+
+.sticky {
+  position: sticky;
+  top: calc(3.125rem + 2vw);
+}
+
+ol.sticky {
+  margin-bottom: 12.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: right;
+  box-sizing: border-box;
+  height: calc(100vh - 12.5rem);
+}
+
+ol.sticky li {
+  flex-basis: 1.25em;
+  flex-grow: 0;
+}
+
+ol.sticky li.active {
+  flex-grow: 1;
+}
+
+main>div>* {
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem;
+}
+
+.content p, .content ol, .content ul {
+  margin-top: 0.6em;
+}
+
+.content h3 {
+  margin-top: 1.8em;
+}

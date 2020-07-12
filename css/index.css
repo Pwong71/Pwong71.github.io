@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap');
-@import url("https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css");
 
 h1 {
   display: inline-block;
@@ -7,6 +6,9 @@ h1 {
 }
 
 h2 {
+  font-size: 1.67rem;
+  font-weight: 400;
+  font-family: 'Hatton';
   margin: 0.5em 0;
 }
 
@@ -36,38 +38,6 @@ main {
 main>div {
   box-sizing: border-box;
   padding: 0 3.5rem;
-}
-
-.work {
-  position: relative;
-  overflow: initial;
-}
-
-.work a {
-  text-decoration: none;
-  color: black;
-}
-
-.work img {
-  display: block;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-}
-
-.work .title {
-  font-weight: 700;
-  writing-mode: vertical-rl;
-  position: absolute;
-  top: 0.5rem;
-  right: -0.85em;
-  opacity: 0;
-  transition: right 300ms ease, opacity 250ms ease;
-}
-
-.work:hover .title {
-  right: -1.25em;
-  opacity: 1;
 }
 
 .keen-slider {
