@@ -1,74 +1,83 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Phoebe Wong</title>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/master.css">
+  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css">
+  <title>Phoebe Wong</title>
 </head>
 <body>
-    
-    
-    <nav class="navbar">
-        
-    <div class="name"><a href="About.html">Phoebe Wong</a></div>
-    
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-        
-    <div class="navbar-links"> 
-        
-    <ul>
-    <li><a href="index.html">Work</a></li>    
-    <li><a href="play.html">Play</a></li> 
+  <nav>
+    <a id="name" href="/" title="Home">Phoebe Wong</a>
+    <ul id="navbar-links">
+      <li><a href="/work/" title="Work">Work</a></li>
+      <li><a href="/play/" title="Play">Play</a></li>
     </ul>
-        
-    </div> 
-        
-    </nav>
-    
-    <div class="header">
-        <h1><span class="font1">Phoebe Wong</span> 
-        <span class="font2">is a student at</span> <br>
-        <span class="font1">York/Sheridan Design</span>
-        <span class="font2">focusing in <br>areas of </span>
-        <span class="font1">branding* + editorial*</span><br>
-        <span class="font2">and </span>
-        <span class="font1">graphic design*.</span>
-        </h1>
+  </nav>
+
+  <header>
+    <h1 class="hatton">Phoebe Wong</h1> is a student at<br />
+    <span class="hatton">York/Sheridan Design</span> focusing in<br />
+    areas of <span class="hatton">branding* + editorial*</span><br />
+    and <span class="hatton">graphic design*.</span>
+  </header>
+
+  <main>
+    <div id="main-header">
+      <div>
+        <h2>Work</h2>
+        <p>Drag left and right to view projects.</p>
+      </div>
+      <div class="carousel-controls">
+        <button id="slider-l">&lt;</button>
+        <button id="slider-r">&gt;</button>
+      </div>
     </div>
-        
-    <div class="work">
-        
-       <a href="comdes.html"><img src="images/talkshowpromo-04.png" alt="project1 image"><h1>Somewhere over the rainbow</h1></a>
-     
-             
-        <a href="Lost_in_space.html"><img src="images/kac.png" alt="project image"><h1>Lost in space</h1></a>
-        
-        
-        <a href="remix_type.html"><img src="images/remixtypepromo-01.png" alt="project image"><h1>Remix type</h1></a>
-    
-          
-        <a href="Info_des.html"><img src="images/info%20process2-02.png" alt="project image"><h1>untitled</h1></a>
-   
-        
+    <div class="carousel">
+      <div class="keen-slider">
+        <div class="work-panel keen-slider__slide">
+          <a href="/work/comdes/" title="Somewhere Over the Rainbow">
+            <span class="title">Somewhere Over the Rainbow</span>
+            <img src="/images/talkshowpromo-04.png" aria-hidden="true" alt="" />
+          </a>
+        </div>
+        <div class="work-panel keen-slider__slide">
+          <a href="/work/lost_in_space/" title="Lost in Space">
+            <span class="title">Lost in Space</span>
+            <img src="/images/kac.png" aria-hidden="true" alt="" />
+          </a>
+        </div>
+        <div class="work-panel keen-slider__slide">
+          <a href="/work/remix_type/" title="Remix Type">
+            <span class="title">Remix Type</span>
+            <img src="/images/remixtypepromo-01.png" aria-hidden="true" alt="" />
+          </a>
+        </div>
+        <div class="work-panel keen-slider__slide">
+          <a href="/work/info_des/" title="Untitled">
+            <span class="title">Untitled</span>
+            <img src="/images/info%20process2-02.png" aria-hidden="true" alt="" />
+          </a>
+        </div>
+      </div>
     </div>
-        
-        
-    <div class="arrow">
-        <p>
-            → Scroll to view projects
-        </p>
-    </div>
-    
-    
-	
-				      
+  </main>
+
+  <footer>&copy; 2020 Phoebe Wong</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+  <script>
+    const slider = new KeenSlider('main .keen-slider', {
+      slidesPerView: 3.5,
+      mode: 'free-snap',
+      spacing: 16 * 3.25, // 3.25em at 16px :root font-size
+      created: instance => {
+        document.querySelector('#slider-l').addEventListener('click', instance.prev);
+        document.querySelector('#slider-r').addEventListener('click', instance.next);
+      }
+    });
+  </script>
 </body>
 </html>
