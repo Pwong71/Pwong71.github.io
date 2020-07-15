@@ -143,7 +143,7 @@ span.line {
 }
 
 .work-panel:not(.static):hover .title {
-  right: -1.25em;
+  right: -1.45em;
   opacity: 1;
 }
 

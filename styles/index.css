@@ -44,6 +44,10 @@ main>div {
   margin-top: 1.25em;
 }
 
+.keen-slider {
+  padding-right: 2em;
+}
+
 #main-header {
   display: flex;
   flex-flow: row nowrap;
