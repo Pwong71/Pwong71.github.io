@@ -1,16 +1,12 @@
-// Too lazy to type .getAttribute 900 times
-const aria = el => el.getAttribute('aria-labelledby');
-
-// Run through and get all the headers beforehand
-const headers = [...document.querySelectorAll('.content')].map(content => {
-  const label = aria(content);
-  return { [ label ]: document.querySelector(`#${label}`).parentElement };
-}).reduce((acc, cur) => ({ ...acc, ...cur }), {});
-
 ScrollReveal().reveal('.content', {
   reset: true,
   origin: 'bottom',
   viewOffset: { top: 100, bottom: 400 },
-  beforeReveal: content => headers[aria(content)].classList.add('active'),
-  afterReset: content => headers[aria(content)].classList.remove('active')
+  beforeReveal: content => {
+    document.querySelectorAll('ol.sticky li').forEach(li => {
+      const id = li.querySelector('h2').getAttribute('id');
+      if (content.getAttribute('aria-labelledby') === id) li.classList.add('active');
+      else li.removeAttribute('class');
+    });
+  }
 });
