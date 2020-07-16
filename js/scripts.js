@@ -1,5 +1,5 @@
 /*eslint-env browser*/
-
+window.onload =()=>{
 ScrollReveal().reveal('.content', {delay: 50, origin: 'bottom', reset: true, distance: '35px', viewFactor: 0.2});
 
 ScrollReveal().reveal('#two', {viewFactor: 0.35})
@@ -63,3 +63,13 @@ sideItem[4].addEventListener('click', () =>{
     conTent[0].style.opacity = "0";
     }
 })
+
+let flickArrow = document.querySelectorAll('.flickity-button');
+let flkty = new Flickity('.main-carousel');
+
+flickArrow.forEach(arrow =>{
+    arrow.addEventListener('click', () =>{
+        document.querySelector('.indicator span').innerText = flkty.selectedIndex+1;
+    })
+});
+    }

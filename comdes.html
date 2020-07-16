@@ -4,14 +4,18 @@
     <title>Phoebe Wong</title>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    carousel library-->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    
 	<link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/node_modules/keen-slider/keen-slider.min.css" />
     
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
+    
 <body id="comdes">  
     <div class="wrapper1"> 
         <div class="title">
@@ -71,7 +75,17 @@ Somewhere Over the Rainbow, promotes a highschool seminar regarding how to suppo
         </div>    
     
         <div class="content" id="four">
-            
+           <div class="main-carousel" data-flickity='{"cellSelector":".carousel-cell", "wrapAround":true, "pageDots":false}'>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="carousel-cell"></div>
+                <div class="indicator"><span>1</span> / <span>8</span></div>
+            </div>  
         </div>
                 
     
@@ -80,7 +94,6 @@ Somewhere Over the Rainbow, promotes a highschool seminar regarding how to suppo
         If expanded, the zine would be designed with four spreads on both sides, each spread would consist of a collage and a page of text next to it. With this design, the reader can bring home information about the topic 
         </div>    
     </div>
-    
     <script src="js/scripts.js"></script>
 </body>
 </html>
