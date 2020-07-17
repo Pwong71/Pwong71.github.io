@@ -9,6 +9,7 @@ ScrollReveal().reveal('#three', {viewFactor: 0.45});
 let sideItem = document.querySelectorAll('span');
 let conTent = document.querySelectorAll('.content');
 
+
 window.onscroll = () => {
     for (let i = 0; i < 5; i++) {
         if (conTent[i].style.opacity === "1"){
@@ -19,49 +20,10 @@ window.onscroll = () => {
     }
 }
 
-sideItem[0].addEventListener('click', () =>{
-    if (conTent[0].style.opacity === "0"){
-    conTent[1].style.opacity = "0";
-    conTent[2].style.opacity = "0";
-    conTent[3].style.opacity = "0";
-    conTent[4].style.opacity = "0";
-    }
-})
-
-sideItem[1].addEventListener('click', () =>{
-    if (conTent[1].style.opacity === "0"){
-    conTent[0].style.opacity = "0";
-    conTent[2].style.opacity = "0";
-    conTent[3].style.opacity = "0";
-    conTent[4].style.opacity = "0";
-    }
-})
-
-sideItem[2].addEventListener('click', () =>{
-    if (conTent[2].style.opacity === "0"){
-    conTent[1].style.opacity = "0";
-    conTent[0].style.opacity = "0";
-    conTent[3].style.opacity = "0";
-    conTent[4].style.opacity = "0";
-    }
-})
-
-sideItem[3].addEventListener('click', () =>{
-    if (conTent[3].style.opacity === "0"){
-    conTent[1].style.opacity = "0";
-    conTent[2].style.opacity = "0";
-    conTent[0].style.opacity = "0";
-    conTent[4].style.opacity = "0";
-    }
-})
-
-sideItem[4].addEventListener('click', () =>{
-    if (conTent[4].style.opacity === "0"){
-    conTent[1].style.opacity = "0";
-    conTent[2].style.opacity = "0";
-    conTent[3].style.opacity = "0";
-    conTent[0].style.opacity = "0";
-    }
+sideItem.forEach( side => {
+    side.addEventListener('click', () => {
+        setTimeout(() => {window.scrollBy(0, -100)}, 50);
+    })
 })
 
 let flickArrow = document.querySelectorAll('.flickity-button');
