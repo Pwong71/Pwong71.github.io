@@ -1,5 +1,6 @@
 @charset "UTF-8";
-* {
+* { 
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     border: 0;
@@ -188,25 +189,26 @@ wrapper {
     font-size: 15px
 }
 
+/*START of wrapper1*/
 .wrapper1{
-/*    margin-bottom: 50px;*/
-    margin-top: calc(50px + 5vw);
-    margin-left: 4.2rem;
-    max-width: 3840px;
-    height: 110vh;
+    margin: calc(5vw + 50px) 150px 0 4.5rem;
+    height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1.5fr 200px;
-    margin-bottom: 100px;
+    grid-template-columns: 1fr 1.5fr;
 }
 
 .somerb{
-    width: 100%;
-    max-width: 100vh;
+    display: flex;
     height: 100%;
-    justify-self: end;
-    object-fit: contain;
-    object-position: top left;
+    width: auto;
     position: relative;
+}
+
+.somerb img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
 }
 
 .somerb::before{
@@ -219,62 +221,57 @@ wrapper {
     right: -25px;
 }
 
-.somerb img{
-    width: 100%;
+.title-wrap{
+    margin-top: calc(2vw + 50px);
     height: auto;
 }
 
 .title{
-    margin-top: calc(2vw + 50px);
-    margin-right: 35px;
-    position: sticky;
     top: calc(2vw + 50px);
-    width: 100%;
-    height: 55vh;
-    max-height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    position: sticky;
 }
 
 .title h1{
     font-family: 'Hatton', serif;
-    font-size: calc(1rem + 2.5vw);
+    font-size: calc(1.5rem + 2vw);
     margin-bottom: 25px;
 }
 
 hr{
     margin: 10px 0px 20px 0px;
-    flex: 0 0 0.5px;
+    height: 0.5px;
     width: 270px;
     background-color: black;
-    display: block;
 }
+/*END of wrapper1*/
 
 
-
+/*START of casestudy*/
 .casestudy{
-    margin-left: 3.5rem;
+    margin: 0 150px 0 4.5rem;
     display: grid;
-    grid-template-columns: 1fr 1.5fr 200px;
+    grid-template-columns: 1fr 1.5fr;
 }
 
 .side{
-    width: 250px;
-    padding-top: 50px;
+    z-index: 1;
+    margin-right 3.5rem;
+    margin-top: 100px;
+    width: 100%;
+    height: 75vh;
     position: sticky;
     top: 100px;
     display: flex;
     flex-flow: column nowrap;
-    height: 75vh;
     justify-content: space-between;
-    align-items: flex-end;
-    margin-right: 35px;
+    align-items: flex-start;
 }
 
 .side span{
+    text-align: right;
+    width: 270px;
     margin-bottom: 20px;
-    transition: 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.7s cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 .side a{
@@ -290,38 +287,32 @@ hr{
     flex-grow: 1;
 }
 
-
 .content{
+    margin: 0 0 25vh 0;
+    padding-top: 100px;
     grid-column: 2/3;
     width: 100%;
-/*    max-width: 83vh;*/
-    height: 90vh;
-    justify-self: end;
+    min-height: 88vh;
+    position: relative;
 }
 
 
-#one{
-    padding-top: 50px;
-}
-
-#two, #three, #four{
+#two, #three{
     height: auto;
-    margin-bottom: 25vh;
-}
-
-#two, #three, #four, #five{
-    padding-top: 100px;
+    padding-bottom: 30vh;
 }
 
 #four{
-   position: relative; 
-    margin-bottom: 500px;
+    padding-bottom: 150vh;
+    position: relative; 
 }
 
+#five{
+    margin-bottom: 4.2vh;
+}
 
 .rainbowflag{
     list-style: none;
-    box-sizing: border-box;
     max-width: 350px;
     margin-top: 70px;
     margin-bottom: 70px;
@@ -332,103 +323,63 @@ hr{
 }
 
 #three img{
-    width: 500px;
+    width: calc(100px + 55%);
+    max-width: 600px;
     height: auto;
 }
 
+/*start of carousel*/
 .main-carousel{
-    font-size: 130px;
-    height: 5em;
-    width: 3.9em;
-    margin-bottom: 200px;
+    margin-bottom: 25vh;
+    width: 32.5vw;
+    max-width: 585px;
+    height: 41.7vw;
+    max-height: 750px;
 }
-
 .carousel-cell{
-    height: 100%;
+    display: block;
     width: 100%;
-    background-size: cover;
-    background-position: center;
+    height: auto;
 }
-
-.carousel-cell:first-of-type{
-    background-image: url(../images/PINK.png);
+.flickity-button{
+    width: 20px;
+    height: 20px;
+    top: 101.5%;
+    background: none;
 }
-
-.carousel-cell:nth-of-type(2){
-    background-image: url(../images/RED.png);
-}
-
-.carousel-cell:nth-of-type(3){
-    background-image: url(../images/ORANGE.png);
-}
-
-.carousel-cell:nth-of-type(4){
-    background-image: url(../images/YELLOW.png);
-}
-
-.carousel-cell:nth-of-type(5){
-    background-image: url(../images/GREEN.png);
-}
-
-.carousel-cell:nth-of-type(6){
-    background-image: url(../images/TOUR.png);
-}
-
-.carousel-cell:nth-of-type(7){
-    background-image: url(../images/INDIGO.png);
-}
-
-.carousel-cell:nth-of-type(8){
-    background-image: url(../images/PURPLE.png);
-}
-
 .next{
     right: 0!important;
 }
-
 .previous{
     left: 0!important;
 }
-
-.flickity-prev-next-button{
-    width: 25px;
-    height: 25px;
-    top: 105%;
-}
-
-.flickity-button{
-    background: none;
-    color: black;
-}
-
-.flickity-button:hover{
-    background-color: rgba(0, 0, 0, 0.21);
-}
-
 .indicator{
     position: absolute;
     display: block;
-    top: 103%;
+    top: 100%;
     text-align: center;
     font-size: 14px;
     left: 0;
     right: 0;
 }
+/*end of carousel*/
 
 .banner {
     display: grid;
     grid-template-columns:repeat(8, auto);
     width: 100vw;
+    height: 125vh;
     position: absolute;
     right: -150px;
-    
+    align-items: center;
+    background-color: #d1d1c5;
 }
 
 .banner img{
     width: 100%;
     height: auto;
-    object-fit: cover;
 }
+/*END of casestudy*/
 
 .arrow1 {
     font-family: 'IBM Plex Mono', monospace;
