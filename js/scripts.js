@@ -26,10 +26,12 @@ window.onscroll = () => {
     if (bannerScr.top <= bannerScr.height-650 && !(bannerScr.top*-1 > bannerScr.height)){
     sideItem.forEach(side => {
         side.style.opacity = "0";
+        document.querySelector('#comdes').style.backgroundColor = "black";
     })
     } else if(bannerScr.top*-1 > bannerScr.height || bannerScr.top > bannerScr.height-650){
     sideItem.forEach(side => {
         side.style.opacity = "1";
+         document.querySelector('#comdes').style.backgroundColor = "#d1d1c5";
     })
     }    
 }
