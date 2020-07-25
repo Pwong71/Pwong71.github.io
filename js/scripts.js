@@ -2,53 +2,37 @@
 window.onload = () =>{
 //initiates scroll reveal
 ScrollReveal().reveal('.content', {delay: 50, reset: true, viewFactor: 0.2, duration: 600});
-ScrollReveal().reveal('#two', {viewFactor: 0.28})
-ScrollReveal().reveal('#three', {viewFactor: 0.1, viewOffset: {bottom: 150}})
-ScrollReveal().reveal('#four', {viewFactor: 0.1, viewOffset: {bottom: 150}})
-ScrollReveal().reveal('#five', {viewFactor: 0.4, delay: 150})
+ScrollReveal().reveal('#two', {viewFactor: 0.28});
+ScrollReveal().reveal('#three', {viewFactor: 0.1, viewOffset: {bottom: 150}});
+ScrollReveal().reveal('#four', {viewFactor: 0.1, viewOffset: {bottom: 150}});
+ScrollReveal().reveal('#five', {viewFactor: 0.4, delay: 150});
+ScrollReveal().reveal('.links',{distance: '100px', origin:'left', duration:500, reset:true});
 
 let sideItem = document.querySelectorAll('.side span');
 let conTent = document.querySelectorAll('.content');
-let bannerScr = document.querySelector('.banner').getBoundingClientRect();
-
+    
 //scroll event
 window.onscroll = () => {
     //moves a sidebar tab when the corresponding content section is in view
-    for (let i = 0; i < 5; i++) {
-        if (conTent[i].style.opacity === "1"){
-            sideItem[i].style.flexGrow = "1";
-        } else {
+    for (let i = 0; i < 5; i++){
+        if ((conTent[i].getBoundingClientRect().top >= (window.innerHeight/1.35 || document.documentElement.clientHeight/1.35) && conTent[i].getBoundingClientRect().bottom > 0) || (conTent[i].getBoundingClientRect().bottom <= -100 && conTent[i].getBoundingClientRect().top < 0)){
             sideItem[i].style.flexGrow = "0";
+        } else {
+            sideItem[i].style.flexGrow = "1";
         }
     }
+    //changes bg color when banner is in viewport
     let bannerScr = document.querySelector('.banner').getBoundingClientRect();
-    //hides sidebar when banner is in view, then vice versa
-    if (bannerScr.top <= bannerScr.height-650 && !(bannerScr.top*-1 > bannerScr.height)){
-    sideItem.forEach(side => {
-        side.style.opacity = "0";
-        document.querySelector('#comdes').style.backgroundColor = "black";
-    })
-    } else if(bannerScr.top*-1 > bannerScr.height || bannerScr.top > bannerScr.height-650){
-    sideItem.forEach(side => {
-        side.style.opacity = "1";
-         document.querySelector('#comdes').style.backgroundColor = "#d1d1c5";
-    })
-    }    
+    if ((bannerScr.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr.bottom > 0) || (bannerScr.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr.top < 0)){
+        document.querySelector('#comdes').classList.remove('darken');
+    } else {
+        document.querySelector('#comdes').classList.add('darken');
+    }  
 }
 
-//return every other side tabs to their original position except the one clicked
-for (let i = 0; i < 5; i++){
-    sideItem[i].addEventListener('click', () =>{
-        sideItem[i].style.flexGrow = "1";
-       console.log("clicked");[...sideItem[i].parentElement.children]
-            .filter(el => el !== sideItem[i])
-            .forEach(el => el.style.flexGrow = '0');
-    })
-}
-
+//updates carousel indicator
 let flickArrow = document.querySelectorAll('.flickity-button');
 let flkty = new Flickity('.main-carousel');
-//updates carousel indicator
 flickArrow.forEach(arrow =>{
     arrow.addEventListener('click', () =>{
         document.querySelector('.indicator span').innerText = flkty.selectedIndex+1;
