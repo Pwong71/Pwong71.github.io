@@ -190,6 +190,10 @@ wrapper {
     transition: background .4s linear;
 }
 
+#inspace{
+    background-color: #d6d4d4;
+}
+
 .darken{
     background-color: black;
 }
@@ -245,6 +249,11 @@ wrapper {
     position: sticky;
     background-color: #d1d1c5;
     z-index: 1;
+}
+
+#inspace .title{
+    background-color: #d6d4d4;
+
 }
 
 .title h1{
@@ -391,6 +400,7 @@ hr{
     position: relative; 
 }
 
+
 #five{
     min-height: 75vh;
     margin-bottom: 0;
@@ -503,6 +513,8 @@ hr{
     position: relative;
 }
 
+
+
 #lost-in-space::before{
     content: "Lost In Space";
     display: inline-block;
@@ -541,160 +553,55 @@ hr{
 
 /*End of links */
 
-.arrow1 {
-    font-family: 'IBM Plex Mono', monospace;
-    top: 800px;
-    left: 10px;
-    font-size: .8rem;
-}
+/* Lost in Space */
 
-.wrapper2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 1100px;
-    margin: 0 auto;   
-}
-
-.wrapper2 body {
-    background-color: #4d57a5;
-}
-
-.wrapper2 a {
+#four-l img{
     width: 100%;
-    grid-column: 2/span 4;
+    height: auto;
+    margin-bottom: 100px;
 }
 
-.wrapper2 a img {
-    width: 100%;
-    margin-top: 5rem;
+.modal{
+    cursor: zoom-in;
+    transition: all 0.5s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
-.wrapper2 h1 {
-    font-size: 3.5rem;
-    font-family: 'Hatton';
-    font-weight: 400;
-    position: absolute;
-    left: 60px;
-    margin-top: 300px;
+img.modal-active{
+    cursor: zoom-out;
+    z-index: 1;
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto!important;
+    max-width: 90%!important;
+    max-height: 90%!important;
+    width: auto!important;
+    height: auto!important;
 }
 
-.wrapper2 h2 {
-    font-size: .8rem;
-    font-family: 'IBM Plex Mono', monospace;
-    position: absolute;
-    top: 515px;
-    left: 60px;    
+.modal-bg{
+    transition: 0.5s ease;
 }
 
-.wrapper2 h3 {
-    text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
-    position: absolute;
-    top: 5rem;
-    right: 9.5%; 
-    writing-mode: vertical-rl;
-    color: #434343;
-    font-size: .8rem;
-    z-index: 2;
-    grid-column: 2/span 4; 
-    letter-spacing: 1px;
+.modal-bg.modal-active{
+    display: block;
+    cursor: zoom-out;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.58);
+    width: 100vw;
+    height: 100vh;
 }
+/* End of Lost in Space */
 
-.wrapper3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 1100px;
-    margin: 0 auto;   
-}
 
-.wrapper3 a {
-    width: 100%;
-    grid-column: 2/span 4;
-}
-
-.wrapper3 a img {
-    width: 100%;
-    margin-top: 5rem;
-}
-
-.wrapper3 h1 {
-    font-size: 3.5rem;
-    font-family: 'Hatton';
-    font-weight: 400;
-    position: absolute;
-    left: 60px;
-    margin-top: 300px;
-}
-
-.wrapper3 h2 {
-    font-size: .8rem;
-    font-family: 'IBM Plex Mono', monospace;
-    position: absolute;
-    top: 455px;
-    left: 60px;    
-}
-
-.wrapper3 h3 {
-    text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
-    position: absolute;
-    top: 5rem;
-    right: 9.5%; 
-    writing-mode: vertical-rl;
-    color: #434343;
-    font-size: .8rem;
-    z-index: 2;
-    grid-column: 2/span 4; 
-    letter-spacing: 2px;
-}
-
-.wrapper4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 1100px;
-    margin: 0 auto;   
-}
-
-.wrapper4 a {
-    width: 100%;
-    grid-column: 2/span 4;
-}
-
-.wrapper4 a img {
-    width: 100%;
-    margin-top: 5rem;
-}
-
-.wrapper4 h1 {
-    font-size: 3.5rem;
-    font-family: 'Hatton';
-    font-weight: 400;
-    position: absolute;
-    left: 60px;
-    margin-top: 300px;
-}
-
-.wrapper4 h2 {
-    font-size: .8rem;
-    font-family: 'IBM Plex Mono', monospace;
-    position: absolute;
-    top: 455px;
-    left: 60px;    
-}
-
-.wrapper4 h3 {
-    text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
-    position: absolute;
-    top: 5rem;
-    right: 9.5%; 
-    writing-mode: vertical-rl;
-    color: #434343;
-    font-size: .8rem;
-    z-index: 2;
-    grid-column: 2/span 4; 
-    letter-spacing: 2px;
-}
 
 .play {
     margin: 0;
