@@ -1,11 +1,11 @@
 /*eslint-env browser*/
 window.onload = () =>{
 //initiates scroll reveal
-ScrollReveal().reveal('.content', {delay: 50, reset: true, viewFactor: 0.2, duration: 600});
-ScrollReveal().reveal('#two', {viewFactor: 0.28});
-ScrollReveal().reveal('#three', {viewFactor: 0.1, viewOffset: {bottom: 150}});
-ScrollReveal().reveal('#four', {viewFactor: 0.1, viewOffset: {bottom: 150}});
-ScrollReveal().reveal('#five', {viewFactor: 0.4, delay: 150});
+ScrollReveal().reveal('.content', { viewFactor: 0.1, reset: true, duration: 600});
+//ScrollReveal().reveal('#two', {viewFactor: 0.28});
+//ScrollReveal().reveal('#three', {viewFactor: 0.1, viewOffset: {bottom: 150}});
+//ScrollReveal().reveal('#four', {viewFactor: 0.1, viewOffset: {bottom: 150}});
+//ScrollReveal().reveal('#five', {viewFactor: 0.4, delay: 150});
 ScrollReveal().reveal('.links',{distance: '100px', origin:'left', duration:500, reset:true});
 
 let sideItem = document.querySelectorAll('.side span');
@@ -39,15 +39,18 @@ flickArrow.forEach(arrow =>{
     })
 });
 
-    let modalImg = document.querySelectorAll('.modal');
+//click event for modal
+let modalImg = document.querySelectorAll('.modal');
 modalImg.forEach(moda => {
     moda.addEventListener('click', () =>{
         moda.classList.toggle('modal-active');
         document.querySelector('.modal-bg').classList.toggle('modal-active');
     })
     document.querySelector('.modal-bg').addEventListener('click', () => {
+        if(moda.className.match('modal-active')){
         document.querySelector('.modal-bg').classList.remove('modal-active');
         moda.classList.remove('modal-active');
+    }
     })
 })
 }

@@ -317,7 +317,7 @@ hr{
 }
 
 .side a:hover{
-    text-decoration: line-through;
+    text-decoration: underline;
 }
 
 .side span:first-child{
@@ -325,12 +325,11 @@ hr{
 }
 
 .content{
-    margin: 0 0 25vh 0;
-    padding-top: 100px;
+    margin: 0;
     grid-column: 2/3;
     width: 100%;
-    min-height: 88vh;
     position: relative;
+    padding-top: 100px;
 }
 
 .content h1{
@@ -392,11 +391,11 @@ hr{
 
 #two, #three{
     height: auto;
-    padding-bottom: 30vh;
+/*    padding-bottom: 30vh;*/
 }
 
 #four{
-    padding-bottom: 20vh;
+/*    padding-bottom: 20vh;*/
     position: relative; 
 }
 
@@ -404,6 +403,10 @@ hr{
 #five{
     min-height: 75vh;
     margin-bottom: 0;
+}
+
+#two, #three, #four{
+    padding-bottom: 100px;
 }
 
 
@@ -555,7 +558,11 @@ hr{
 
 /* Lost in Space */
 
-#four-l img{
+#inspace .title-wrap a{
+    margin-top: 175px;
+}
+
+#two-l img, #three-l img, #four-l img{
     width: 100%;
     height: auto;
     margin-bottom: 100px;
@@ -563,7 +570,7 @@ hr{
 
 .modal{
     cursor: zoom-in;
-    transition: all 0.5s cubic-bezier(0.87, 0, 0.13, 1);
+    -webkit-animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both;animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both
 }
 
 img.modal-active{
@@ -580,6 +587,7 @@ img.modal-active{
     max-height: 90%!important;
     width: auto!important;
     height: auto!important;
+    -webkit-animation:fade-in-bottom .6s cubic-bezier(.86,0.000,.07,1.000) both;animation:fade-in-bottom .6s cubic-bezier(.86,0.000,.07,1.000) both
 }
 
 .modal-bg{
@@ -599,6 +607,10 @@ img.modal-active{
     width: 100vw;
     height: 100vh;
 }
+
+@-webkit-keyframes fade-in-bck{0%{-webkit-transform:translateZ(80px);transform:translateZ(80px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes fade-in-bck{0%{-webkit-transform:translateZ(80px);transform:translateZ(80px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+
+@-webkit-keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 /* End of Lost in Space */
 
 
