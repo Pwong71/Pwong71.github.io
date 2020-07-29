@@ -570,7 +570,7 @@ hr{
 
 .modal{
     cursor: zoom-in;
-    -webkit-animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both;animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both
+    -webkit-animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both;animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both;
 }
 
 img.modal-active{
@@ -587,7 +587,7 @@ img.modal-active{
     max-height: 90%!important;
     width: auto!important;
     height: auto!important;
-    -webkit-animation:fade-in-bottom .6s cubic-bezier(.86,0.000,.07,1.000) both;animation:fade-in-bottom .6s cubic-bezier(.86,0.000,.07,1.000) both
+    -webkit-animation:fade-in-bottom .6s cubic-bezier(.86,0.000,.07,1.000) both;animation:fade-in-bottom .6s cubic-bezier(.86,0.000,.07,1.000) both;
 }
 
 .modal-bg{
