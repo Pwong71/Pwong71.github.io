@@ -81,40 +81,6 @@ wrapper {
     border-radius: 5px;
 }
 
-@media (max-width: 400px) {
-    .toggle-button {
-       display: flex; 
-    }
-    
-    .navbar-links {
-        display: none;  
-        width: 100%
-    }
-    
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;    
-    }
-    
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-    
-    .navbar-links li {
-        text-align: center;
-    }
-    
-    .navbar-links li a {
-        padding: .5rem 1rem;
-    }
-    
-    .navbar-links.active {
-        display: flex;
-    }
-       
-}
-
 .header {
     font-size: 3.5rem;
     text-align: center; 
@@ -195,7 +161,7 @@ wrapper {
 }
 
 .darken{
-    background-color: black;
+    background-color: black!important;
 }
 
 /*START of wrapper1*/
@@ -288,6 +254,12 @@ hr{
     margin: 0 150px 0 4.5rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+}
+
+@media (max-width: 400px) {
+    .casestudy {
+        display: block;
+    }
 }
 
 .side{
@@ -425,6 +397,14 @@ hr{
     max-height: 750px;
 }
 
+.carousel-2{
+    margin-bottom: 5vh;
+    width: 40vw;
+    max-width: 500px;
+    height: 60vw;
+    max-height: 750px;
+}
+
 .carousel-cell{
     display: block;
     width: 100%;
@@ -434,9 +414,10 @@ hr{
 .flickity-button{
     width: 20px;
     height: 20px;
-    top: 101.5%;
+    top: 102%;
     background: none;
 }
+
 .next{
     right: 0!important;
 }
@@ -446,7 +427,7 @@ hr{
 .indicator{
     position: absolute;
     display: block;
-    top: 100%;
+    top: 101%;
     text-align: center;
     font-size: 14px;
     left: 0;
@@ -568,6 +549,12 @@ hr{
     margin-bottom: 100px;
 }
 
+#four-l{
+    position: relative;
+    padding-bottom: 150vh;
+    margin-bottom: 200px;
+}
+
 .modal{
     cursor: zoom-in;
     -webkit-animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both;animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both;
@@ -611,9 +598,15 @@ img.modal-active{
 @-webkit-keyframes fade-in-bck{0%{-webkit-transform:translateZ(80px);transform:translateZ(80px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes fade-in-bck{0%{-webkit-transform:translateZ(80px);transform:translateZ(80px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
 
 @-webkit-keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+#four-l .banner{
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    place-items: center;
+}
 /* End of Lost in Space */
-
-
 
 .play {
     margin: 0;
@@ -654,6 +647,28 @@ img.modal-active{
     right: 0.5%;
 }
 
+@media only screen and (max-width: 680px){
+    .header{
+        font-size: calc(2vw + 1rem);
+        line-height: calc(0.8vh + 2.7rem);
+        padding: calc(0.5vw + 1rem);
+        margin: calc(2vw + 1rem);
+    }
+    
+    .work a img{
+        width: calc(200px + 20vw);
+    }
+    
+    .arrow{
+        margin-left: calc(1vw + 2rem);
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .header{
+        text-align: left;
+    }
+}
 
 
 
