@@ -41,16 +41,22 @@ flickArrow.forEach(arrow =>{
 
 //click event for modal
 let modalImg = document.querySelectorAll('.modal');
+let modalBg = document.querySelector('.modal-bg');
 modalImg.forEach(moda => {
     moda.addEventListener('click', () =>{
-        moda.classList.toggle('modal-active');
-        document.querySelector('.modal-bg').classList.toggle('modal-active');
+        if (moda.className.match('modal-active')){
+            modalBg.classList.remove('modal-active');
+            moda.classList.remove('modal-active');
+        } else{
+            modalBg.classList.add('modal-active');
+            moda.classList.add('modal-active');
+        }
     })
-    document.querySelector('.modal-bg').addEventListener('click', () => {
+    modalBg.addEventListener('click', () => {
         if(moda.className.match('modal-active')){
-        document.querySelector('.modal-bg').classList.remove('modal-active');
-        moda.classList.remove('modal-active');
-    }
+            modalBg.classList.remove('modal-active');
+            moda.classList.remove('modal-active');
+        }
     })
 })
 }

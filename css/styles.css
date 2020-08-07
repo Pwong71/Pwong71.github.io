@@ -399,9 +399,9 @@ hr{
 
 .carousel-2{
     margin-bottom: 5vh;
-    width: 40vw;
-    max-width: 500px;
-    height: 60vw;
+    width: 37vw;
+    max-width: 550px;
+    height: 50vw;
     max-height: 750px;
 }
 
@@ -414,7 +414,7 @@ hr{
 .flickity-button{
     width: 20px;
     height: 20px;
-    top: 102%;
+    top: 101.5%;
     background: none;
 }
 
@@ -427,7 +427,7 @@ hr{
 .indicator{
     position: absolute;
     display: block;
-    top: 101%;
+    top: 100%;
     text-align: center;
     font-size: 14px;
     left: 0;
@@ -468,9 +468,9 @@ hr{
     flex-flow: row wrap;
     width: auto;
     height: auto;
-    justify-content: space-around;
+    justify-content: center;
     margin: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
 }
 
 .links h1{
@@ -479,16 +479,19 @@ hr{
     font-size: 50px;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4.5rem;
 }
 
 .links h3{
     font-weight: 100;
+    text-decoration: underline;
 }
 
 .links > div{
     display: flex;
     flex-flow: column nowrap;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 .links div a{
@@ -607,6 +610,70 @@ img.modal-active{
     place-items: center;
 }
 /* End of Lost in Space */
+
+footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 100px 0px 200px 0px;
+    justify-items: center;
+    width: 1000px;
+    margin: 0 auto; 
+}
+
+footer > div:first-of-type{
+    justify-self: flex-end;
+    padding-right: 25px;
+}
+
+footer h2{
+    font-family: "Telegraf", sans-serif;
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: right;
+}
+
+footer h2 span{
+    letter-spacing: 0;
+}
+
+footer h2:last-of-type{
+    font-family: "Hatton", serif;
+    font-size: 36px;
+}
+
+footer > div:last-of-type{
+    width: auto;
+    justify-self: flex-start;
+    padding-left: 25px;
+    
+}
+
+footer p{
+    font-size: 20px; 
+}
+
+footer a{
+    font-family: "Telegraf", sans-serif;
+    color: black;
+    display: block;
+}
+
+footer > div > div{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+footer > div > div div{
+    
+}
+
+footer h3{
+    font-weight: 100;
+    font-size: 20px;
+    flex: 1 0 100%;
+    margin-bottom: 5px;
+}
 
 .play {
     margin: 0;
