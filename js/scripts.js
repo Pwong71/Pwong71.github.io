@@ -21,13 +21,19 @@ window.onscroll = () => {
             sideItem[i].style.flexGrow = "1";
         }
     }
-    //changes bg color when banner is in viewport
+   //changes bg color when banner is in viewport
     let bannerScr = document.querySelector('.banner').getBoundingClientRect();
     if ((bannerScr.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr.bottom > 0) || (bannerScr.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr.top < 0)){
+        document.body.style.backgroundColor = "#d6d4d4";
+    } else {
+        document.body.style.backgroundColor = "black";
+    } 
+    let bannerScr2 = document.querySelector('.banner2').getBoundingClientRect();
+    if ((bannerScr2.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr2.bottom > 0) || (bannerScr2.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr2.top < 0)){
         document.body.className = "";
     } else {
         document.body.className = "darken";
-    } 
+    }
 }
 
 //updates carousel indicator
