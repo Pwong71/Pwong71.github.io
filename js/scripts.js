@@ -24,7 +24,7 @@ window.onscroll = () => {
    //changes bg color when banner is in viewport
     let bannerScr = document.querySelector('.banner').getBoundingClientRect();
     if ((bannerScr.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr.bottom > 0) || (bannerScr.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr.top < 0)){
-        document.body.style.backgroundColor = "#d6d4d4";
+        document.body.style.backgroundColor = "";
     } else {
         document.body.style.backgroundColor = "black";
     } 
