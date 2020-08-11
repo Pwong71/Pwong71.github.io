@@ -37,12 +37,9 @@ window.onscroll = () => {
 }
 
 //updates carousel indicator
-let flickArrow = document.querySelectorAll('.flickity-button');
 let flkty = new Flickity('.main-carousel');
-flickArrow.forEach(arrow =>{
-    arrow.addEventListener('click', () =>{
-        document.querySelector('.indicator span').innerText = flkty.selectedIndex+1;
-    })
+flkty.on('change', function(newSlideIndex) {
+    document.querySelector('.indicator span').innerText = newSlideIndex + 1;
 });
 
 //click event for modal
