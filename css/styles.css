@@ -1,0 +1,848 @@
+@charset "UTF-8";
+* { 
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+}
+
+body {
+    background-color: #d1d1c5;
+    width: 100%;
+    
+}
+
+wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+.navbar {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .8px solid;
+    
+}
+
+.name {
+    font-family: 'Hatton';
+    font-weight: 400;
+   font-size: 1.3rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.name a{
+   text-decoration: none;
+    color: black;
+}
+
+.navbar-links ul {
+   margin: 0;
+    padding: 0;
+    display: flex;  
+    
+}
+
+.navbar-links li{
+    list-style: none;
+}
+
+.navbar-links li a{
+    color: black;
+    text-decoration: none;
+    padding: 1.3rem;
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;   
+}
+
+.toggle-button {
+   position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.header {
+    font-size: 3.5rem;
+    text-align: center; 
+    padding: 6rem;
+    margin: 3rem;
+    line-height: 5rem;
+}
+
+.font1{font-family: Hatton}
+.font1{font-weight: 400}
+.font2{font-family: 'Quantico', sans-serif;}
+
+
+.work {
+    margin: 0;
+    padding: 0 3rem 0rem 3rem;
+    white-space: nowrap;
+    overflow-x: scroll; 
+}
+
+.work a img {
+    width: 500px; 
+    height: auto;
+    vertical-align: middle;
+    margin: 0 3rem 2rem 3rem;
+}
+
+.work a {
+    display: inline-block;
+    position: relative;   
+}
+
+.work a h1 {
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    z-index: 1;
+    position: absolute;
+    top: 8px;
+    right: 5%; 
+    writing-mode: vertical-rl;
+    opacity: 0;
+    color: #434343;
+    font-size: .8rem;
+    transition: .3s ease;
+    letter-spacing: 1.5px;
+}
+
+.work a:hover h1 {
+    opacity: 1;
+    right: 3.5%;
+}
+
+.work::-webkit-scrollbar {
+  display: none;
+}
+
+.work {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.arrow {
+    margin-left: 6rem;
+    margin-bottom: 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem; 
+}
+
+#comdes, #inspace, #remixtype{
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    transition: background .4s linear;
+}
+
+#inspace{
+    background-color: #d6d4d4;
+}
+
+#remixtype{
+    background-color: black;
+    color: white;
+}
+
+.darken{
+    background-color: black!important;
+}
+
+/*START of wrapper1*/
+.wrapper1{
+    margin: calc(5vw + 50px) 150px 0 4.5rem;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.front-img{
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
+.front-img img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
+}
+
+.somerb::before{
+    content: "Communication Design";
+    position: absolute;
+    display: inline-block;
+    font-size: 13px;
+    writing-mode: vertical-lr;
+    right: -25px;
+}
+
+.inspace::before{
+    content: "Art Direction";
+    position: absolute;
+    display: inline-block;
+    font-size: 13px;
+    writing-mode: vertical-lr;
+    right: -25px;
+}
+
+.remixtype::before{
+    content: "Typography";
+    position: absolute;
+    display: inline-block;
+    font-size: 13px;
+    writing-mode: vertical-lr;
+    right: -25px;
+}
+
+.title-wrap{
+    margin-top: calc(2vw + 50px);
+    height: auto;
+}
+
+.title{
+    top: calc(2vw + 50px);
+    position: sticky;
+    background-color: #d1d1c5;
+    z-index: 1;
+}
+
+#inspace .title{
+    background-color: #d6d4d4;
+
+}
+
+.title h1{
+    font-family: 'Hatton', serif;
+    font-size: calc(2rem + 2vw);
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.title p{
+    line-height: 25px;
+}
+
+hr{
+    margin: 10px 0px 10px 0px;
+    height: 0.5px;
+    width: 270px;
+    background-color: black;
+}
+
+#remixtype hr{
+    background-color: white;
+    width: 315px;
+}
+
+.title-wrap a{
+    margin-top: 100px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+/*END of wrapper1*/
+
+
+/*START of casestudy*/
+.casestudy{
+    margin: 0 150px 0 4.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+@media (max-width: 400px) {
+    .casestudy {
+        display: block;
+    }
+}
+
+.side{
+    z-index: 0;
+    margin-right 3.5rem;
+    margin-top: 100px;
+    width: 100%;
+    height: 75vh;
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.side span{
+    text-align: right;
+    width: 270px;
+    margin-bottom: 20px;
+    transition: all 0.7s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.side a{
+    text-decoration: none;
+    color: black;
+}
+
+#remixtype .side a{
+    color: white;
+}
+
+.side a:hover{
+    text-decoration: underline;
+}
+
+.side span:first-child{
+    flex-grow: 1;
+}
+
+.content{
+    margin: 0;
+    grid-column: 2/3;
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
+}
+
+.content h1{
+    font-family: "Telegraf", sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 55px;
+    margin-bottom: 30px;
+}
+
+.content h3{
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.content p{
+    width: 80%;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+#one{
+    min-height: auto;
+}
+
+#two{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#two h1:first-of-type{
+    margin-bottom: 60px;
+}
+
+#two h1:nth-of-type(2){
+    margin-bottom: 50px;
+}
+
+#two>*{
+    grid-column: 1/3;
+}
+
+#two ul{
+    list-style: none;
+    grid-column: 1/2;
+    margin-right: 21px;
+    margin-bottom: 70px;
+}
+
+#two li{
+    padding: 1.5rem 2rem;
+}
+
+#two p:first-of-type{
+    grid-column: 2/3;
+    align-self: flex-end;
+    width: 80%;
+    margin-bottom: 70px;
+}
+
+#two, #three{
+    height: auto;
+/*    padding-bottom: 30vh;*/
+}
+
+#four{
+/*    padding-bottom: 20vh;*/
+    position: relative; 
+}
+
+
+#five{
+    min-height: 75vh;
+    margin-bottom: 0;
+}
+
+#two, #three, #four{
+    padding-bottom: 100px;
+}
+
+
+#three img{
+    width: calc(100px + 55%);
+    max-width: 600px;
+    height: auto;
+}
+
+/*start of carousel*/
+.main-carousel{
+    margin-bottom: 25vh;
+    width: 32.5vw;
+    max-width: 585px;
+    height: 41.7vw;
+    max-height: 750px;
+}
+
+.carousel-2{
+    margin-bottom: 5vh;
+    width: 37vw;
+    max-width: 550px;
+    height: 50vw;
+    max-height: 750px;
+}
+
+.carousel-3{
+    width: 100%;
+    max-width: 100%;
+    max-height: auto;
+    height: auto;
+    margin-bottom: 15vh;
+}
+
+.carousel-cell{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.flickity-button{
+    width: 20px;
+    height: 20px;
+    top: 101.5%;
+    background: none;
+}
+
+#remixtype .flickity-button{
+    top: 103.5%;
+    color: white;
+}
+
+.next{
+    right: 0!important;
+}
+.previous{
+    left: 0!important;
+}
+.indicator{
+    position: absolute;
+    display: block;
+    top: 100%;
+    text-align: center;
+    font-size: 14px;
+    left: 0;
+    right: 0;
+}
+
+#remixtype .indicator{
+    top: 102%;
+}
+/*end of carousel*/
+
+.banner {
+    display: grid;
+    grid-template-columns:repeat(8, auto);
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    right: -150px;
+    align-items: center;
+    min-height: 750px;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+#four h3:last-of-type{
+    margin-top: calc(900px + 50vh);
+}
+
+.talkshow {
+    width: calc(100px + 55%);
+    max-width: 600px;
+    height: auto;
+}
+/*END of casestudy*/
+
+/*Start of links*/
+.links{
+    display: flex;
+    flex-flow: row wrap;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    margin: 2rem;
+    padding-bottom: 5rem;
+}
+
+.links h1{
+    flex: 1 0 100%;
+    font-family: "Hatton", serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+
+.links h3{
+    font-weight: 100;
+/*    text-decoration: underline;*/
+}
+
+.links > div{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.links div a{
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
+
+
+#lost-in-space::before{
+    content: "Lost In Space";
+    display: inline-block;
+    position: absolute;
+    writing-mode: vertical-lr;
+    right: -1.5rem;
+    color: black;
+}
+
+#somewhere::before{
+    content: "Somewhere Over the Rainbow";
+    display: inline-block;
+    position: absolute;
+    writing-mode: vertical-lr;
+    right: -1.5rem;
+    color: black;
+}
+
+#remix-type::before{
+    content: "Remix Type";
+    display: inline-block;
+    position: absolute;
+    writing-mode: vertical-lr;
+    right: -1.5rem;
+    color: black;
+}
+
+#info-heritage::before{
+    content: "Untitled";
+    display: inline-block;
+    position: absolute;
+    writing-mode: vertical-lr;
+    right: -1.5rem;
+    color: black;
+}
+
+#remixtype .links a::before{
+    color: white;
+}
+
+
+
+.links a img{
+    width: 350px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+
+/*End of links */
+
+/* Lost in Space */
+
+#inspace .title-wrap a{
+    margin-top: 175px;
+}
+
+#one-l{
+    height: 30vh;
+    position: relative;
+    padding-bottom: 200vh;
+    margin-bottom: 200px;
+}
+
+.banner2{
+    position: absolute;
+    right: -150px;
+    align-items: center;
+    min-height: 750px;
+    bottom: 0vh;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    place-items: center;
+}
+
+.banner2 img{
+    width: 100%;
+    height: auto;
+}
+
+#two-l img, #three-l img, #four-l img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+}
+
+#four-l{
+    position: relative;
+    padding-bottom: 150vh;
+    margin-bottom: 200px;
+}
+
+.modal{
+    cursor: zoom-in;
+    -webkit-animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both;animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both;
+}
+
+img.modal-active{
+    cursor: zoom-out;
+    z-index: 1;
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto!important;
+    max-width: 90%!important;
+    max-height: 90%!important;
+    width: auto!important;
+    height: auto!important;
+    -webkit-animation:fade-in-bottom .6s cubic-bezier(.86,0.000,.07,1.000) both;animation:fade-in-bottom .6s cubic-bezier(.86,0.000,.07,1.000) both;
+}
+
+.modal-bg{
+    transition: 0.5s ease;
+}
+
+.modal-bg.modal-active{
+    display: block;
+    cursor: zoom-out;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.58);
+    width: 100vw;
+    height: 100vh;
+}
+
+@-webkit-keyframes fade-in-bck{0%{-webkit-transform:translateZ(80px);transform:translateZ(80px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes fade-in-bck{0%{-webkit-transform:translateZ(80px);transform:translateZ(80px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+
+@-webkit-keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+#four-l .banner{
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    place-items: center;
+}
+/* End of Lost in Space */
+
+/*START of Remix Type*/
+#remixtype .title{
+    background-color: black;
+}
+
+#remixtype .title-wrap a{
+    margin-top: 175px;
+    color: white;
+}
+
+#five-r img, #two-r img:not(.carousel-cell), #three-r img, #four-r img, #five-r img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+}
+/*END of Remix Type*/
+
+footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 100px 0px 200px 0px;
+    justify-items: center;
+    width: 1000px;
+    margin: 0 auto; 
+}
+
+footer > div:first-of-type{
+    justify-self: flex-end;
+    padding-right: 25px;
+}
+
+footer h2{
+    font-family: "Telegraf", sans-serif;
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 70px;
+    text-align: right;
+}
+
+footer h2 span{
+    letter-spacing: 0;
+}
+
+footer h2:last-of-type{
+    font-family: "Hatton", serif;
+    font-size: 36px;
+}
+
+footer > div:last-of-type{
+    width: auto;
+    justify-self: flex-start;
+    padding-left: 25px;
+    
+}
+
+footer p{
+    font-size: 20px; 
+    line-height: 30px;
+}
+
+footer a{
+    font-family: "Telegraf", sans-serif;
+    color: black;
+    display: block;
+}
+
+#remixtype footer a{
+    color: white;
+}
+
+footer > div > div{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+footer > div > div div{
+    
+}
+
+footer h3{
+    font-weight: 100;
+    font-size: 20px;
+    flex: 1 0 100%;
+    margin-bottom: 5px;
+}
+
+.play {
+    margin: 0;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    white-space: nowrap;
+    overflow-x: scroll; 
+}
+
+.play a img {
+    width: 500px; 
+    height: 650px;
+    vertical-align: middle;
+    margin: 3rem 1.5rem 3rem 3rem;
+}
+
+.play a {
+    display: inline-block;
+    position: relative;   
+}
+
+.play a h1 {
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    z-index: 1;
+    position: absolute;
+    top: 55px;
+    right: 3%; 
+    writing-mode: vertical-rl;
+    opacity: 0;
+    color: #434343;
+    font-size: .7rem;
+    transition: .3s ease;
+    letter-spacing: 1.5px;
+}
+
+.play a:hover h1 {
+    opacity: 1;
+    right: 0.5%;
+}
+
+@media only screen and (max-width: 680px){
+    .header{
+        font-size: calc(2vw + 1rem);
+        line-height: calc(0.8vh + 2.7rem);
+        padding: calc(0.5vw + 1rem);
+        margin: calc(2vw + 1rem);
+    }
+    
+    .work a img{
+        width: calc(200px + 20vw);
+    }
+    
+    .arrow{
+        margin-left: calc(1vw + 2rem);
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .header{
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Hatton';
+    src: url('Hatton-Medium.eot');
+    src: local('Hatton Medium'), local('Hatton-Medium'),
+        url('Hatton-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Hatton-Medium.woff2') format('woff2'),
+        url('Hatton-Medium.woff') format('woff'),
+        url('Hatton-Medium.ttf') format('truetype'),
+        url('Hatton-Medium.svg#Hatton-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hatton';
+    src: url('Hatton-Ultralight.eot');
+    src: local('Hatton Ultralight'), local('Hatton-Ultralight'),
+        url('Hatton-Ultralight.eot?#iefix') format('embedded-opentype'),
+        url('Hatton-Ultralight.woff2') format('woff2'),
+        url('Hatton-Ultralight.woff') format('woff'),
+        url('Hatton-Ultralight.ttf') format('truetype'),
+        url('Hatton-Ultralight.svg#Hatton-Ultralight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hatton';
+    src: url('Hatton-Light.eot');
+    src: local('Hatton Light'), local('Hatton-Light'),
+        url('Hatton-Light.eot?#iefix') format('embedded-opentype'),
+        url('Hatton-Light.woff2') format('woff2'),
+        url('Hatton-Light.woff') format('woff'),
+        url('Hatton-Light.ttf') format('truetype'),
+        url('Hatton-Light.svg#Hatton-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hatton';
+    src: url('Hatton-Bold.eot');
+    src: local('Hatton Bold'), local('Hatton-Bold'),
+        url('Hatton-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Hatton-Bold.woff2') format('woff2'),
+        url('Hatton-Bold.woff') format('woff'),
+        url('Hatton-Bold.ttf') format('truetype'),
+        url('Hatton-Bold.svg#Hatton-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hatton';
+    src: url('Hatton-Ultrabold.eot');
+    src: local('Hatton Ultrabold'), local('Hatton-Ultrabold'),
+        url('Hatton-Ultrabold.eot?#iefix') format('embedded-opentype'),
+        url('Hatton-Ultrabold.woff2') format('woff2'),
+        url('Hatton-Ultrabold.woff') format('woff'),
+        url('Hatton-Ultrabold.ttf') format('truetype'),
+        url('Hatton-Ultrabold.svg#Hatton-Ultrabold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Telegraf';
+    src: url('Telegraf-UltraBold.eot');
+    src: url('Telegraf-UltraBold.eot?#iefix') format('embedded-opentype'),
+        url('Telegraf-UltraBold.woff2') format('woff2'),
+        url('Telegraf-UltraBold.woff') format('woff'),
+        url('Telegraf-UltraBold.ttf') format('truetype'),
+        url('Telegraf-UltraBold.svg#Telegraf-UltraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Telegraf';
+    src: url('Telegraf-Bold.eot');
+    src: url('Telegraf-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Telegraf-Bold.woff2') format('woff2'),
+        url('Telegraf-Bold.woff') format('woff'),
+        url('Telegraf-Bold.ttf') format('truetype'),
+        url('Telegraf-Bold.svg#Telegraf-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Telegraf';
+    src: url('Telegraf-UltraLight.eot');
+    src: url('Telegraf-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('Telegraf-UltraLight.woff2') format('woff2'),
+        url('Telegraf-UltraLight.woff') format('woff'),
+        url('Telegraf-UltraLight.ttf') format('truetype'),
+        url('Telegraf-UltraLight.svg#Telegraf-UltraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Telegraf';
+    src: url('Telegraf-Regular.eot');
+    src: url('Telegraf-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Telegraf-Regular.woff2') format('woff2'),
+        url('Telegraf-Regular.woff') format('woff'),
+        url('Telegraf-Regular.ttf') format('truetype'),
+        url('Telegraf-Regular.svg#Telegraf-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
