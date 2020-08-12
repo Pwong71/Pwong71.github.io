@@ -1,11 +1,8 @@
 /*eslint-env browser*/
 window.onload = () =>{
 //initiates scroll reveal
-ScrollReveal().reveal('.content', {distance: '100px', origin: 'left', viewFactor: 0.2, reset: true, duration: 600});
-//ScrollReveal().reveal('#two', {viewFactor: 0.28});
-//ScrollReveal().reveal('#three', {viewFactor: 0.1, viewOffset: {bottom: 150}});
-//ScrollReveal().reveal('#four', {viewFactor: 0.1, viewOffset: {bottom: 150}});
-//ScrollReveal().reveal('#five', {viewFactor: 0.4, delay: 150});
+ScrollReveal().reveal('.content h1', {distance: '100px', origin: 'bottom', viewFactor: 0.8, duration: 700});
+ScrollReveal().reveal('.content img', {distance: '100px', origin: 'bottom', viewFactor: 0.8, duration: 700});
 ScrollReveal().reveal('.links',{distance: '100px', origin:'left', duration:500, reset:true});
 
 let sideItem = document.querySelectorAll('.side span');
