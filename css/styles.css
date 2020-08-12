@@ -660,6 +660,10 @@ img.modal-active{
     transition: 0.5s ease;
 }
 
+#two-l img:first-of-type.modal-active{
+    filter: invert(1);
+}
+
 .modal-bg.modal-active{
     display: block;
     cursor: zoom-out;

@@ -1,7 +1,7 @@
 /*eslint-env browser*/
 window.onload = () =>{
 //initiates scroll reveal
-ScrollReveal().reveal('.content', { viewFactor: 0.1, reset: true, duration: 600});
+ScrollReveal().reveal('.content', {distance: '100px', origin: 'left', viewFactor: 0.2, reset: true, duration: 600});
 //ScrollReveal().reveal('#two', {viewFactor: 0.28});
 //ScrollReveal().reveal('#three', {viewFactor: 0.1, viewOffset: {bottom: 150}});
 //ScrollReveal().reveal('#four', {viewFactor: 0.1, viewOffset: {bottom: 150}});
