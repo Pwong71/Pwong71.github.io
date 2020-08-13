@@ -273,7 +273,7 @@ hr{
 }
 
 #inspace hr{
-    width: 230px;
+    width: 215px;
 }
 
 #remixtype hr{
@@ -373,7 +373,7 @@ hr{
 .content p{
     width: 80%;
     line-height: 30px;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 #one{
@@ -541,7 +541,8 @@ hr{
     height: auto;
     justify-content: center;
     margin: 2rem;
-    padding-bottom: 7rem;
+    padding-bottom: 10rem;
+    padding-top: 7rem;
 }
 
 .links h1{
