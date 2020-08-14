@@ -11,15 +11,12 @@
 body {
     background-color: #d1d1c5;
     width: 100%;
-    
 }
 
 wrapper {
     width: 90%;
     margin: 0 auto;
 }
-
-
 
 .navbar {
   display: flex;
@@ -148,6 +145,7 @@ wrapper {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 1rem; 
 }
+/*END of Index*/
 
 #comdes, #inspace, #remixtype, #infodes1{
     box-sizing: border-box;
@@ -194,40 +192,28 @@ wrapper {
     object-position: top;
 }
 
-.somerb::before{
-    content: "Communication Design";
+.somerb::before, .inspace::before, .remixtype::before, .infodes1::before{
     position: absolute;
     display: inline-block;
     font-size: 13px;
     writing-mode: vertical-lr;
     right: -25px;
+}
+
+.somerb::before{
+    content: "Communication Design";
 }
 
 .inspace::before{
     content: "Art Direction";
-    position: absolute;
-    display: inline-block;
-    font-size: 13px;
-    writing-mode: vertical-lr;
-    right: -25px;
 }
 
 .remixtype::before{
     content: "Typography";
-    position: absolute;
-    display: inline-block;
-    font-size: 13px;
-    writing-mode: vertical-lr;
-    right: -25px;
 }
 
 .infodes1::before{
     content: "Information Design";
-    position: absolute;
-    display: inline-block;
-    font-size: 13px;
-    writing-mode: vertical-lr;
-    right: -25px;
 }
 
 .title-wrap{
@@ -258,7 +244,7 @@ wrapper {
 }
 
 #infodes1 .title h1{
-    font-size: calc(1.5rem + 2vw);
+    font-size: calc(1rem + 2.2vw);
 }
 
 .title p{
@@ -303,12 +289,6 @@ hr{
     margin: 0 150px 0 4.5rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-}
-
-@media (max-width: 400px) {
-    .casestudy {
-        display: block;
-    }
 }
 
 .side{
@@ -572,61 +552,42 @@ hr{
     position: relative;
 }
 
-
-
-#lost-in-space::before{
-    content: "Lost In Space";
-    display: inline-block;
-    position: absolute;
-    writing-mode: vertical-lr;
-    right: -1.5rem;
-    color: black;
-}
-
-#somewhere::before{
-    content: "Somewhere Over the Rainbow";
-    display: inline-block;
-    position: absolute;
-    writing-mode: vertical-lr;
-    right: -1.5rem;
-    color: black;
-}
-
-#remix-type::before{
-    content: "Remix Type";
-    display: inline-block;
-    position: absolute;
-    writing-mode: vertical-lr;
-    right: -1.5rem;
-    color: black;
-}
-
-#info-heritage::before{
-    content: "Untitled";
-    display: inline-block;
-    position: absolute;
-    writing-mode: vertical-lr;
-    right: -1.5rem;
-    color: black;
-}
-
 #remixtype .links a::before{
     color: white;
 }
 
+.links div a::before{
+    display: inline-block;
+    position: absolute;
+    writing-mode: vertical-lr;
+    right: -1.5rem;
+    color: black;
+}
 
+#lost-in-space::before{
+    content: "Lost In Space";
+}
+
+#somewhere::before{
+    content: "Somewhere Over the Rainbow";
+}
+
+#remix-type::before{
+    content: "Remix Type";
+}
+
+#info-heritage::before{
+    content: "Untitled";
+}
 
 .links a img{
     width: 350px;
     height: auto;
     margin-bottom: 1rem;
 }
-
-
 /*End of links */
 
 /* Lost in Space */
-
 #inspace .title-wrap a{
     margin-top: 175px;
 }
@@ -669,7 +630,10 @@ hr{
 
 .modal{
     cursor: zoom-in;
-    -webkit-animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both;animation:fade-in-bck .5s cubic-bezier(.785,.135,.15,.86) both;
+}
+
+.modal-exit{
+    -webkit-animation:fade-in .5s cubic-bezier(.25,.46,.45,.94) both;animation:fade-in .5s cubic-bezier(.25,.46,.45,.94) both
 }
 
 img.modal-active{
@@ -686,7 +650,7 @@ img.modal-active{
     max-height: 90%!important;
     width: auto!important;
     height: auto!important;
-    -webkit-animation:fade-in-bottom .6s cubic-bezier(.86,0.000,.07,1.000) both;animation:fade-in-bottom .6s cubic-bezier(.86,0.000,.07,1.000) both;
+    -webkit-animation:fade-in-bottom .5s cubic-bezier(.215,.61,.355,1.000) both;animation:fade-in-bottom .5s cubic-bezier(.215,.61,.355,1.000) both
 }
 
 .modal-bg{
@@ -711,7 +675,7 @@ img.modal-active{
     height: 100vh;
 }
 
-@-webkit-keyframes fade-in-bck{0%{-webkit-transform:translateZ(80px);transform:translateZ(80px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes fade-in-bck{0%{-webkit-transform:translateZ(80px);transform:translateZ(80px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
 
 @-webkit-keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 

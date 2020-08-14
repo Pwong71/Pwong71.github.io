@@ -1,13 +1,13 @@
 /*eslint-env browser*/
 window.onload = () =>{
 //initiates scroll reveal
-ScrollReveal().reveal('.content h1', {distance: '100px', origin: 'bottom', viewFactor: 0.8, duration: 700});
-ScrollReveal().reveal('.content img', {distance: '100px', origin: 'bottom', viewFactor: 0.8, duration: 700});
+ScrollReveal().reveal('.content h1', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300});
+ScrollReveal().reveal('.modal', {distance: '75px', origin: 'bottom', viewFactor: 0.5, duration: 700, delay: 200});
+ScrollReveal().reveal('.main-carousel', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300})
 ScrollReveal().reveal('.links',{distance: '100px', origin:'left', duration:500, reset:true});
 
 let sideItem = document.querySelectorAll('.side span');
 let conTent = document.querySelectorAll('.content');
-    
 //scroll event
 window.onscroll = () => {
     //moves a sidebar tab when the corresponding content section is in view
@@ -19,17 +19,23 @@ window.onscroll = () => {
         }
     }
    //changes bg color when banner is in viewport
-    let bannerScr = document.querySelector('.banner').getBoundingClientRect();
-    if ((bannerScr.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr.bottom > 0) || (bannerScr.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr.top < 0)){
-        document.body.style.backgroundColor = "";
-    } else {
-        document.body.style.backgroundColor = "black";
-    } 
-    let bannerScr2 = document.querySelector('.banner2').getBoundingClientRect();
-    if ((bannerScr2.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr2.bottom > 0) || (bannerScr2.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr2.top < 0)){
-        document.body.className = "";
-    } else {
-        document.body.className = "darken";
+    let bannerScr = document.querySelector('.banner');
+    if (bannerScr){
+        bannerScr = bannerScr.getBoundingClientRect();
+        if ((bannerScr.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr.bottom > 0) || (bannerScr.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr.top < 0)){
+            document.body.style.backgroundColor = "";
+        } else {
+            document.body.style.backgroundColor = "black";
+        } 
+    }
+    let bannerScr2 = document.querySelector('.banner2');
+    if (bannerScr2){
+        bannerScr2 = bannerScr2.getBoundingClientRect();
+        if ((bannerScr2.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr2.bottom > 0) || (bannerScr2.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr2.top < 0)){
+            document.body.className = "";
+        } else {
+            document.body.className = "darken";
+        }
     }
 }
 
@@ -47,9 +53,11 @@ modalImg.forEach(moda => {
         if (moda.className.match('modal-active')){
             modalBg.classList.remove('modal-active');
             moda.classList.remove('modal-active');
+            setTimeout(() => moda.classList.remove('modal-exit'), 550);
         } else{
             modalBg.classList.add('modal-active');
             moda.classList.add('modal-active');
+            moda.classList.add('modal-exit');
         }
     })
     modalBg.addEventListener('click', () => {
