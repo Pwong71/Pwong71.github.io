@@ -173,10 +173,14 @@ wrapper {
 
 /*START of wrapper1*/
 .wrapper1{
-    margin: calc(5vw + 50px) 150px 0 4.5rem;
+    padding: calc(5vw + 50px) 150px 0 4.5rem;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+}
+
+#infodes1 .wrapper1{
+    background-color: #eeeeee;
 }
 
 .front-img{
@@ -264,7 +268,7 @@ hr{
 
 #remixtype hr{
     background-color: white;
-    width: 315px;
+    width: 230px;
 }
 
 #infodes1 hr{
@@ -286,9 +290,13 @@ hr{
 
 /*START of casestudy*/
 .casestudy{
-    margin: 0 150px 0 4.5rem;
+    padding: 0 150px 0 4.5rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+}
+
+#infodes1 .casestudy{
+    background-color: #eeeeee;
 }
 
 .side{
@@ -425,10 +433,10 @@ hr{
 /*start of carousel*/
 .main-carousel{
     margin-bottom: 25vh;
-    width: 32.5vw;
-    max-width: 585px;
-    height: 41.7vw;
-    max-height: 750px;
+    width: 39vw;
+    max-width: 682.5px;
+    height: 50vw;
+    max-height: 875px;
 }
 
 .carousel-2{
@@ -440,6 +448,14 @@ hr{
 }
 
 .carousel-3{
+    width: 100%;
+    max-width: 100%;
+    max-height: auto;
+    height: auto;
+    margin-bottom: 15vh;
+}
+
+.carousel-4{
     width: 100%;
     max-width: 100%;
     max-height: auto;
@@ -460,10 +476,18 @@ hr{
     background: none;
 }
 
+.carousel-2 .flickity-button{
+    top: 101.5%;
+} 
+
 #remixtype .flickity-button{
-    top: 103.5%;
+    top: 104%;
     color: white;
 }
+
+.carousel-4 .flickity-button{
+    top: 104%;
+} 
 
 .next{
     right: 0!important;
@@ -481,7 +505,15 @@ hr{
     right: 0;
 }
 
+.carousel-2 .indicator{
+    top: 100%;
+}
+
 #remixtype .indicator{
+    top: 102%;
+}
+
+.carousel-4 .indicator{
     top: 102%;
 }
 /*end of carousel*/
@@ -520,9 +552,14 @@ hr{
     width: auto;
     height: auto;
     justify-content: center;
-    margin: 2rem;
     padding-bottom: 10rem;
     padding-top: 7rem;
+    z-index: 1;
+    margin-bottom: 100vh;
+}
+
+#infodes1 .links{
+    background-color: #eeeeee;
 }
 
 .links h1{
@@ -560,7 +597,7 @@ hr{
     display: inline-block;
     position: absolute;
     writing-mode: vertical-lr;
-    right: -1.5rem;
+    right: -1.75rem;
     color: black;
 }
 
@@ -577,7 +614,7 @@ hr{
 }
 
 #info-heritage::before{
-    content: "Untitled";
+    content: "Visualization: Toronto Neighborhoods";
 }
 
 .links a img{
@@ -588,8 +625,16 @@ hr{
 /*End of links */
 
 /* Lost in Space */
+#comdes .title-wrap a{
+    margin-top: 120px;
+}
+
 #inspace .title-wrap a{
-    margin-top: 175px;
+    margin-top: 200px;
+}
+
+#infodes1 .title-wrap a{
+    margin-top: 170px;
 }
 
 #one-l{
@@ -616,7 +661,7 @@ hr{
     height: auto;
 }
 
-#two-l img, #three-l img, #four-l img{
+#two-l img, #three-l img:not(.carousel-cell), #four-l img{
     width: 100%;
     height: auto;
     margin-bottom: 100px;
@@ -708,11 +753,19 @@ img.modal-active{
 footer{
     display: grid;
     grid-template-columns: 50% 50%;
-    padding: 300px 0px 275px 0px;
     justify-items: center;
     width: 100%;
     margin: 0 auto; 
     background-color: #99ad91;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    height: 100vh;
+    align-items: center;
+}
+
+#remixtype footer{
+    color: black;
 }
 
 footer > div:first-of-type{
@@ -756,7 +809,7 @@ footer a{
 }
 
 #remixtype footer a{
-    color: white;
+    color: black;
 }
 
 footer > div > div{
