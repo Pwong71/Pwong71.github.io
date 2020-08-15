@@ -23,18 +23,18 @@ window.onscroll = () => {
     if (bannerScr){
         bannerScr = bannerScr.getBoundingClientRect();
         if ((bannerScr.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr.bottom > 0) || (bannerScr.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr.top < 0)){
-            document.body.style.backgroundColor = "";
+            document.querySelector('.casestudy').style.backgroundColor = "";
         } else {
-            document.body.style.backgroundColor = "black";
+            document.querySelector('.casestudy').style.backgroundColor = "black";
         } 
     }
     let bannerScr2 = document.querySelector('.banner2');
     if (bannerScr2){
         bannerScr2 = bannerScr2.getBoundingClientRect();
         if ((bannerScr2.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr2.bottom > 0) || (bannerScr2.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr2.top < 0)){
-            document.body.className = "";
+            document.querySelector('.casestudy').classList.remove('darken');
         } else {
-            document.body.className = "darken";
+            document.querySelector('.casestudy').classList.add('darken');
         }
     }
 }

@@ -151,7 +151,6 @@ wrapper {
     box-sizing: border-box;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 15px;
-    transition: background .4s linear;
 }
 
 #inspace{
@@ -177,6 +176,18 @@ wrapper {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+}
+
+#comdes .wrapper1{
+    background-color: #d1d1c5;
+}
+
+#inspace .wrapper1{
+    background-color: #d6d4d4;
+}
+
+#remixtype .wrapper1{
+    background-color: black;
 }
 
 #infodes1 .wrapper1{
@@ -293,6 +304,19 @@ hr{
     padding: 0 150px 0 4.5rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+    transition: background .4s linear;
+}
+
+#comdes .casestudy{
+    background-color: #d1d1c5;
+}
+
+#inspace .casestudy{
+    background-color: #d6d4d4;
+}
+
+#remixtype .casestudy{
+    background-color: black;
 }
 
 #infodes1 .casestudy{
@@ -556,6 +580,18 @@ hr{
     padding-top: 7rem;
     z-index: 1;
     margin-bottom: 100vh;
+}
+
+#comdes .links{
+    background-color: #d1d1c5;
+}
+
+#inspace .links{
+    background-color: #d6d4d4;
+}
+
+#remixtype .links{
+    background-color: black;
 }
 
 #infodes1 .links{
