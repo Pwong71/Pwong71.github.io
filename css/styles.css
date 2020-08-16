@@ -797,7 +797,7 @@ footer{
     bottom: 0;
     z-index: -1;
     height: 100vh;
-    align-items: center;
+    align-content: center;
 }
 
 #remixtype footer{
