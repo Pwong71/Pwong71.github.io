@@ -40,9 +40,12 @@ window.onscroll = () => {
 }
 
 //updates carousel indicator
-let flkty = new Flickity('.main-carousel');
-flkty.on('change', function(newSlideIndex) {
-    document.querySelector('.indicator span').innerText = newSlideIndex + 1;
+let flicks = document.querySelectorAll('.main-carousel');
+flicks.forEach(flick => {
+    let flkty = new Flickity(flick);
+    flkty.on('change', function(index) {
+        flick.querySelector('.indicator span').innerText = index + 1;
+    });
 });
 
 //click event for modal
