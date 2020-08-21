@@ -11,6 +11,7 @@
 body {
     background-color: #d1d1c5;
     width: 100%;
+    cursor: url(../images/cursor.png), auto;
 }
 
 wrapper {
@@ -18,65 +19,81 @@ wrapper {
     margin: 0 auto;
 }
 
-.navbar {
-  display: flex;
+/*START of navbar*/
+nav{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     border-bottom: .8px solid;
-    
+    position: relative;
 }
 
-.name {
-    font-family: 'Hatton';
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav div{
+}
+
+nav div > a{
+    font-family: 'Hatton', serif;
     font-weight: 400;
-   font-size: 1.3rem;
+    font-size: 1.3rem;
     padding: 1rem;
-    text-decoration: none;
-    color: black;
 }
 
-.name a{
-   text-decoration: none;
-    color: black;
+nav span{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
 }
 
-.navbar-links ul {
-   margin: 0;
-    padding: 0;
-    display: flex;  
-    
-}
-
-.navbar-links li{
+nav span ul{
+    position: absolute;
+    left: 0;
     list-style: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem; 
+    width: 400px;
+    border: .8px solid;
+    background: #d1d1c5;
+    display: none;
 }
 
-.navbar-links li a{
-    color: black;
-    text-decoration: none;
+nav > div span:hover ul{
+    display: block;
+}
+
+nav span ul li{
+    border: .8px solid;
+}
+
+nav span a{
+    display: block;
+    padding: 1rem;
+}
+
+nav span ul li:first-of-type{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+nav > ul{
+    list-style: none;
+    display: flex;
+}
+
+nav > ul a{
     padding: 1.3rem;
     display: block;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 1rem;   
+    font-size: 1rem; 
 }
+/*END of navbar*/
 
-.toggle-button {
-   position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: black;
-    border-radius: 5px;
-}
 
 .header {
     font-size: 3.5rem;
@@ -107,7 +124,8 @@ wrapper {
 
 .work a {
     display: inline-block;
-    position: relative;   
+    position: relative; 
+    cursor: url(../images/hover.png), auto;
 }
 
 .work a h1 {
@@ -122,12 +140,12 @@ wrapper {
     color: #434343;
     font-size: .8rem;
     transition: .3s ease;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 .work a:hover h1 {
     opacity: 1;
-    right: 3.5%;
+    right: 4%;
 }
 
 .work::-webkit-scrollbar {
@@ -234,6 +252,7 @@ wrapper {
 .title-wrap{
     margin-top: calc(2vw + 50px);
     height: auto;
+    position: relative;
 }
 
 .title{
@@ -268,7 +287,7 @@ wrapper {
 
 hr{
     margin: 10px 0px 10px 0px;
-    height: 0.5px;
+    min-height: 1px;
     width: 270px;
     background-color: black;
 }
@@ -287,17 +306,14 @@ hr{
 }
 
 .title-wrap a{
-    margin-top: 100px;
     display: block;
     text-decoration: none;
     color: black;
+    position: absolute;
+    bottom: 320px;
 }
 
-#infodes1 .title-wrap a{
-    margin-top: 130px;
-}
 /*END of wrapper1*/
-
 
 /*START of casestudy*/
 .casestudy{
@@ -487,6 +503,14 @@ hr{
     margin-bottom: 15vh;
 }
 
+.carousel-5{
+    width: 100%;
+    max-width: 100%;
+    max-height: auto;
+    height: auto;
+    margin-bottom: 5vh;
+}
+
 .carousel-cell{
     display: block;
     width: 100%;
@@ -513,6 +537,10 @@ hr{
     top: 104%;
 } 
 
+.carousel-5 .flickity-button{
+    top: 104%;
+}
+
 .next{
     right: 0!important;
 }
@@ -538,6 +566,10 @@ hr{
 }
 
 .carousel-4 .indicator{
+    top: 102%;
+}
+
+.carousel-5 .indicator{
     top: 102%;
 }
 /*end of carousel*/
@@ -623,6 +655,7 @@ hr{
     height: auto;
     width: auto;
     position: relative;
+    cursor: url(../images/hover.png), auto;
 }
 
 #remixtype .links a::before{
@@ -661,17 +694,6 @@ hr{
 /*End of links */
 
 /* Lost in Space */
-#comdes .title-wrap a{
-    margin-top: 120px;
-}
-
-#inspace .title-wrap a{
-    margin-top: 200px;
-}
-
-#infodes1 .title-wrap a{
-    margin-top: 170px;
-}
 
 #one-l{
     height: 30vh;
@@ -710,7 +732,7 @@ hr{
 }
 
 .modal{
-    cursor: zoom-in;
+    cursor: url(../images/hover.png), auto;
 }
 
 .modal-exit{
@@ -718,7 +740,7 @@ hr{
 }
 
 img.modal-active{
-    cursor: zoom-out;
+    cursor: url(../images/exit.png), auto;
     z-index: 1;
     display: block;
     position: fixed;
@@ -775,7 +797,6 @@ img.modal-active{
 }
 
 #remixtype .title-wrap a{
-    margin-top: 175px;
     color: white;
 }
 
@@ -785,6 +806,16 @@ img.modal-active{
     margin-bottom: 100px;
 }
 /*END of Remix Type*/
+
+/*START of Info Des*/
+#one-i img:not(.carousel-cell), #two-i img:not(.carousel-cell), #three-i img:not(.carousel-cell), #four-i img:not(.carousel-cell), #five-i img:not(.carousel-cell){
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+}
+/*END of Info Des*/
+
+
 
 footer{
     display: grid;
@@ -842,6 +873,7 @@ footer a{
     font-family: "Telegraf", sans-serif;
     color: black;
     display: block;
+    cursor: url(../images/hover.png), auto;
 }
 
 #remixtype footer a{
