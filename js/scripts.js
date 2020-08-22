@@ -24,8 +24,10 @@ window.onscroll = () => {
         bannerScr = bannerScr.getBoundingClientRect();
         if ((bannerScr.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr.bottom > 0) || (bannerScr.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr.top < 0)){
             document.querySelector('.casestudy').style.backgroundColor = "";
+            document.querySelector('nav').style.opacity = "1";
         } else {
             document.querySelector('.casestudy').style.backgroundColor = "black";
+            document.querySelector('nav').style.opacity = "0";
         } 
     }
     let bannerScr2 = document.querySelector('.banner2');
@@ -33,8 +35,10 @@ window.onscroll = () => {
         bannerScr2 = bannerScr2.getBoundingClientRect();
         if ((bannerScr2.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr2.bottom > 0) || (bannerScr2.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr2.top < 0)){
             document.querySelector('.casestudy').classList.remove('darken');
+            document.querySelector('nav').classList.remove('darken');
         } else {
             document.querySelector('.casestudy').classList.add('darken');
+            document.querySelector('nav').classList.add('darken');
         }
     }
 }

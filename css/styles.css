@@ -21,77 +21,86 @@ wrapper {
 
 /*START of navbar*/
 nav{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem; 
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
     border-bottom: .8px solid;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    transition: .4s linear;
+}
+
+nav, nav div ul{
+    background-color: #d1d1c5;
+}
+
+#inspace nav, #inspace nav div ul{
+    background-color: #d6d4d4;
+}
+
+#remixtype nav, #remixtype nav div ul{
+    background-color: black;
+}
+
+#infodes1 nav, #infodes1 nav div ul{
+    background-color: #eeeeee;
 }
 
 nav a{
-    text-decoration: none;
     color: black;
+    display: inline-block;
+    padding: 1.3rem;
+    vertical-align: middle;
+    text-decoration: none;
+    cursor: url(../images/hover.png), auto;
 }
 
-nav div{
+#remixtype nav a{
+    color: white;
 }
 
 nav div > a{
     font-family: 'Hatton', serif;
-    font-weight: 400;
     font-size: 1.3rem;
-    padding: 1rem;
+    padding: 1.3rem 0 1.3rem 1.3rem;
 }
 
 nav span{
+    padding: 15px 10px;
     position: relative;
-    cursor: pointer;
     display: inline-block;
 }
 
-nav span ul{
-    position: absolute;
-    left: 0;
-    list-style: none;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1rem; 
-    width: 400px;
-    border: .8px solid;
-    background: #d1d1c5;
-    display: none;
-}
-
-nav > div span:hover ul{
-    display: block;
-}
-
-nav span ul li{
-    border: .8px solid;
-}
-
-nav span a{
-    display: block;
-    padding: 1rem;
-}
-
-nav span ul li:first-of-type{
-    font-size: 1.5rem;
-    padding: 1rem;
-}
-
-nav > ul{
+nav ul{
     list-style: none;
     display: flex;
 }
 
-nav > ul a{
-    padding: 1.3rem;
-    display: block;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1rem; 
+nav div ul{
+    display: none;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    border: .8px solid;
+    z-index: 3;
 }
+
+nav div li:first-of-type{
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-bottom: .8px solid;
+}
+
+nav > div span:hover ul{
+    display: block;
+    -webkit-animation:dropdown .3s cubic-bezier(.215,.61,.355,1.000) both;animation:dropdown .3s cubic-bezier(.215,.61,.355,1.000) both;
+}
+
+@-webkit-keyframes dropdown{0%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes dropdown{0%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 /*END of navbar*/
 
 
@@ -186,6 +195,10 @@ nav > ul a{
 
 .darken{
     background-color: black!important;
+}
+
+nav.darken{
+    opacity: 0;
 }
 
 /*START of wrapper1*/
@@ -703,6 +716,7 @@ hr{
 }
 
 .banner2{
+    z-index: 3;
     position: absolute;
     right: -150px;
     align-items: center;
@@ -741,7 +755,7 @@ hr{
 
 img.modal-active{
     cursor: url(../images/exit.png), auto;
-    z-index: 1;
+    z-index: 4;
     display: block;
     position: fixed;
     top: 0;
@@ -768,7 +782,7 @@ img.modal-active{
     display: block;
     cursor: zoom-out;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     bottom: 0;
     left: 0;
