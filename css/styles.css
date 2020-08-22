@@ -28,8 +28,6 @@ nav{
     justify-content: space-between;
     align-items: center;
     border-bottom: .8px solid;
-    position: sticky;
-    top: 0;
     z-index: 2;
     transition: .4s linear;
 }
@@ -53,7 +51,7 @@ nav, nav div ul{
 nav a{
     color: black;
     display: inline-block;
-    padding: 1.3rem;
+    padding: 1rem;
     vertical-align: middle;
     text-decoration: none;
     cursor: url(../images/hover.png), auto;
@@ -73,6 +71,7 @@ nav span{
     padding: 15px 10px;
     position: relative;
     display: inline-block;
+    transition: .3s cubic-bezier(.215,.61,.355,1.000);
 }
 
 nav ul{
@@ -90,14 +89,28 @@ nav div ul{
 }
 
 nav div li:first-of-type{
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
+    padding: 1.3rem 1.3rem;
     border-bottom: .8px solid;
 }
 
-nav > div span:hover ul{
+nav div li:not(:first-of-type){
+    border-bottom: .8px solid;
+    font-family: 'Hatton', serif;
+    font-weight: 100;
+}
+
+nav div li:last-of-type{
+    border-bottom: none;
+}
+
+nav > div:hover > ul{
     display: block;
     -webkit-animation:dropdown .3s cubic-bezier(.215,.61,.355,1.000) both;animation:dropdown .3s cubic-bezier(.215,.61,.355,1.000) both;
+}
+
+nav > div:hover > span{
+    transform: rotate(180deg);
+    transform-origin: center;
 }
 
 @-webkit-keyframes dropdown{0%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes dropdown{0%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
@@ -170,7 +183,7 @@ nav > div span:hover ul{
     margin-left: 6rem;
     margin-bottom: 3rem;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 1rem; 
+    font-size: .8rem; 
 }
 /*END of Index*/
 
@@ -263,13 +276,13 @@ nav.darken{
 }
 
 .title-wrap{
-    margin-top: calc(2vw + 50px);
+    margin-top: calc(2vw + 10px);
     height: auto;
     position: relative;
 }
 
 .title{
-    top: calc(2vw + 50px);
+    top: calc(2vw + 10px);
     position: sticky;
     background-color: #d1d1c5;
     z-index: 1;
@@ -288,6 +301,10 @@ nav.darken{
     font-size: calc(2rem + 2vw);
     margin-bottom: 25px;
     font-weight: 500;
+}
+
+#comdes .title h1{
+    font-size: calc(1rem + 2.2vw);
 }
 
 #infodes1 .title h1{
@@ -323,7 +340,7 @@ hr{
     text-decoration: none;
     color: black;
     position: absolute;
-    bottom: 320px;
+    bottom: 400px;
 }
 
 /*END of wrapper1*/
