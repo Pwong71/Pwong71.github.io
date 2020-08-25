@@ -8,14 +8,27 @@ ScrollReveal().reveal('.links div',{distance: '100px', origin:'left', duration:5
 
 let sideItem = document.querySelectorAll('.side span');
 let conTent = document.querySelectorAll('.content');
+let oldScroll = 0;
+let navBar = document.querySelector('nav');
 //scroll event
 window.onscroll = () => {
+    //hides the navbar when the window is scrolled down and vice versa
+    let newScroll = document.documentElement.scrollTop || document.body.scrollTop || window.scrollY;
+    if (newScroll > 0 && newScroll >= oldScroll){
+        oldScroll = newScroll;
+        navBar.style.top = '-100px';
+    } else {
+        oldScroll = newScroll;
+        navBar.style.top = '0';
+    }
     //moves a sidebar tab when the corresponding content section is in view
-    for (let i = 0; i < 5; i++){
-        if ((conTent[i].getBoundingClientRect().top >= (window.innerHeight/1.35 || document.documentElement.clientHeight/1.35) && conTent[i].getBoundingClientRect().bottom > 0) || (conTent[i].getBoundingClientRect().bottom <= -100 && conTent[i].getBoundingClientRect().top < 0)){
-            sideItem[i].style.flexGrow = "0";
-        } else {
-            sideItem[i].style.flexGrow = "1";
+    if (conTent[0] && sideItem[0]){
+        for (let i = 0; i < 5; i++){
+            if ((conTent[i].getBoundingClientRect().top >= (window.innerHeight/1.35 || document.documentElement.clientHeight/1.35) && conTent[i].getBoundingClientRect().bottom > 0) || (conTent[i].getBoundingClientRect().bottom <= -100 && conTent[i].getBoundingClientRect().top < 0)){
+                sideItem[i].style.flexGrow = "0";
+            } else {
+                sideItem[i].style.flexGrow = "1";
+            }
         }
     }
    //changes bg color when banner is in viewport
@@ -24,8 +37,10 @@ window.onscroll = () => {
         bannerScr = bannerScr.getBoundingClientRect();
         if ((bannerScr.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr.bottom > 0) || (bannerScr.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr.top < 0)){
             document.querySelector('.casestudy').style.backgroundColor = "";
+            navBar.style.opacity = "1";
         } else {
             document.querySelector('.casestudy').style.backgroundColor = "black";
+            navBar.style.opacity = "0";
         } 
     }
     let bannerScr2 = document.querySelector('.banner2');
@@ -33,8 +48,10 @@ window.onscroll = () => {
         bannerScr2 = bannerScr2.getBoundingClientRect();
         if ((bannerScr2.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr2.bottom > 0) || (bannerScr2.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr2.top < 0)){
             document.querySelector('.casestudy').classList.remove('darken');
+            navBar.classList.remove('darken');
         } else {
             document.querySelector('.casestudy').classList.add('darken');
+            navBar.classList.add('darken');
         }
     }
 }
