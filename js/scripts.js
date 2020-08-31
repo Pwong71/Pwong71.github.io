@@ -74,16 +74,20 @@ modalImg.forEach(moda => {
             modalBg.classList.remove('modal-active');
             moda.classList.remove('modal-active');
             setTimeout(() => moda.classList.remove('modal-exit'), 550);
+            bodyScrollLock.enableBodyScroll(moda);
         } else{
             modalBg.classList.add('modal-active');
             moda.classList.add('modal-active');
             moda.classList.add('modal-exit');
+            bodyScrollLock.disableBodyScroll(moda, {reserveScrollBarGap: true,});
+            document.querySelector('footer').style.backgroundColor = "transparent";
         }
     })
     modalBg.addEventListener('click', () => {
         if(moda.className.match('modal-active')){
             modalBg.classList.remove('modal-active');
             moda.classList.remove('modal-active');
+            bodyScrollLock.enableBodyScroll(moda);
         }
     })
 })
