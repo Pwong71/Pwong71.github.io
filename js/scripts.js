@@ -75,6 +75,7 @@ modalImg.forEach(moda => {
             moda.classList.remove('modal-active');
             setTimeout(() => moda.classList.remove('modal-exit'), 550);
             bodyScrollLock.enableBodyScroll(moda);
+            document.querySelector('footer').style.backgroundColor = "";
         } else{
             modalBg.classList.add('modal-active');
             moda.classList.add('modal-active');
@@ -88,6 +89,7 @@ modalImg.forEach(moda => {
             modalBg.classList.remove('modal-active');
             moda.classList.remove('modal-active');
             bodyScrollLock.enableBodyScroll(moda);
+            document.querySelector('footer').style.backgroundColor = "";
         }
     })
 })
