@@ -1,0 +1,152 @@
+@charset "UTF-8";
+* { 
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+}
+
+body {
+    width: 100%;
+    cursor: url(../images/cursor.png), auto;
+}
+
+#newyork{
+    background-color: #475449;
+}
+
+/*START of navbar*/
+nav{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem; 
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .8px solid;
+    z-index: 2;
+    transition: .4s linear;
+    position: sticky;
+    top: 0;
+}
+
+nav, nav div ul{
+    background-color: #d1d1c5;
+}
+
+nav a{
+    color: black;
+    display: inline-block;
+    padding: 1rem;
+    vertical-align: middle;
+    text-decoration: none;
+    cursor: url(../images/hover.png), auto;
+}
+
+nav div > a{
+    font-family: 'Hatton', serif;
+    font-size: 1.3rem;
+    padding: 1.3rem 0 1.3rem 1.3rem;
+}
+
+nav span{
+    padding: 15px 10px;
+    position: relative;
+    display: inline-block;
+    transition: .3s cubic-bezier(.215,.61,.355,1.000);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav div ul{
+    display: none;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    border: .8px solid;
+    z-index: 3;
+}
+
+nav div li:first-of-type{
+    padding: 1.3rem 1.3rem;
+    border-bottom: .8px solid;
+}
+
+nav div li:not(:first-of-type){
+    border-bottom: .8px solid;
+    font-family: 'Hatton', serif;
+    font-weight: 100;
+}
+
+nav div li:last-of-type{
+    border-bottom: none;
+}
+
+nav > div:hover > ul{
+    display: block;
+    -webkit-animation:dropdown .3s cubic-bezier(.215,.61,.355,1.000) both;animation:dropdown .3s cubic-bezier(.215,.61,.355,1.000) both;
+}
+
+nav > div:hover > span{
+    transform: rotate(180deg);
+    transform-origin: center;
+}
+
+@-webkit-keyframes dropdown{0%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes dropdown{0%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+/*END of navbar*/
+
+/* Start of New York */
+#newyork nav{
+    opacity: 0;
+}
+
+.play-intro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Hatton', serif;
+    color: #F78D8D;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.play-intro h1{
+    font-size: 8rem;
+    animation:
+    typing 3s steps(40, end),
+    cursor .75s step-end 3;
+}
+.play-intro h3{
+    width: 0;
+    font-size: 4rem;
+    animation:
+    typing-small 2s steps(30, end) 3s forwards,
+    cursor .75s step-end 3s;
+}
+
+.play-intro *{
+    font-weight: 300; 
+    margin: 0 auto;
+    overflow: hidden;
+    border-right: 3px solid transparent;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+@keyframes typing {from{ width: 0 } to{ width: 50% }}
+@keyframes typing-small {from{ width: 0 } to{ width: 15% }}
+
+@keyframes cursor {
+  from, to { border-color: #F78D8D }
+  50% { border-color: transparent; }
+}
+/* End of New York */

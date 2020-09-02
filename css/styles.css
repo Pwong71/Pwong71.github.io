@@ -50,6 +50,10 @@ nav, nav div ul{
     background-color: #eeeeee;
 }
 
+#play nav, #play nav div ul{
+    background-color: black;
+}
+
 nav a{
     color: black;
     display: inline-block;
@@ -59,7 +63,7 @@ nav a{
     cursor: url(../images/hover.png), auto;
 }
 
-#remixtype nav a{
+#remixtype nav a, #play nav a{
     color: white;
 }
 
