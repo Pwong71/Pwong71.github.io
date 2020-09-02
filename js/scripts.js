@@ -6,7 +6,7 @@ ScrollReveal().reveal('.modal', {distance: '75px', origin: 'bottom', viewFactor:
 ScrollReveal().reveal('.main-carousel', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300})
 ScrollReveal().reveal('.links div',{distance: '100px', origin:'left', duration:500, reset:true});
     
-var rellax = new Rellax('.parallax img');
+var rellax = new Rellax('.parallax span');
 
 let sideItem = document.querySelectorAll('.side span');
 let conTent = document.querySelectorAll('.content');
