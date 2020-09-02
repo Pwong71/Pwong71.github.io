@@ -203,7 +203,7 @@ nav > div:hover > span{
     background-color: #d6d4d4;
 }
 
-#remixtype{
+#remixtype, #play{
     background-color: black;
     color: white;
 }
