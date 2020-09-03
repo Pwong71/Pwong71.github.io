@@ -14,7 +14,7 @@ body {
 }
 
 #newyork{
-    background-color: #475449;
+    background-color: #043b1f;
 }
 
 /*START of navbar*/
@@ -114,7 +114,7 @@ nav > div:hover > span{
     height: 100vh;
     text-align: center;
     font-family: 'Hatton', serif;
-    color: #F78D8D;
+    color: #ef5252;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -123,15 +123,15 @@ nav > div:hover > span{
 .play-intro h1{
     font-size: calc(9vw + 1.5rem);
     animation:
-    typing 3.5s steps(30, end),
+    typing 3s steps(30, end),
     cursor .75s step-end 3;
 }
 .play-intro h3{
     width: 0;
     font-size: calc(4vw + 1rem);
     animation:
-    typing-small 2s steps(15, end) 3s forwards,
-    cursor .75s step-end 2 3s;
+    typing-small 1.5s steps(15, end) 2s forwards,
+    cursor .75s step-end 2 2s;
 }
 
 .play-intro *{
@@ -147,7 +147,7 @@ nav > div:hover > span{
 @keyframes typing-small {from{ width: 0 } to{ width: calc(16vw + 1rem) }}
 
 @keyframes cursor {
-  from, to { border-color: #F78D8D }
+  from, to { border-color: #ef5252 }
   50% { border-color: transparent; }
 }
 
@@ -159,7 +159,7 @@ nav > div:hover > span{
     height: auto;
     padding: 10%;
     margin-top: 100vh;
-    background-color: #E6E8E6;
+    background-color: #e1e3e1;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -384,7 +384,7 @@ nav > div:hover > span{
 }
 .bg-text:nth-of-type(3){
     bottom: 43%;
-    color: #334A33;
+    color: #292929;
 }
 .bg-text:last-of-type{
     bottom: 27%;
