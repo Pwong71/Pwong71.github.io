@@ -32,8 +32,8 @@ nav{
     top: 0;
 }
 
-nav, nav div ul{
-    background-color: #d1d1c5;
+#newyork nav, #newyork nav div ul{
+    background-color: #E6E8E6;
 }
 
 nav a{
@@ -152,6 +152,7 @@ nav > div:hover > span{
 }
 
 .parallax{
+    overflow: hidden;
     position: relative;
     z-index: 1;
     width: auto;
@@ -165,17 +166,17 @@ nav > div:hover > span{
 
 .parallax span{
     position: relative;
-    display: inline-block;;
+    display: inline-block;
     width: calc(15vw + 4rem);
+    cursor: url(../images/hover.png), auto;
 }
-
 .parallax span::before{
+    z-index: 1;
     position: absolute;
     font-family: 'Hatton', serif;
     font-size: 5vw;
-    font-weight: 300;
+    font-weight: 100;
 }
-
 .parallax span img{
     width: 100%;
     display: block;
@@ -338,7 +339,24 @@ nav > div:hover > span{
     left: -15%;
 }
 
+.parallax span img, .parallax span::before{
+    transition: 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.parallax span:hover{
+    z-index: 1;
+}
+.parallax span:hover img{
+    z-index: 1;
+    transform: scale(1.7);
+    transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.parallax span:hover::before{
+    font-size: 2vw;
+    transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
 .bg-text{
+    pointer-events: none;
     font-family: 'Hatton', serif;
     text-align: center;
     position: absolute;
@@ -346,7 +364,6 @@ nav > div:hover > span{
     right: 0;
     z-index: 1;
 }
-
 .bg-text h1{
     font-size: 9vw;
     font-weight: 300;

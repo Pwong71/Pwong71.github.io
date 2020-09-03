@@ -5,8 +5,11 @@ ScrollReveal().reveal('.content h1', {distance: '75px', origin: 'bottom', viewFa
 ScrollReveal().reveal('.modal', {distance: '75px', origin: 'bottom', viewFactor: 0.5, duration: 700, delay: 200});
 ScrollReveal().reveal('.main-carousel', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300})
 ScrollReveal().reveal('.links div',{distance: '100px', origin:'left', duration:500, reset:true});
-    
+ 
+//initiates parallax library
+if (document.querySelector('.parallax span')){
 var rellax = new Rellax('.parallax span');
+}
 
 let sideItem = document.querySelectorAll('.side span');
 let conTent = document.querySelectorAll('.content');
@@ -19,9 +22,11 @@ window.onscroll = () => {
     if (newScroll > 0 && newScroll >= oldScroll){
         oldScroll = newScroll;
         navBar.style.top = '-100px';
+        navBar.style.opacity = '';
     } else {
         oldScroll = newScroll;
         navBar.style.top = '0';
+        navBar.style.opacity = '1';
     }
     //moves a sidebar tab when the corresponding content section is in view
     if (conTent[0] && sideItem[0]){
