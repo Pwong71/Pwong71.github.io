@@ -51,7 +51,7 @@ nav, nav div ul{
 }
 
 #play nav, #play nav div ul{
-    background-color: black;
+    background-color: transparent;
 }
 
 nav a{
@@ -63,7 +63,7 @@ nav a{
     cursor: url(../images/hover.png), auto;
 }
 
-#remixtype nav a, #play nav a{
+#remixtype nav a{
     color: white;
 }
 
@@ -208,8 +208,19 @@ nav > div:hover > span{
     background: #ffffff;
 }
 
+.blurb{
+    width: auto;
+    height: 60vh;
+    background-image: url(../images/Artboard%205.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: multiply;
+    margin: 6rem;
+}
+
 .arrow {
-    margin: 0 1rem 1rem 1rem;
+    margin: 0 1rem 2rem 1rem;
     font-family: 'IBM Plex Mono', monospace;
     font-size: .8rem; 
 }
@@ -225,9 +236,15 @@ nav > div:hover > span{
     background-color: #d6d4d4;
 }
 
-#remixtype, #play{
+#remixtype{
     background-color: black;
     color: white;
+}
+
+#play{
+    background-image: url(../images/Artboard%204-100.jpg);
+    background-size: cover;
+    background-position: center bottom;
 }
 
 #infodes1{
