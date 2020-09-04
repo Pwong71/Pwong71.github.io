@@ -11,8 +11,6 @@
 body {
     width: 100%;
     cursor: url(../images/cursor.png), auto;
-    background-image: url(images/Artboard%204-100.jpg);
-    background-size: cover;
 }
 
 #newyork{
