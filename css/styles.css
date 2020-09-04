@@ -131,13 +131,17 @@ nav > div:hover > span{
     line-height: 5rem;
 }
 
+#play .header{
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
 .font1{font-family: Hatton}
 .font1{font-weight: 400}
 .font2{font-family: 'Quantico', sans-serif;}
 
 
 .work {
-    margin: 0;
     padding: 0 3rem 0rem 3rem;
     white-space: nowrap;
     overflow-x: scroll; 
@@ -171,23 +175,41 @@ nav > div:hover > span{
     letter-spacing: 1px;
 }
 
+#play .work a h1{
+    color: white;
+}
+
 .work a:hover h1 {
     opacity: 1;
     right: 4%;
 }
 
-.work::-webkit-scrollbar {
-  display: none;
+/* width */
+::-webkit-scrollbar {
+    width: 1.1rem;
+    height: 1.1rem;
 }
-
-.work {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #434343;
+}
+#play::-webkit-scrollbar-thumb, #play *::-webkit-scrollbar-thumb,  #remixtype::-webkit-scrollbar-thumb{
+    background: #bababa;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #8e8e8e;
+}
+#play::-webkit-scrollbar-thumb:hover, #play *::-webkit-scrollbar-thumb:hover,  #remixtype::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
 }
 
 .arrow {
-    margin-left: 6rem;
-    margin-bottom: 3rem;
+    margin: 0 1rem 1rem 1rem;
     font-family: 'IBM Plex Mono', monospace;
     font-size: .8rem; 
 }

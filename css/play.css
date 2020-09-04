@@ -36,6 +36,11 @@ nav{
     background-color: #E6E8E6;
 }
 
+#chipo nav, #chipo nav div ul{
+    background-color: #F2F1EC;
+}
+
+
 nav a{
     color: black;
     display: inline-block;
@@ -392,3 +397,184 @@ nav > div:hover > span{
     color: white;
 }
 /* End of New York */
+
+/*Start of Summer 2019*/
+#chipo nav{
+    opacity: 0;
+}
+
+#chipo-intro{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    background-color: #EFEAD6;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+#chipo-intro p{
+    position: absolute;
+    padding: 1rem 1rem;
+    bottom: 7%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    font-weight: bolder;
+}
+#chipo-intro div{
+    margin-bottom: 5%;
+    width: calc(4rem + 40vw);
+    height: calc(3rem + 30vw);
+    background-image: url(../images/chipo/summer1.jpg);
+    background-size: cover;
+    position: relative;
+}
+#chipo-intro h1, #chipo-intro h3{
+    position: absolute;
+    font-family: 'Hatton', serif;
+    font-size: calc(1rem + 7vw);
+    font-weight: 300;
+    color: #FB9E18;
+}
+#chipo-intro h1{
+    top: -8%;
+    left: 0;
+    width: 100%;
+    -webkit-animation:vibrate-3 29s linear infinite both;animation:vibrate-3 29s linear infinite both;
+}
+#chipo-intro h3{
+    bottom: -12%;
+    left: -15%;
+    right: 0;
+    margin: 0 auto;
+    width: 130%;
+    -webkit-animation:vibrate-3 30s linear infinite reverse both;animation:vibrate-3 30s linear infinite reverse both;
+}
+
+@-webkit-keyframes vibrate-3{0%{-webkit-transform:translate(0);transform:translate(0)}10%{-webkit-transform:translate(-7px,-7px);transform:translate(-7px,-7px)}20%{-webkit-transform:translate(7px,-7px);transform:translate(7px,-7px)}30%{-webkit-transform:translate(-7px,7px);transform:translate(-7px,7px)}40%{-webkit-transform:translate(7px,7px);transform:translate(7px,7px)}50%{-webkit-transform:translate(-7px,-7px);transform:translate(-7px,-7px)}60%{-webkit-transform:translate(7px,-7px);transform:translate(7px,-7px)}70%{-webkit-transform:translate(-7px,7px);transform:translate(-7px,7px)}80%{-webkit-transform:translate(-7px,-7px);transform:translate(-7px,-7px)}90%{-webkit-transform:translate(7px,-7px);transform:translate(7px,-7px)}100%{-webkit-transform:translate(0);transform:translate(0)}}@keyframes vibrate-3{0%{-webkit-transform:translate(0);transform:translate(0)}10%{-webkit-transform:translate(-7px,-7px);transform:translate(-7px,-7px)}20%{-webkit-transform:translate(7px,-7px);transform:translate(7px,-7px)}30%{-webkit-transform:translate(-7px,7px);transform:translate(-7px,7px)}40%{-webkit-transform:translate(7px,7px);transform:translate(7px,7px)}50%{-webkit-transform:translate(-7px,-7px);transform:translate(-7px,-7px)}60%{-webkit-transform:translate(7px,-7px);transform:translate(7px,-7px)}70%{-webkit-transform:translate(-7px,7px);transform:translate(-7px,7px)}80%{-webkit-transform:translate(-7px,-7px);transform:translate(-7px,-7px)}90%{-webkit-transform:translate(7px,-7px);transform:translate(7px,-7px)}100%{-webkit-transform:translate(0);transform:translate(0)}}
+
+#chipo-parallax{
+    margin-top: 100vh;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #F2F1EC;
+    display: flex;
+}
+#chipo-parallax > img{
+    position: sticky;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+#chipo-parallax > div{
+    overflow: hidden;
+    align-self: flex-end;
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+#chipo-parallax > div p{
+    position: absolute;
+    top: calc(97vh - 3rem);
+    width: 50%;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.56rem;
+    line-height: 1rem;
+    font-weight: bolder;
+}
+#chipo-parallax > div h1{
+    margin-top: calc(6% + 4.5rem);
+    font-family: 'Hatton', sans-serif;
+    font-size: 9vw;
+    font-weight: 300;
+    text-align: center;
+    color: #B7CDB9;
+}
+#chipo-parallax span{
+    position: relative;
+    margin: 0 0 50vh 0;
+    width: 50%;
+    height: auto;
+}
+#chipo-parallax span img{
+    width: 100%;
+    display: block;
+}
+#chipo-parallax span:first-of-type{
+    margin: 30vh 0 50vh 0;
+    width: calc(6vw + 4rem);
+    align-self: center;
+}
+#chipo-parallax span:nth-of-type(2){
+    margin: -30vh 0 50vh 0;
+    width: calc(30% + 4rem);
+    align-self: flex-end;
+}
+#chipo-parallax span:nth-of-type(2) img{
+    transform-origin: right;
+}
+#chipo-parallax span:nth-of-type(3){
+    margin: 40vh 0 20vh 0;
+    width: calc(52% + 4rem);
+    align-self: flex-start;
+}
+#chipo-parallax span:nth-of-type(3) img{
+    transform-origin: left;
+}
+#chipo-parallax span:nth-of-type(4){
+    margin: 20vh 0 20vh 0;
+    width: 100%;
+    align-self: flex-start;
+}
+#chipo-parallax span:nth-of-type(4) img{
+    transform-origin: bottom;
+}
+#chipo-parallax span:nth-of-type(5){
+    margin: 70vh 0 50vh 0;
+    width: calc(42% + 4rem);
+    align-self: center;
+}
+#chipo-parallax span:nth-of-type(6){
+    margin: 30vh 0 0 0;
+    width: calc(30% + 4rem);
+    align-self: flex-end;
+}
+#chipo-parallax span:nth-of-type(6) img{
+    transform-origin: right;
+}
+#chipo-parallax span:nth-of-type(7){
+    margin: -150vh 0 50vh 0;
+    width: calc(42% + 4rem);
+    align-self: flex-start;
+}
+#chipo-parallax span:nth-of-type(7) img{
+    transform-origin: left;
+}
+#chipo-parallax span:nth-of-type(8){
+    margin: 110vh 0 0vh 0;
+    width: calc(28% + 4rem);
+    align-self: flex-end;
+    right: 10%;
+}
+
+#chipo-parallax span{
+    transition: 1.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+#chipo-parallax span img{
+    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+#chipo-parallax span img:hover{
+    z-index: 1;
+    transform: scale(1.45);
+    transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+/*End of Summer 2019*/

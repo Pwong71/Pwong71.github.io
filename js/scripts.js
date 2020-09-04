@@ -1,14 +1,17 @@
 /*eslint-env browser*/
 window.onload = () =>{
-//initiates scroll reveal
+//initiate scroll reveal
 ScrollReveal().reveal('.content h1', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300});
 ScrollReveal().reveal('.modal', {distance: '75px', origin: 'bottom', viewFactor: 0.5, duration: 700, delay: 200});
 ScrollReveal().reveal('.main-carousel', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300})
 ScrollReveal().reveal('.links div',{distance: '100px', origin:'left', duration:500, reset:true});
  
-//initiates parallax library
+//initiate parallax library
 if (document.querySelector('.parallax span')){
 var rellax = new Rellax('.parallax span');
+} 
+if (document.querySelector('#chipo-parallax span')){
+var rellax = new Rellax('#chipo-parallax span');
 }
 
 let sideItem = document.querySelectorAll('.side span');
@@ -17,18 +20,24 @@ let oldScroll = 0;
 let navBar = document.querySelector('nav');
 //scroll event
 window.onscroll = () => {
-    //hides the navbar when the window is scrolled down and vice versa
+    //hide the navbar when the window is scrolled down and vice versa
     let newScroll = document.documentElement.scrollTop || document.body.scrollTop || window.scrollY;
     if (newScroll > 0 && newScroll >= oldScroll){
         oldScroll = newScroll;
         navBar.style.top = '-100px';
-        navBar.style.opacity = '';
     } else {
         oldScroll = newScroll;
         navBar.style.top = '0';
-        navBar.style.opacity = '1';
     }
-    //moves a sidebar tab when the corresponding content section is in view
+    //hide the navbar in play case studies
+    if (document.querySelector('#newyork') || document.querySelector('#chipo')){
+        if (document.documentElement.scrollTop < window.innerHeight || window.scrollY < window.innerHeight){
+            navBar.style.opacity = '0';
+        } else {
+            navBar.style.opacity = '1';
+        }
+    }
+    //move a sidebar tab when the corresponding content section is in view
     if (conTent[0] && sideItem[0]){
         for (let i = 0; i < 5; i++){
             if ((conTent[i].getBoundingClientRect().top >= (window.innerHeight/1.35 || document.documentElement.clientHeight/1.35) && conTent[i].getBoundingClientRect().bottom > 0) || (conTent[i].getBoundingClientRect().bottom <= -100 && conTent[i].getBoundingClientRect().top < 0)){
@@ -38,7 +47,7 @@ window.onscroll = () => {
             }
         }
     }
-   //changes bg color when banner is in viewport
+   //change bg color when banner is in viewport
     let bannerScr = document.querySelector('.banner');
     if (bannerScr){
         bannerScr = bannerScr.getBoundingClientRect();
@@ -63,7 +72,7 @@ window.onscroll = () => {
     }
 }
 
-//updates carousel indicator
+//update carousel indicator
 let flicks = document.querySelectorAll('.main-carousel');
 flicks.forEach(flick => {
     let flkty = new Flickity(flick);
