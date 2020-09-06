@@ -10,7 +10,7 @@
 
 body {
     width: 100%;
-    cursor: url(../images/cursor.png), auto;
+    cursor: url(../images/cursor.png) 16 16, auto;
 }
 
 #newyork{
@@ -47,7 +47,7 @@ nav a{
     padding: 1rem;
     vertical-align: middle;
     text-decoration: none;
-    cursor: url(../images/hover.png), auto;
+    cursor: url(../images/hover.png) 16 16, auto;
 }
 
 nav div > a{
@@ -173,7 +173,7 @@ nav > div:hover > span{
     position: relative;
     display: inline-block;
     width: calc(15vw + 4rem);
-    cursor: url(../images/hover.png), auto;
+    cursor: url(../images/hover.png) 16 16, auto;
 }
 .parallax span::before{
     z-index: 1;

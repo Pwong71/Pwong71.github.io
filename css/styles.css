@@ -11,7 +11,7 @@
 body {
     background-color: #d1d1c5;
     width: 100%;
-    cursor: url(../images/cursor.png), auto;
+    cursor: url(../images/cursor.png) 16 16, auto;
 }
 
 wrapper {
@@ -60,7 +60,7 @@ nav a{
     padding: 1rem;
     vertical-align: middle;
     text-decoration: none;
-    cursor: url(../images/hover.png), auto;
+    cursor: url(../images/hover.png) 16 16, auto;
 }
 
 #remixtype nav a{
@@ -157,7 +157,7 @@ nav > div:hover > span{
 .work a {
     display: inline-block;
     position: relative; 
-    cursor: url(../images/hover.png), auto;
+    cursor: url(../images/hover.png) 16 16, auto;
 }
 
 .work a h1 {
@@ -730,7 +730,7 @@ hr{
     height: auto;
     width: auto;
     position: relative;
-    cursor: url(../images/hover.png), auto;
+    cursor: url(../images/hover.png) 16 16, auto;
 }
 
 #remixtype .links a::before{
@@ -808,7 +808,7 @@ hr{
 }
 
 .modal{
-    cursor: url(../images/hover.png), auto;
+    cursor: url(../images/hover.png) 16 16, auto;
 }
 
 .modal-exit{
@@ -816,7 +816,7 @@ hr{
 }
 
 img.modal-active{
-    cursor: url(../images/exit.png), auto;
+    cursor: url(../images/exit.png) 16 16, auto;
     z-index: 4;
     display: block;
     position: fixed;
@@ -949,7 +949,7 @@ footer a{
     font-family: "Telegraf", sans-serif;
     color: black;
     display: block;
-    cursor: url(../images/hover.png), auto;
+    cursor: url(../images/hover.png) 16 16, auto;
 }
 
 #remixtype footer a{
