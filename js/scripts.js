@@ -44,7 +44,7 @@ if (pagePath == '/' || pagePath == '/index.html') {
         document.cookie = "animation=played; path=/";
     }
 };
-//skip animation on user input
+//enable scrolllock again after animation finishes
 if (indexButts) {
     indexButts.addEventListener('animationend', () => {
         bodyScrollLock.enableBodyScroll(document.body);
