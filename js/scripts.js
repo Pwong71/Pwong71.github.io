@@ -18,6 +18,39 @@ let sideItem = document.querySelectorAll('.side span');
 let conTent = document.querySelectorAll('.content');
 let oldScroll = 0;
 let navBar = document.querySelector('nav');
+const pagePath = window.location.pathname;
+let biscuit = document.cookie;
+let indexButts = document.querySelector('#butts');    
+//find page path in cookie
+const cookiePath = name => biscuit.split(';').map(s => s.trim().split('=')).find(([k, v]) => k == name)[1];
+//get current page path before unload
+window.addEventListener('beforeunload', () => {
+    document.cookie = "lastURL=" + pagePath + "; path=/";
+});
+    
+//handle landing butts animation
+if (pagePath == '/' || pagePath == '/index.html') {
+    if (biscuit.includes('played')){
+        //play animation again if index is reloaded
+        if (cookiePath('lastURL') == '/' || cookiePath('lastURL') == '/index.html') {
+            bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
+            indexButts.classList.add('butts-animation');
+        } else {
+            indexButts.classList.remove('butts-animation');
+        }
+    } else {
+        bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
+        indexButts.classList.add('butts-animation');
+        document.cookie = "animation=played; path=/";
+    }
+};
+//skip animation on user input
+if (indexButts) {
+    indexButts.addEventListener('animationend', () => {
+        bodyScrollLock.enableBodyScroll(document.body);
+    });
+};
+    
 //scroll event
 window.onscroll = () => {
     //hide the navbar when the window is scrolled down and vice versa

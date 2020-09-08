@@ -30,23 +30,30 @@ wrapper {
     position: fixed;
     top: 0;
     left: 0;
-    animation: butt-ani 5s steps(1, end) forwards, slide-up 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6.5s forwards;
 }
 
+.butts-animation{
+    animation: butt-ani 3s steps(1, end) forwards, slide-up 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4s forwards;
+}
 @keyframes butt-ani {
     0%{
+        background-color: #d4d3ca;
         background-image: url(../images/butt1.jpg);
     }
     25%{
+        background-color: #cda09b;
         background-image: url(../images/butt2.jpg);
     }
     50%{
+        background-color: #8ca3c9;
         background-image: url(../images/butt3.jpg);
     }
     75%{
+        background-color: #919e55;
         background-image: url(../images/butt4.jpg);
     }
     100%{
+        background-color: #212121;
         background-image: url(../images/butt5.jpg);
     }
 }
