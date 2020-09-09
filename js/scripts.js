@@ -36,7 +36,7 @@ if (pagePath == '/' || pagePath == '/index.html') {
             bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
             indexButts.classList.add('butts-animation');
         } else {
-            indexButts.classList.remove('butts-animation');
+            indexButts.style.top = "-100%";
         }
     } else {
         bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
