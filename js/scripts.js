@@ -8,10 +8,13 @@ ScrollReveal().reveal('.links div',{distance: '100px', origin:'left', duration:5
  
 //initiate parallax library
 if (document.querySelector('.parallax span')){
-var rellax = new Rellax('.parallax span');
+    var rellax = new Rellax('.parallax span');
 } 
 if (document.querySelector('#chipo-parallax span')){
-var rellax = new Rellax('#chipo-parallax span');
+    var rellax = new Rellax('#chipo-parallax span');
+}
+if (document.querySelector('#charles-parallax span')){
+    var rellax = new Rellax('#charles-parallax span');
 }
 
 let sideItem = document.querySelectorAll('.side span');
@@ -59,7 +62,7 @@ window.onscroll = () => {
         navBar.style.top = '0';
     }
     //hide the navbar in play case studies
-    if (document.querySelector('#newyork') || document.querySelector('#chipo')){
+    if (document.querySelector('#newyork') || document.querySelector('#summer19')){
         if (document.documentElement.scrollTop < window.innerHeight || window.scrollY < window.innerHeight){
             navBar.style.opacity = '0';
         } else {

@@ -36,7 +36,7 @@ nav{
     background-color: #E6E8E6;
 }
 
-#chipo nav, #chipo nav div ul{
+#summer19 nav, #summer19 nav div ul{
     background-color: #F2F1EC;
 }
 
@@ -399,11 +399,11 @@ nav > div:hover > span{
 /* End of New York */
 
 /*Start of Summer 2019*/
-#chipo nav{
+#summer19 nav{
     opacity: 0;
 }
 
-#chipo-intro{
+#summer19-intro{
     z-index: -1;
     position: fixed;
     top: 0;
@@ -416,7 +416,7 @@ nav > div:hover > span{
     align-items: center;
     justify-content: center;
 }
-#chipo-intro p{
+#summer19-intro p{
     position: absolute;
     padding: 1rem 1rem;
     bottom: 7%;
@@ -425,7 +425,7 @@ nav > div:hover > span{
     line-height: 1rem;
     font-weight: bolder;
 }
-#chipo-intro div{
+#summer19-intro div{
     margin-bottom: 5%;
     width: calc(4rem + 40vw);
     height: calc(3rem + 30vw);
@@ -433,20 +433,20 @@ nav > div:hover > span{
     background-size: cover;
     position: relative;
 }
-#chipo-intro h1, #chipo-intro h3{
+#summer19-intro h1, #summer19-intro h3{
     position: absolute;
     font-family: 'Hatton', serif;
     font-size: calc(1rem + 7vw);
     font-weight: 300;
     color: #FB9E18;
 }
-#chipo-intro h1{
+#summer19-intro h1{
     top: -8%;
     left: 0;
     width: 100%;
     -webkit-animation:vibrate-3 29s linear infinite both;animation:vibrate-3 29s linear infinite both;
 }
-#chipo-intro h3{
+#summer19-intro h3{
     bottom: -12%;
     left: -15%;
     right: 0;
@@ -573,6 +573,114 @@ nav > div:hover > span{
     transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
 #chipo-parallax span img:hover{
+    z-index: 1;
+    transform: scale(1.45);
+    transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+#charles-parallax{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #C1CBC2;
+    display: flex;
+}
+#charles-parallax > h1{
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 50vh;
+    text-align: center;
+    font-family: 'Hatton', sans-serif;
+    font-size: 9vw;
+    font-weight: 300;
+    color: white;
+    
+}
+#charles-parallax > img{
+    position: sticky;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+#charles-parallax > div{
+    overflow: hidden;
+    align-self: flex-end;
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+#charles-parallax > div p{
+    position: absolute;
+    top: calc(97vh - 3rem);
+    width: 50%;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.56rem;
+    line-height: 1rem;
+    font-weight: bolder;
+}
+#charles-parallax p a{
+    text-decoration: none;
+    color: black;
+}
+#charles-parallax span{
+    position: relative;
+    margin: 0 0 50vh 0;
+    width: 50%;
+    height: auto;
+}
+#charles-parallax span img{
+    width: 100%;
+    display: block;
+}
+#charles-parallax span:first-of-type{
+    margin: calc(300px + 0vw + 80vh) 0 30vh 0;
+    width: calc(11vw + 4rem);
+    align-self: center;
+}
+#charles-parallax span:nth-of-type(2){
+    margin: -100vh 0 170vh 0;
+    width: calc(35% + 4rem);
+    align-self: flex-start;
+}
+#charles-parallax span:nth-of-type(3){
+    margin: 100vh 0 -20vh 0;
+    width: calc(45% + 4rem);
+    align-self: flex-end;
+}
+#charles-parallax span:nth-of-type(4){
+    z-index: 1;
+    margin: -100vh 0 130vh 0;
+    width: calc(30% + 4rem);
+    align-self: flex-start;
+    left: 15%;
+}
+#charles-parallax span:nth-of-type(5){
+    margin: 0 0 0 0;
+    width: calc(30% + 4rem);
+    align-self: flex-end;
+    right: 15%;
+}
+#charles-parallax span:last-of-type{
+    margin: 40vh 0 0 0;
+    width: calc(11vw + 4rem);
+    align-self: center;
+}
+
+#charles-parallax span{
+    transition: 1.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+#charles-parallax span img{
+    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+#charles-parallax span:hover{
+    z-index: 1;
+}
+#charles-parallax span img:hover{
     z-index: 1;
     transform: scale(1.45);
     transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
