@@ -31,20 +31,22 @@ if (pagePath == '/' || pagePath == '/index.html') {
         //play animation again if index is reloaded
         if (currentSession.getItem("lastURL") == '/' || currentSession.getItem("lastURL") == '/index.html') {
             bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
-            indexButts.classList.add('butts-animation');
+            indexButts.style.setProperty('display', 'block', 'important');
         } else {
-            indexButts.style.setProperty('display', 'none', 'important');
+            indexButts.style.display = "";
         }
     } else {
         bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
-        indexButts.classList.add('butts-animation');
+        indexButts.style.setProperty('display', 'block', 'important');
         currentSession.setItem("animation", "played");
     }
 };
-//enable scrolllock again after animation finishes
+//enable scrolllock again when animation finishes
 if (indexButts) {
-    indexButts.addEventListener('animationend', () => {
-        bodyScrollLock.enableBodyScroll(document.body);
+    indexButts.addEventListener('animationstart', (event) => {
+        if (event.animationName == 'slide-up') {
+            bodyScrollLock.enableBodyScroll(document.body);
+        };
     });
 };
 //store the current page path
