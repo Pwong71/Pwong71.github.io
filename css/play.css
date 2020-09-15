@@ -36,6 +36,9 @@ nav{
     background-color: #F2F1EC;
 }
 
+nav.charles-nav, nav.charles-nav div ul{
+    background-color: #c5d3c7!important;
+}
 
 nav a{
     color: black;
@@ -65,12 +68,16 @@ nav ul{
 }
 
 nav div ul{
-    display: none;
+    display: block;
+    opacity: 0;
     white-space: nowrap;
     position: absolute;
     left: 0;
     border: .8px solid;
-    z-index: 3;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 nav div li:first-of-type{
@@ -89,16 +96,15 @@ nav div li:last-of-type{
 }
 
 nav > div:hover > ul{
-    display: block;
-    -webkit-animation:dropdown .3s cubic-bezier(.215,.61,.355,1.000) both;animation:dropdown .3s cubic-bezier(.215,.61,.355,1.000) both;
+    z-index: 3;
+    opacity: 1;
+    transform: scaleY(1);
 }
 
 nav > div:hover > span{
     transform: rotate(180deg);
     transform-origin: center;
 }
-
-@-webkit-keyframes dropdown{0%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes dropdown{0%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 /*END of navbar*/
 
 /* Start of New York */

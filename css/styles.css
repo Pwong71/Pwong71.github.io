@@ -30,14 +30,12 @@ wrapper {
 }
 
 #butts{
-    display: none;
     z-index: 3;
     width: 100%;
     height: 100vh;
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
-    animation: slide-up 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3.6s forwards;
 }
 #butts img{
     position: absolute;
@@ -81,7 +79,10 @@ wrapper {
 }
 
 body.loading #butts{
-    display: block;
+    top: 0;
+}
+body.load-ease #butts{
+    transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 body.loading, body.loading nav, body.loading nav div ul{
     animation-delay: 3.6s;

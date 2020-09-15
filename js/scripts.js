@@ -25,27 +25,27 @@ const pagePath = window.location.pathname;
 let currentSession = window.sessionStorage;
 let indexButts = document.querySelector('#butts');    
 
+//clean up when animation finishes
+animationClean = () => {
+    bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
+    setTimeout(() => {
+        bodyScrollLock.enableBodyScroll(document.body);
+        document.body.classList.remove('loading');
+    }, 3600);
+}
 //handle landing butts animation
 if (pagePath == '/' || pagePath == '/index.html') {
     if (currentSession.getItem("animation") == 'played'){
         //play animation again if index is reloaded
         if (currentSession.getItem("lastURL") == '/' || currentSession.getItem("lastURL") == '/index.html') {
-            bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
+            animationClean();
         } else {
-            document.body.classList.remove('loading');
+            document.body.classList.remove('loading', 'load-ease');
         }
     } else {
-        bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
+        animationClean();
         currentSession.setItem("animation", "played");
     }
-};
-//enable scrolllock again when animation finishes
-if (indexButts) {
-    indexButts.addEventListener('animationstart', (event) => {
-        if (event.animationName == 'slide-up') {
-            bodyScrollLock.enableBodyScroll(document.body);
-        };
-    });
 };
 //store the current page path
 currentSession.setItem("lastURL", pagePath);
@@ -100,6 +100,16 @@ window.onscroll = () => {
         } else {
             document.querySelector('.casestudy').classList.add('darken');
             navBar.classList.add('darken');
+        }
+    }
+    //change nav bar color when charles case study is in view
+    let summerCase = document.querySelector('#charles-parallax');
+    if (summerCase){
+        summerCase = summerCase.getBoundingClientRect();
+        if (summerCase.top < 0) {
+            navBar.classList.add('charles-nav');
+        } else {
+            navBar.classList.remove('charles-nav');
         }
     }
 }
