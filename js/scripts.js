@@ -31,13 +31,11 @@ if (pagePath == '/' || pagePath == '/index.html') {
         //play animation again if index is reloaded
         if (currentSession.getItem("lastURL") == '/' || currentSession.getItem("lastURL") == '/index.html') {
             bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
-            indexButts.style.setProperty('display', 'block', 'important');
         } else {
-            indexButts.style.display = "";
+            document.body.classList.remove('loading');
         }
     } else {
         bodyScrollLock.disableBodyScroll(document.body, {reserveScrollBarGap: true,});
-        indexButts.style.setProperty('display', 'block', 'important');
         currentSession.setItem("animation", "played");
     }
 };
