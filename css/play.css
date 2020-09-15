@@ -13,10 +13,6 @@ body {
     cursor: url(../images/cursor.png) 16 16, auto;
 }
 
-#newyork{
-    background-color: #043b1f;
-}
-
 /*START of navbar*/
 nav{
     font-family: 'IBM Plex Mono', monospace;
@@ -123,6 +119,8 @@ nav > div:hover > span{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    background-image:url(../images/newyork2.png);
+    background-size: cover;
 }
 
 .play-intro h1{
@@ -582,7 +580,7 @@ nav > div:hover > span{
     position: relative;
     width: 100%;
     height: auto;
-    background-color: #C1CBC2;
+    background-color: #c5d3c7;
     display: flex;
 }
 #charles-parallax > h1{
