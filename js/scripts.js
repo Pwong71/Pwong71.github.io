@@ -46,6 +46,10 @@ if (pagePath == '/' || pagePath == '/index.html') {
         animationClean();
         currentSession.setItem("animation", "played");
     }
+    document.querySelector('#skip-button').addEventListener('click', () => {
+        bodyScrollLock.enableBodyScroll(document.body);
+        document.body.classList.remove('loading');
+    });
 };
 //store the current page path
 currentSession.setItem("lastURL", pagePath);

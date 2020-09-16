@@ -29,6 +29,41 @@ wrapper {
     margin: 0 auto;
 }
 
+#skip-button{
+    cursor: url(../images/hover.png) 16 16, auto;
+    z-index: 6;
+    position: fixed;
+    mix-blend-mode: hard-light;
+    width: calc(3rem + 1vw);
+    height: calc(4rem + 1vh);
+    margin: calc(1rem + 5vw) 0 0 calc(1rem + 6vw);
+    background: url(../images/smiley.png) center/contain no-repeat;
+    opacity: 0;
+}
+#skip-button:hover{
+    mix-blend-mode: normal;
+}
+#skip-button::after{
+    content: "";
+    position: fixed;
+    left: calc(4rem + 7vw + 1rem);
+    top: calc(2.5rem + 5vw + 0.5vh);
+    width: 10rem;
+    height: 21px;
+    background: url(../images/arrow.png) center/contain no-repeat;
+}
+#skip-button::before{
+    content: "Click to skip!";
+    position: fixed;
+    left: calc(4rem + 7vw + 2.5rem);
+    top: calc(2.5rem + 5vw + 0.5vh - 0.5rem);
+    white-space: nowrap;
+    font-family: 'IBM PLex Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+}
+
 #butts{
     z-index: 3;
     width: 100%;
@@ -80,6 +115,9 @@ wrapper {
 
 body.loading #butts{
     top: 0;
+}
+body.loading #skip-button{
+    opacity: 1;
 }
 body.load-ease #butts{
     transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
