@@ -86,18 +86,19 @@ wrapper {
 }
 #butts img:first-of-type{
     z-index: 4;
+    animation-delay: 0.6s;
 }
 #butts img:nth-of-type(2){
     z-index: 3;
-    animation-delay: 0.6s;
+    animation-delay: 1.2s;
 }
 #butts img:nth-of-type(3){
     z-index: 2;
-    animation-delay: 1.2s;
+    animation-delay: 1.8s;
 }
 #butts img:nth-of-type(4){
     z-index: 1;
-    animation-delay: 1.8s;
+    animation-delay: 2.4s;
 }
 
 @keyframes butt-ani {
@@ -123,7 +124,7 @@ body.load-ease #butts{
     transition: 0.8s cubic-bezier(0.33, 1, 0.68, 1);
 }
 body.loading, body.loading nav, body.loading nav div ul{
-    animation-delay: 3.6s;
+    animation-delay: 4.2s;
 }
 
 /*START of navbar*/
