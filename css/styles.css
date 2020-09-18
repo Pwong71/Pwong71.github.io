@@ -861,6 +861,7 @@ hr{
     writing-mode: vertical-lr;
     right: -1.75rem;
     color: black;
+    white-space: nowrap;
 }
 
 #lost-in-space::before{

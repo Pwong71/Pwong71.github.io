@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
 ScrollReveal().reveal('.content h1', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300});
 ScrollReveal().reveal('.modal', {distance: '75px', origin: 'bottom', viewFactor: 0.5, duration: 700, delay: 200});
 ScrollReveal().reveal('.main-carousel', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300})
-ScrollReveal().reveal('.links div', {distance: '100px', origin: 'left', duration: 500, reset: true});
+ScrollReveal().reveal('.links div', {distance: '100px', origin: 'left', duration: 500});
  
 //initiate parallax library
 if (document.querySelector('.parallax span')){
