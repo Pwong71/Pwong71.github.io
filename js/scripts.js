@@ -1,5 +1,5 @@
 /*eslint-env browser*/
-window.onload = () =>{
+window.addEventListener('DOMContentLoaded', () => {
 //initiate scroll reveal
 ScrollReveal().reveal('.content h1', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300});
 ScrollReveal().reveal('.modal', {distance: '75px', origin: 'bottom', viewFactor: 0.5, duration: 700, delay: 200});
@@ -155,4 +155,4 @@ modalImg.forEach(moda => {
         }
     })
 })
-}
+});
