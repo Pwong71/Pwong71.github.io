@@ -334,7 +334,7 @@ nav > div:hover > span{
     background-repeat: no-repeat;
     background-position: center;
     mix-blend-mode: multiply;
-    margin: 6rem;
+    margin: 6rem 1rem;
 }
 
 .arrow {
@@ -372,7 +372,6 @@ nav > div:hover > span{
 .darken{
     background-color: black!important;
 }
-
 nav.darken{
     opacity: 0;
 }
@@ -471,7 +470,7 @@ nav.darken{
 }
 
 #infodes1 .title h1{
-    font-size: calc(1rem + 2.2vw);
+    font-size: calc(0.5rem + 2.7vw);
 }
 
 .title p{
@@ -481,7 +480,7 @@ nav.darken{
 hr{
     margin: 10px 0px 10px 0px;
     min-height: 1px;
-    width: 270px;
+    width: calc(150px + 9vw);
     background-color: black;
 }
 
@@ -495,7 +494,7 @@ hr{
 }
 
 #infodes1 hr{
-    width: 305px;
+    width: calc(110px + 15vw);
 }
 
 .title-wrap a{
@@ -534,8 +533,7 @@ hr{
 
 .side{
     z-index: 0;
-    margin-right 3.5rem;
-    margin-top: 100px;
+    margin: 100px 0 0 0;
     width: 100%;
     height: 75vh;
     position: sticky;
@@ -546,9 +544,9 @@ hr{
     align-items: flex-start;
 }
 
-.side span{
+.side > span{
     text-align: right;
-    width: 270px;
+    width: calc(150px + 9vw);
     margin-bottom: 20px;
     transition: all 0.7s cubic-bezier(0.85, 0, 0.15, 1);
 }
@@ -566,7 +564,7 @@ hr{
     text-decoration: underline;
 }
 
-.side span:first-child{
+.side > span.active{
     flex-grow: 1;
 }
 
@@ -887,11 +885,10 @@ hr{
 /*End of links */
 
 /* Lost in Space */
-
 #one-l{
     height: 30vh;
     position: relative;
-    padding-bottom: 200vh;
+    padding-bottom: 275vh;
     margin-bottom: 200px;
 }
 
@@ -1008,8 +1005,6 @@ img.modal-active{
     margin-bottom: 100px;
 }
 /*END of Info Des*/
-
-
 
 footer{
     display: grid;
@@ -1129,6 +1124,163 @@ footer h3{
     right: 0.5%;
 }
 
+@media only screen and (max-width: 856px){
+    nav div > a{
+        font-size: calc(0.6rem + 0.75vh + 1.65vw);
+        padding: 1rem 0 1rem 1rem;
+    }
+    nav > ul a{
+        padding: 1rem 1rem 1rem 0.5rem;
+    }
+    nav > div:hover > ul{z-index: -1;opacity: 0;transform: scaleY(0);}
+    nav > div:hover > span{transform: rotate(0);transform-origin: center;}
+    nav.dropdown > div > ul{
+        z-index: 3;
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    nav.dropdown > div > span{
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
+    .wrapper1{
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        padding: calc(5vw + 50px) 2.5rem 0 2.5rem;
+    }
+    .title-wrap{
+        margin-top: 3rem;
+        height: 90vh;
+    }
+    .title-wrap a{
+        display: none;
+    }
+    .title{
+        top: 3rem;
+    }
+    .front-img{
+        width: 80%;
+    }
+    .casestudy{
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    .side{
+        overflow-x: hidden;
+        transition: .4s linear;
+        margin: 0;
+        padding: 4.2rem 2.5rem 0 2.5rem;
+        top: -4.2rem;
+        z-index: 1;
+        flex-flow: row nowrap;
+        width: auto;
+        height: auto;
+        background-color: #d1d1c5;
+    }
+    #inspace .side{
+        background-color: #d6d4d4;
+    }
+    #remixtype .side{
+        background-color: black;
+    }
+    #infodes1 .side{
+        background-color: #eeeeee;
+    }
+    .side.darken{
+        opacity: 0;
+    }
+    .side > span{
+        text-align: left;
+        width: auto;
+        margin: 0.5rem 0.5rem 2rem 0.5rem;
+    }
+    .side > span a{
+        position: relative;
+    }
+    .side a:hover{
+        text-decoration: none;
+    }
+    .side > span a span{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        white-space: nowrap;
+        transition: all 0.7s cubic-bezier(0.85, 0, 0.15, 1);
+        transform: scale(0);
+        transform-origin: top;
+    }
+    .side > span.active a span{
+        transform: scale(1);
+    }
+    .content{
+        width: auto;
+        grid-column: 1/2;
+        padding: 150px 2.5rem 0 2.5rem;
+    }
+    .main-carousel{
+        width: 78vw;
+        max-width: 100%;
+        height: 100vw;
+        max-height: 100%;
+    }
+    .carousel-2{
+        width: 74vw;
+        max-width: 100%;
+        height: 100vw;
+        max-height: 100%;
+    }
+    .carousel-3, .carousel-4, .carousel-5{
+        width: 100%;
+        height: auto;
+    }
+    .flickity-button{
+        top: 102%;
+    }
+    .carousel-2 .flickity-button{
+        top: 102.5%;
+    } 
+    .carousel-3 .flickity-button{
+        top: 106%;
+        color: white;
+    }
+    .carousel-4 .flickity-button{
+        top: 106%;
+    }
+    .carousel-5 .flickity-button{
+        top: 105.5%;
+    }
+    .banner, .banner2{
+        right: 0;
+    }
+    #comdes .banner{
+        grid-template-columns: repeat(4, auto);
+        align-content: center;
+    }
+    .links h1{
+        font-size: 40px;
+    }
+    .links div{
+        margin-bottom: 5rem;
+    }
+    .links div a::before{
+        right: 0;
+    }
+    .links a img{
+        width: 90%;
+    }
+    footer{
+        grid-template-columns: 1fr;
+    }
+    footer > div {
+        justify-self: center!important;
+        padding-right: 0!important;
+        padding-left: 0!important;
+        margin: 0 0 1rem 0;
+    }
+    footer > div:first-of-type *{
+        text-align: left!important;
+    }
+}
 @media only screen and (max-width: 680px){
     .header{
         font-size: calc(2vw + 1rem);
@@ -1136,7 +1288,6 @@ footer h3{
         padding: calc(0.5vw + 1rem);
         margin: calc(2vw + 1rem);
     }
-    
     .work a img{
         width: calc(200px + 20vw);
     }
@@ -1145,21 +1296,48 @@ footer h3{
         margin-left: calc(1vw + 2rem);
     }
 }
-
-@media only screen and (max-width: 400px){
-    .header{
-        text-align: left;
+@media only screen and (max-width: 560px){
+    nav > ul a{
+        font-size: 0.8rem;
+    }
+    .wrapper1{
+        padding: calc(5vw + 50px) 1.5rem 0 1.5rem;
+    }
+    .side {
+        padding: 4.2rem 1.5rem 0 1.5rem;
+    }
+    .content{
+        padding: 150px 1.5rem 0 1.5rem;
+    }
+    .content h1{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    #two {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    #two >*{
+        width: auto;
+    }
+    #two p:first-of-type{
+        align-self: flex-start;
+    }
+    #four h3:last-of-type{
+        margin-top: 400vh;
+    }
+    #comdes .banner{
+        grid-template-columns: repeat(2, auto);
+        height: 300vh;
+    }
+    footer h2{
+        font-size: 45px;
+    }
+    footer h2:last-of-type{
+        font-size: 30px;
+    }
+    footer p{
+        font-size: 1rem;
+        line-height: 1.6rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

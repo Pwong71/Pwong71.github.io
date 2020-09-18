@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
 ScrollReveal().reveal('.content h1', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300});
 ScrollReveal().reveal('.modal', {distance: '75px', origin: 'bottom', viewFactor: 0.5, duration: 700, delay: 200});
 ScrollReveal().reveal('.main-carousel', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300})
-ScrollReveal().reveal('.links div',{distance: '100px', origin:'left', duration:500, reset:true});
+ScrollReveal().reveal('.links div', {distance: '100px', origin: 'left', duration: 500, reset: true});
  
 //initiate parallax library
 if (document.querySelector('.parallax span')){
@@ -17,7 +17,8 @@ if (document.querySelector('#charles-parallax span')){
     var rellax = new Rellax('#charles-parallax span');
 }
 
-let sideItem = document.querySelectorAll('.side span');
+const side = document.querySelector('.side');
+let sideItem = document.querySelectorAll('.side > span');
 let conTent = document.querySelectorAll('.content');
 let oldScroll = 0;
 let navBar = document.querySelector('nav');
@@ -54,6 +55,11 @@ if (pagePath == '/' || pagePath == '/index.html') {
 //store the current page path
 currentSession.setItem("lastURL", pagePath);
     
+//dropdown click event
+navBar.querySelector('span').addEventListener('click', () => {
+    navBar.classList.toggle('dropdown');
+})
+    
 //scroll event
 window.onscroll = () => {
     //hide the navbar when the window is scrolled down and vice versa
@@ -61,9 +67,11 @@ window.onscroll = () => {
     if (newScroll > 0 && newScroll >= oldScroll){
         oldScroll = newScroll;
         navBar.style.top = '-100px';
+        if (side && (window.matchMedia('screen and (max-width:856px)').matches)) {side.style.top = "";};
     } else {
         oldScroll = newScroll;
         navBar.style.top = '0';
+        if (side && (window.matchMedia('screen and (max-width:856px)').matches)) {side.style.top = "0px";} else if (side) {side.style.top = "";};
     }
     //hide the navbar in play case studies
     if (document.querySelector('#newyork') || document.querySelector('#summer19')){
@@ -76,10 +84,10 @@ window.onscroll = () => {
     //move a sidebar tab when the corresponding content section is in view
     if (conTent[0] && sideItem[0]){
         for (let i = 0; i < 5; i++){
-            if ((conTent[i].getBoundingClientRect().top >= (window.innerHeight/1.35 || document.documentElement.clientHeight/1.35) && conTent[i].getBoundingClientRect().bottom > 0) || (conTent[i].getBoundingClientRect().bottom <= -100 && conTent[i].getBoundingClientRect().top < 0)){
-                sideItem[i].style.flexGrow = "0";
+            if ((conTent[i].getBoundingClientRect().top >= (window.innerHeight/1.2 || document.documentElement.clientHeight/1.2) && conTent[i].getBoundingClientRect().bottom > 0) || ((conTent[i].getBoundingClientRect().bottom <= window.innerHeight/2) && conTent[i].getBoundingClientRect().top < 0)){
+                sideItem[i].classList.remove('active');
             } else {
-                sideItem[i].style.flexGrow = "1";
+                sideItem[i].classList.add('active');
             }
         }
     }
@@ -90,9 +98,11 @@ window.onscroll = () => {
         if ((bannerScr.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr.bottom > 0) || (bannerScr.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr.top < 0)){
             document.querySelector('.casestudy').style.backgroundColor = "";
             navBar.style.opacity = "1";
+            side.style.opacity = "1";
         } else {
             document.querySelector('.casestudy').style.backgroundColor = "black";
             navBar.style.opacity = "0";
+            side.style.opacity = "0";
         } 
     }
     let bannerScr2 = document.querySelector('.banner2');
@@ -101,9 +111,11 @@ window.onscroll = () => {
         if ((bannerScr2.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr2.bottom > 0) || (bannerScr2.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr2.top < 0)){
             document.querySelector('.casestudy').classList.remove('darken');
             navBar.classList.remove('darken');
+            if (window.matchMedia('screen and (max-width:856px)').matches) {side.classList.remove('darken');};
         } else {
             document.querySelector('.casestudy').classList.add('darken');
             navBar.classList.add('darken');
+            if (window.matchMedia('screen and (max-width:856px)').matches) {side.classList.add('darken');};
         }
     }
     //change nav bar color when charles case study is in view
