@@ -95,15 +95,17 @@ nav div li:last-of-type{
     border-bottom: none;
 }
 
-nav > div:hover > ul{
-    z-index: 3;
-    opacity: 1;
-    transform: scaleY(1);
-}
+@media (hover: hover){
+    nav > div:hover > ul{
+        z-index: 3;
+        opacity: 1;
+        transform: scaleY(1);
+    }
 
-nav > div:hover > span{
-    transform: rotate(180deg);
-    transform-origin: center;
+    nav > div:hover > span{
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
 }
 /*END of navbar*/
 
@@ -690,3 +692,70 @@ nav > div:hover > span{
     transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
 /*End of Summer 2019*/
+
+@media only screen and (max-width: 856px){
+    nav div > a{
+        font-size: calc(0.6rem + 0.75vh + 1.65vw);
+        padding: 1rem 0 1rem 1rem;
+    }
+    nav > ul a{
+        padding: 1rem 1rem 1rem 0.5rem;
+    }
+    nav.dropdown > div > ul{
+        z-index: 3;
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    nav.dropdown > div > span{
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
+}
+@media only screen and (max-width: 560px){
+    nav > ul a{
+        font-size: 0.8rem;
+    }
+    
+    #chipo-parallax {
+        flex-flow: column nowrap;
+    }
+    #chipo-parallax > img{
+        position: static;
+        width: auto;
+    }
+    #chipo-parallax > div{
+        width: 100%;
+        position: relative;
+    }    
+    #chipo-parallax > div h1{
+        font-size: 19vw;
+    }
+    #chipo-parallax > div p{
+        width: 100%;
+    }
+    #chipo-parallax span:first-of-type{
+        margin: 68vh 0 50vh 0;
+    }
+    
+    #charles-parallax {
+        flex-flow: column-reverse nowrap;
+    }
+    #charles-parallax > img{
+        position: static;
+        width: auto;
+    }
+    #charles-parallax > h1{
+        width: 100%;
+        font-size: 19vw;
+    }
+    #charles-parallax > div{
+        width: 100%;
+        position: relative;
+    }
+    #charles-parallax > div p{
+        width: 100%;
+    }
+    #charles-parallax span:first-of-type{
+        margin: calc(300px + 0vw + 110vh) 0 30vh 0;
+    }
+}

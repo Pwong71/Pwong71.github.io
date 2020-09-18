@@ -225,15 +225,17 @@ nav div li:last-of-type{
     border-bottom: none;
 }
 
-nav > div:hover > ul{
-    z-index: 3;
-    opacity: 1;
-    transform: scaleY(1);
-}
+@media (hover: hover){
+    nav > div:hover > ul{
+        z-index: 3;
+        opacity: 1;
+        transform: scaleY(1);
+    }
 
-nav > div:hover > span{
-    transform: rotate(180deg);
-    transform-origin: center;
+    nav > div:hover > span{
+        transform: rotate(180deg);
+        transform-origin: center;
+    }
 }
 /*END of navbar*/
 
