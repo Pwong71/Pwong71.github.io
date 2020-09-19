@@ -367,6 +367,18 @@ nav div li:last-of-type{
     transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
+
+.parallax h3{
+    font-family: 'IBM PLex Mono', monospace;
+    font-size: 11px;
+    width: 22%;
+    line-height: 25px;
+    right: 400px;
+    position: absolute;
+    bottom: 35rem;
+}
+
+
 .bg-text{
     pointer-events: none;
     font-family: 'Hatton', serif;
@@ -714,6 +726,13 @@ nav div li:last-of-type{
 @media only screen and (max-width: 560px){
     nav > ul a{
         font-size: 0.8rem;
+    }
+    
+    .parallax h3{
+        position: static;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+        width: auto;
+        font-size: 9px;
     }
     
     #chipo-parallax {
