@@ -82,38 +82,39 @@ window.onscroll = () => {
             navBar.style.opacity = '1';
         }
     }
-    
     //return true if content is within viewport
     contentBounds = (x, y, z) => {
         return ((x.getBoundingClientRect().top >= (window.innerHeight/y || document.documentElement.clientHeight/y) && x.getBoundingClientRect().bottom > 0) || ((x.getBoundingClientRect().bottom <= window.innerHeight/z) && x.getBoundingClientRect().top < 0))
     }
-    //move a sidebar tab when the corresponding content section is in view
-    if (conTent[0] && sideItem[0]){
-        for (let i = 0; i < 5; i++){
-            if (contentBounds(conTent[i], 1.2, 2)){
-                sideItem[i].classList.remove('active');
-            } else {
-                sideItem[i].classList.add('active');
+    if (caseStudy){
+        //move a sidebar tab when the corresponding content section is in view
+        if (conTent[0] && sideItem[0]){
+            for (let i = 0; i < 5; i++){
+                if (contentBounds(conTent[i], 1.2, 2)){
+                    sideItem[i].classList.remove('active');
+                } else {
+                    sideItem[i].classList.add('active');
+                }
             }
         }
-    }
-    //change bg color when banner is in viewport
-    let banner = document.querySelectorAll('.banner');
-    if (banner[0] && banner[1]){
-        if (contentBounds(banner[0], 2, 100) && contentBounds(banner[1], 2, 100)) {
-            document.body.classList.remove('darken');
-        } else {document.body.classList.add('darken');};
-    } else if (banner[0]) {
-        if (contentBounds(banner[0], 2, 100)) {
-            document.body.classList.remove('darken');
-        } else {document.body.classList.add('darken');};
+        //change bg color when banner is in viewport
+        let banner = document.querySelectorAll('.banner');
+        if (banner[0] && banner[1]){
+            if (contentBounds(banner[0], 2, 100) && contentBounds(banner[1], 2, 100)) {
+                document.body.classList.remove('darken');
+            } else {document.body.classList.add('darken');};
+        } else {
+            if (contentBounds(banner[0], 2, 100)) {
+                document.body.classList.remove('darken');
+            } else {document.body.classList.add('darken');};
+        };
+        //show footer only if viewport is near end of page
+        if (document.querySelector('.links').getBoundingClientRect().top < window.innerHeight){
+            document.querySelector('footer').style.visibility = "visible";
+        } else {
+            document.querySelector('footer').style.visibility = "hidden";
+        };
     };
-    //show footer only if viewport is near end of page
-    if (document.querySelector('.links').getBoundingClientRect().top < window.innerHeight){
-        document.querySelector('footer').style.visibility = "visible";
-    } else {
-        document.querySelector('footer').style.visibility = "hidden";
-    }
     //change nav bar color when charles case study is in view
     let summerCase = document.querySelector('#charles-parallax');
     if (summerCase){
