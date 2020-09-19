@@ -88,15 +88,13 @@ window.onscroll = () => {
     }
     if (caseStudy){
         //move a sidebar tab when the corresponding content section is in view
-        if (conTent[0] && sideItem[0]){
-            for (let i = 0; i < 5; i++){
-                if (contentBounds(conTent[i], 1.2, 2)){
-                    sideItem[i].classList.remove('active');
-                } else {
-                    sideItem[i].classList.add('active');
-                }
-            }
-        }
+        for (let i = 0; i < 5; i++){
+            if (contentBounds(conTent[i], 1.2, 2)){
+                sideItem[i].classList.remove('active');
+            } else {
+                sideItem[i].classList.add('active');
+            };
+        };
         //change bg color when banner is in viewport
         let banner = document.querySelectorAll('.banner');
         if (banner[0] && banner[1]){

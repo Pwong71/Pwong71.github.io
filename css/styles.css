@@ -308,9 +308,18 @@ nav.dropdown > div > span{
     color: white;
 }
 
-.work a:hover h1 {
-    opacity: 1;
-    right: 4%;
+@media (hover: hover){
+    .work a:hover h1 {
+        opacity: 1;
+        right: 4%;
+    }
+}
+
+@media (hover: none) {
+    .work a h1 {
+        opacity: 1;
+        right: 4%;
+    }
 }
 
 /* width */
@@ -574,8 +583,10 @@ hr{
     color: white;
 }
 
-.side a:hover{
-    text-decoration: underline;
+@media (hover:hover){
+    .side a:hover{
+        text-decoration: underline;
+    }
 }
 
 .side > span.active{
@@ -1202,9 +1213,6 @@ footer h3{
     }
     .side > span a{
         position: relative;
-    }
-    .side a:hover{
-        text-decoration: none;
     }
     .side > span a span{
         position: absolute;
