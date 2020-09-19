@@ -1300,22 +1300,50 @@ footer h3{
 @media only screen and (max-width: 680px){
     .header{
         font-size: calc(2vw + 1rem);
-        line-height: calc(0.8vh + 2.7rem);
+        line-height: calc(0.8vh + 2rem);
         padding: calc(0.5vw + 1rem);
+        padding-top: 5rem;
+        padding-bottom: 5rem;
         margin: calc(2vw + 1rem);
     }
+    
     .work a img{
         width: calc(200px + 20vw);
     }
     
+    .work a img:first-of-type{
+        margin: 0rem 3rem 2rem 0rem;
+    }
+    
+    .work a h1{
+        right: 9%;
+        font-size: 10px;
+    }
+    
     .arrow{
-        margin-left: calc(1vw + 2rem);
+        margin-left: calc(.5vw + .5rem);
+        font-size: .7rem;
+    }
+    
+    .blurb{
+        margin: 3rem 2rem;
+        height: 40vh;
     }
 }
 @media only screen and (max-width: 560px){
+    nav div > a{
+    font-size: 1rem;
+    padding: 1rem 0 1rem 1rem;
+}
+    
+    nav span{
+    padding: 15px 0 15px 0;
+}
+    
     nav > ul a{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
+    
     .wrapper1{
         padding: calc(5vw + 50px) 1.5rem 0 1.5rem;
     }
