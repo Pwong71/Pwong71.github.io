@@ -1,24 +1,24 @@
 /*eslint-env browser*/
+window.addEventListener('load', () => {
+    //initiate scroll reveal
+    ScrollReveal().reveal('.content h1', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300});
+    ScrollReveal().reveal('.modal', {distance: '75px', origin: 'bottom', viewFactor: 0.5, duration: 700, delay: 200});
+    ScrollReveal().reveal('.main-carousel', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300})
+    ScrollReveal().reveal('.links div', {distance: '100px', origin: 'left', duration: 500, reset: true});
+});
 window.addEventListener('DOMContentLoaded', () => {
-//initiate scroll reveal
-ScrollReveal().reveal('.content h1', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300});
-ScrollReveal().reveal('.modal', {distance: '75px', origin: 'bottom', viewFactor: 0.5, duration: 700, delay: 200});
-ScrollReveal().reveal('.main-carousel', {distance: '75px', origin: 'bottom', viewFactor: 0.4, duration: 700, delay: 300})
-ScrollReveal().reveal('.links div', {distance: '100px', origin: 'left', duration: 500});
- 
 //initiate parallax library
 if (document.querySelector('.parallax span')){
     var rellax = new Rellax('.parallax span');
 } 
-if (document.querySelector('#chipo-parallax span')){
+if (document.querySelector('#chipo-parallax span') || document.querySelector('#charles-parallax span')){
     var rellax = new Rellax('#chipo-parallax span');
-}
-if (document.querySelector('#charles-parallax span')){
     var rellax = new Rellax('#charles-parallax span');
 }
 
 const side = document.querySelector('.side');
 let sideItem = document.querySelectorAll('.side > span');
+const caseStudy = document.querySelector('.casestudy');
 let conTent = document.querySelectorAll('.content');
 let oldScroll = 0;
 let navBar = document.querySelector('nav');
@@ -47,6 +47,7 @@ if (pagePath == '/' || pagePath == '/index.html') {
         animationClean();
         currentSession.setItem("animation", "played");
     }
+    //skip animation on button click
     document.querySelector('#skip-button').addEventListener('click', () => {
         bodyScrollLock.enableBodyScroll(document.body);
         document.body.classList.remove('loading');
@@ -81,42 +82,37 @@ window.onscroll = () => {
             navBar.style.opacity = '1';
         }
     }
+    
+    //return true if content is within viewport
+    contentBounds = (x, y, z) => {
+        return ((x.getBoundingClientRect().top >= (window.innerHeight/y || document.documentElement.clientHeight/y) && x.getBoundingClientRect().bottom > 0) || ((x.getBoundingClientRect().bottom <= window.innerHeight/z) && x.getBoundingClientRect().top < 0))
+    }
     //move a sidebar tab when the corresponding content section is in view
     if (conTent[0] && sideItem[0]){
         for (let i = 0; i < 5; i++){
-            if ((conTent[i].getBoundingClientRect().top >= (window.innerHeight/1.2 || document.documentElement.clientHeight/1.2) && conTent[i].getBoundingClientRect().bottom > 0) || ((conTent[i].getBoundingClientRect().bottom <= window.innerHeight/2) && conTent[i].getBoundingClientRect().top < 0)){
+            if (contentBounds(conTent[i], 1.2, 2)){
                 sideItem[i].classList.remove('active');
             } else {
                 sideItem[i].classList.add('active');
             }
         }
     }
-   //change bg color when banner is in viewport
-    let bannerScr = document.querySelector('.banner');
-    if (bannerScr){
-        bannerScr = bannerScr.getBoundingClientRect();
-        if ((bannerScr.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr.bottom > 0) || (bannerScr.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr.top < 0)){
-            document.querySelector('.casestudy').style.backgroundColor = "";
-            navBar.style.opacity = "1";
-            side.style.opacity = "1";
-        } else {
-            document.querySelector('.casestudy').style.backgroundColor = "black";
-            navBar.style.opacity = "0";
-            side.style.opacity = "0";
-        } 
-    }
-    let bannerScr2 = document.querySelector('.banner2');
-    if (bannerScr2){
-        bannerScr2 = bannerScr2.getBoundingClientRect();
-        if ((bannerScr2.top >= (window.innerHeight/2 || document.documentElement.clientHeight/2) && bannerScr2.bottom > 0) || (bannerScr2.bottom <= (window.innerHeight/10 || document.documentElement.clientHeight/10) && bannerScr2.top < 0)){
-            document.querySelector('.casestudy').classList.remove('darken');
-            navBar.classList.remove('darken');
-            if (window.matchMedia('screen and (max-width:856px)').matches) {side.classList.remove('darken');};
-        } else {
-            document.querySelector('.casestudy').classList.add('darken');
-            navBar.classList.add('darken');
-            if (window.matchMedia('screen and (max-width:856px)').matches) {side.classList.add('darken');};
-        }
+    //change bg color when banner is in viewport
+    let banner = document.querySelectorAll('.banner');
+    if (banner[0] && banner[1]){
+        if (contentBounds(banner[0], 2, 100) && contentBounds(banner[1], 2, 100)) {
+            document.body.classList.remove('darken');
+        } else {document.body.classList.add('darken');};
+    } else if (banner[0]) {
+        if (contentBounds(banner[0], 2, 100)) {
+            document.body.classList.remove('darken');
+        } else {document.body.classList.add('darken');};
+    };
+    //show footer only if viewport is near end of page
+    if (document.querySelector('.links').getBoundingClientRect().top < window.innerHeight){
+        document.querySelector('footer').style.visibility = "visible";
+    } else {
+        document.querySelector('footer').style.visibility = "hidden";
     }
     //change nav bar color when charles case study is in view
     let summerCase = document.querySelector('#charles-parallax');

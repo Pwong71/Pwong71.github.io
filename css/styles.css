@@ -237,6 +237,15 @@ nav div li:last-of-type{
         transform-origin: center;
     }
 }
+nav.dropdown > div > ul{
+    z-index: 3;
+    opacity: 1;
+    transform: scaleY(1);
+}
+nav.dropdown > div > span{
+    transform: rotate(180deg);
+    transform-origin: center;
+}
 /*END of navbar*/
 
 .header {
@@ -371,11 +380,14 @@ nav div li:last-of-type{
     background-color: #eeeeee;
 }
 
-.darken{
+body.darken .casestudy{
     background-color: black!important;
 }
-nav.darken{
+body.darken nav{
     opacity: 0;
+}
+body.darken .links{
+    background-color: black!important;
 }
 
 /*START of wrapper1*/
@@ -805,6 +817,7 @@ hr{
     padding-top: 7rem;
     z-index: 1;
     margin-bottom: 100vh;
+    transition: background .4s linear;
 }
 
 #comdes .links{
@@ -891,7 +904,7 @@ hr{
 #one-l{
     height: 30vh;
     position: relative;
-    padding-bottom: 275vh;
+    padding-bottom: calc(200vh + 25vw);
     margin-bottom: 200px;
 }
 
@@ -1010,6 +1023,7 @@ img.modal-active{
 /*END of Info Des*/
 
 footer{
+    visibility: hidden;
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
@@ -1135,17 +1149,6 @@ footer h3{
     nav > ul a{
         padding: 1rem 1rem 1rem 0.5rem;
     }
-    nav > div:hover > ul{z-index: -1;opacity: 0;transform: scaleY(0);}
-    nav > div:hover > span{transform: rotate(0);transform-origin: center;}
-    nav.dropdown > div > ul{
-        z-index: 3;
-        opacity: 1;
-        transform: scaleY(1);
-    }
-    nav.dropdown > div > span{
-        transform: rotate(180deg);
-        transform-origin: center;
-    }
     .wrapper1{
         display: flex;
         flex-flow: column-reverse nowrap;
@@ -1189,7 +1192,7 @@ footer h3{
     #infodes1 .side{
         background-color: #eeeeee;
     }
-    .side.darken{
+    body.darken .side{
         opacity: 0;
     }
     .side > span{
@@ -1273,6 +1276,8 @@ footer h3{
     }
     footer{
         grid-template-columns: 1fr;
+        align-content: flex-end;
+        padding: 0 0 12% 0;
     }
     footer > div {
         justify-self: center!important;
@@ -1328,6 +1333,9 @@ footer h3{
     }
     #four h3:last-of-type{
         margin-top: 400vh;
+    }
+    #one-l{
+        padding-bottom: 300vh;
     }
     #comdes .banner{
         grid-template-columns: repeat(2, auto);
