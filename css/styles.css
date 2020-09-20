@@ -1167,6 +1167,15 @@ footer h3{
 }
 
 @media only screen and (max-width: 856px){
+    #butts img{
+        object-position: center;
+    }
+    #butts img:first-of-type{content: url(../images/butt1-square-extended.jpg);}
+    #butts img:nth-of-type(2){content: url(../images/butt2-square-extended.jpg);}
+    #butts img:nth-of-type(3){content: url(../images/butt3-square-extended.jpg);}
+    #butts img:nth-of-type(4){content: url(../images/butt4-square-extended.jpg);}
+    #butts img:last-child{content: url(../images/butt5-square-extended.jpg);}
+    
     nav div > a{
         font-size: calc(0.6rem + 0.75vh + 1.65vw);
         padding: 1rem 0 1rem 1rem;
