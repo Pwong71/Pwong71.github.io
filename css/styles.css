@@ -225,16 +225,24 @@ nav div li:last-of-type{
     border-bottom: none;
 }
 
-@media (hover: hover){
+@media (hover: hover) and (pointer: fine){
     nav > div:hover > ul{
         z-index: 3;
         opacity: 1;
         transform: scaleY(1);
     }
-
     nav > div:hover > span{
         transform: rotate(180deg);
         transform-origin: center;
+    }
+}
+@media (hover: none), (pointer: coarse){
+    nav > div:hover > ul{
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    nav > div:hover > span{
+        transform: rotate(0);
     }
 }
 nav.dropdown > div > ul{
@@ -308,42 +316,49 @@ nav.dropdown > div > span{
     color: white;
 }
 
-@media (hover: hover){
+.arrow {
+    margin: 0 1rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: .8rem; 
+}
+
+@media (hover: hover) and (pointer: fine){
     .work a:hover h1 {
         opacity: 1;
         right: 4%;
     }
 }
-
-@media (hover: none) {
+@media (hover: none), (pointer: coarse){
     .work a h1 {
         opacity: 1;
         right: 4%;
     }
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 1.1rem;
-    height: 1.1rem;
-}
-/* Track */
-::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.3);
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #434343;
-}
-#play::-webkit-scrollbar-thumb, #play *::-webkit-scrollbar-thumb,  #remixtype::-webkit-scrollbar-thumb{
-    background: #bababa;
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #8e8e8e;
-}
-#play::-webkit-scrollbar-thumb:hover, #play *::-webkit-scrollbar-thumb:hover,  #remixtype::-webkit-scrollbar-thumb:hover {
-    background: #ffffff;
+@media (pointer: fine){
+    /* width */
+    ::-webkit-scrollbar {
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.3);
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #434343;
+    }
+    #play::-webkit-scrollbar-thumb, #play *::-webkit-scrollbar-thumb,  #remixtype::-webkit-scrollbar-thumb{
+        background: #bababa;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #8e8e8e;
+    }
+    #play::-webkit-scrollbar-thumb:hover, #play *::-webkit-scrollbar-thumb:hover,  #remixtype::-webkit-scrollbar-thumb:hover {
+        background: #ffffff;
+    }
 }
 
 .blurb{
@@ -355,12 +370,6 @@ nav.dropdown > div > span{
     background-position: center;
     mix-blend-mode: multiply;
     margin: 6rem 1rem;
-}
-
-.arrow {
-    margin: 0 1rem 2rem 1rem;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: .8rem; 
 }
 /*END of Index*/
 
@@ -583,7 +592,12 @@ hr{
     color: white;
 }
 
-@media (hover:hover){
+@media (hover: hover) and (pointer: fine){
+    .side a:hover{
+        text-decoration: underline;
+    }
+}
+@media (hover: none), (pointer: coarse){
     .side a:hover{
         text-decoration: underline;
     }
@@ -1301,27 +1315,22 @@ footer h3{
     .header{
         font-size: calc(2vw + 1rem);
         line-height: calc(0.8vh + 2rem);
-        padding: calc(0.5vw + 1rem);
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding: 5rem calc(0.5vw + 1rem);
         margin: calc(2vw + 1rem);
     }
     
     .work a img{
         width: calc(200px + 20vw);
     }
-    
-    .work a img:first-of-type{
+    .work a:first-of-type img{
         margin: 0rem 3rem 2rem 0rem;
     }
-    
     .work a h1{
         right: 9%;
         font-size: 10px;
     }
-    
     .arrow{
-        margin-left: calc(.5vw + .5rem);
+        margin: 0 1rem 2rem 0;
         font-size: .7rem;
     }
     
@@ -1332,16 +1341,24 @@ footer h3{
 }
 @media only screen and (max-width: 560px){
     nav div > a{
-    font-size: 1rem;
-    padding: 1rem 0 1rem 1rem;
-}
-    
+        font-size: 1rem;
+        padding: 1rem 0 1rem 1rem;
+    }
     nav span{
-    padding: 15px 0 15px 0;
-}
-    
+        padding: 15px 0 15px 0;
+    }
     nav > ul a{
         font-size: 0.7rem;
+    }
+    
+    .work {
+        padding: 0 2.5rem 0rem 2.5rem;
+    }
+    .work a img{
+        width: calc(100vw - 5rem);
+    }
+    .work a h1{
+        right: 7%;
     }
     
     .wrapper1{
