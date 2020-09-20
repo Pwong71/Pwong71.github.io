@@ -755,8 +755,15 @@ nav.dropdown > div > span{
     }
 }
 @media only screen and (max-width: 560px){
+    nav div > a{
+        font-size: 1rem;
+        padding: 1rem 0 1rem 1rem;
+    }
+    nav span{
+        padding: 15px 0 15px 0;
+    }
     nav > ul a{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     
     .parallax span::before{
@@ -908,7 +915,8 @@ nav.dropdown > div > span{
         width: 100%;
     }
     #chipo-parallax span:first-of-type{
-        margin: 68vh 0 50vh 0;
+        margin: 62vh 0 50vh 0;
+        width: 40%;
     }
     
     #charles-parallax {
@@ -930,6 +938,7 @@ nav.dropdown > div > span{
         width: 100%;
     }
     #charles-parallax span:first-of-type{
-        margin: calc(300px + 0vw + 110vh) 0 30vh 0;
+        margin: calc(300px + 0vw + 109vh) 0 30vh 0;
+        width: 40%;
     }
 }
