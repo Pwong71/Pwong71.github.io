@@ -106,7 +106,7 @@ window.onscroll = () => {
             if (contentBounds(banner[0], 2, 100) && contentBounds(banner[1], 2, 100)) {
                 document.body.classList.remove('darken');
             } else {document.body.classList.add('darken');};
-        } else {
+        } else if (banner[0]) {
             if (contentBounds(banner[0], 2, 100)) {
                 document.body.classList.remove('darken');
             } else {document.body.classList.add('darken');};
