@@ -181,6 +181,7 @@ nav a{
 
 nav div > a{
     font-family: 'Hatton', serif;
+    font-weight: 500;
     font-size: 1.3rem;
     padding: 1.3rem 0 1.3rem 1.3rem;
 }
@@ -218,7 +219,7 @@ nav div li:first-of-type{
 nav div li:not(:first-of-type){
     border-bottom: .8px solid;
     font-family: 'Hatton', serif;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 nav div li:last-of-type{
@@ -270,7 +271,7 @@ nav.dropdown > div > span{
 }
 
 .font1{font-family: Hatton}
-.font1{font-weight: 400}
+.font1{font-weight: 500}
 .font2{font-family: 'Quantico', sans-serif;}
 
 
@@ -492,9 +493,9 @@ body.darken .links{
 
 .title h1{
     font-family: 'Hatton', serif;
+    font-weight: 500;
     font-size: calc(2rem + 2vw);
     margin-bottom: 25px;
-    font-weight: 500;
 }
 
 #comdes .title h1{
@@ -865,7 +866,7 @@ hr{
     flex: 1 0 100%;
     font-family: "Hatton", serif;
     font-size: 50px;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 4.5rem;
 }
@@ -1085,6 +1086,7 @@ footer h2 span{
 
 footer h2:last-of-type{
     font-family: "Hatton", serif;
+    font-weight: 500;
     font-size: 36px;
 }
 

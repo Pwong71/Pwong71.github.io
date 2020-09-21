@@ -55,6 +55,7 @@ nav a{
 
 nav div > a{
     font-family: 'Hatton', serif;
+    font-weight: 500;
     font-size: 1.3rem;
     padding: 1.3rem 0 1.3rem 1.3rem;
 }
@@ -92,7 +93,7 @@ nav div li:first-of-type{
 nav div li:not(:first-of-type){
     border-bottom: .8px solid;
     font-family: 'Hatton', serif;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 nav div li:last-of-type{
@@ -415,12 +416,12 @@ nav.dropdown > div > span{
 }
 .bg-text h1{
     font-size: 9vw;
-    font-weight: 300;
+    font-weight: 200;
     margin-bottom: 3vw;
 }
 .bg-text p{
     font-size: 4.5vw;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .bg-text:first-of-type{
@@ -480,7 +481,7 @@ nav.dropdown > div > span{
     position: absolute;
     font-family: 'Hatton', serif;
     font-size: calc(1rem + 7vw);
-    font-weight: 300;
+    font-weight: 200;
     color: #FB9E18;
 }
 #summer19-intro h1{
@@ -538,7 +539,7 @@ nav.dropdown > div > span{
     margin-top: calc(6% + 4.5rem);
     font-family: 'Hatton', sans-serif;
     font-size: 9vw;
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
     color: #B7CDB9;
 }
@@ -737,6 +738,9 @@ nav.dropdown > div > span{
     background-position: top;
     background-size: 100% 110vh;
 }
+body.hidden{background-color: white;background-image: none!important;}
+body.hidden #la19-intro{opacity: 0;}
+
 #la19 nav{
     opacity: 0;
 }
@@ -858,6 +862,7 @@ nav.dropdown > div > span{
 
 /*style right side*/
 .la19-parallax div:last-of-type{
+    transition: 1.1s cubic-bezier(0, 0.55, 0.45, 1);
     position: relative;
     height: auto;
     width: 50%;
@@ -866,7 +871,6 @@ nav.dropdown > div > span{
     flex-flow: column nowrap;
     align-items: flex-end;
 }
-body.slow-parallax .la19-parallax div:last-of-type{transition: 1.1s cubic-bezier(0, 0.55, 0.45, 1);}
 .la19-parallax div:last-of-type span{
     width: 50%;
     margin-bottom: 3rem;

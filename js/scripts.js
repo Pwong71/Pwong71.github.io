@@ -17,9 +17,8 @@ if (document.querySelector('#summer19')){
 }
 //initiate/refresh parallax set cover size to inner browser height
 if (document.querySelector('#la19')){
-    var rellaxLA = new Rellax('.la19-parallax div:last-of-type', {speed: 2.5, center: true,});
-    adjustPage = () => {document.querySelector('#la19-intro').style.setProperty('height', window.innerHeight + 'px');document.body.classList.remove('slow-parallax');setTimeout(() => {document.body.classList.add('slow-parallax');}, 200);}; adjustPage();
-    window.addEventListener('resize', () => { rellaxLA.refresh(); adjustPage();});
+    var rellaxLA = new Rellax('.la19-parallax div:last-of-type', {speed: 3, center: true,});
+    document.querySelector('#la19-intro').style.setProperty('height', window.innerHeight + 'px');
 };
 
 const side = document.querySelector('.side');
@@ -38,7 +37,7 @@ animationClean = () => {
     setTimeout(() => {
         bodyScrollLock.enableBodyScroll(document.body);
         document.body.classList.remove('loading');
-    }, 4200);
+    }, 3800);
 }
 //handle landing butts animation
 if (pagePath == '/' || pagePath == '/index.html') {
@@ -129,6 +128,8 @@ window.onscroll = () => {
             navBar.classList.remove('charles-nav');
         }
     }
+    //hide intro when screen is scrolled down
+    if (document.querySelector('#la19')){if ((document.body.scrollTop || document.documentElement.scrollTop) > screen.height) {document.body.classList.add('hidden');} else {document.body.classList.remove('hidden');};};
 }
 
 //update carousel indicator
