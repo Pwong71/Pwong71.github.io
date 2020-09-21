@@ -36,6 +36,10 @@ nav{
     background-color: #F2F1EC;
 }
 
+#la19 nav, #la19 nav div ul{
+    background-color: white;
+}
+
 nav.charles-nav, nav.charles-nav div ul{
     background-color: #c5d3c7!important;
 }
@@ -387,9 +391,10 @@ nav.dropdown > div > span{
     }
 }
 
-.parallax h3{
+.parallax > p{
     font-family: 'IBM PLex Mono', monospace;
     font-size: 11px;
+    font-weight: bold;
     width: calc(16% + 5rem);
     line-height: 25px;
     left: 0;
@@ -724,19 +729,167 @@ nav.dropdown > div > span{
     transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
 /*End of Summer 2019*/
+
+/*Start of LA19*/
+#la19{
+    overflow-x: hidden;
+}
+#la19 nav{
+    opacity: 0;
+}
+
+#la19-intro {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/la/la-bg.jpg) center/cover;
+}
+#la19-intro img{
+    height: 70%;
+    width: 75%;
+    object-fit: contain;
+    -webkit-animation:vibrate-3 60s linear infinite reverse both;animation:vibrate-3 60s linear infinite reverse both;
+}
+#la19-intro p{
+    position: absolute;
+    font-family: 'Hatton', serif;
+    font-size: calc(0.3vw + 1rem);
+    color: #FE628B;
+    padding: 3% 5%;
+}
+#la19-intro p:first-of-type{
+    top: 0;
+    left: 0;
+}
+#la19-intro p:nth-of-type(2){
+    top: 0;
+}
+#la19-intro p:last-of-type{
+    bottom: 0;
+    right: 0;
+}
+
+.la19-parallax{
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.la19-parallax:first-of-type{
+    margin: 100vh 0 0 0;
+}
+.la19-parallax *{
+    box-sizing: border-box;
+}
+.la19-parallax h2, .la19-parallax p{
+    position: absolute;
+    font-family: 'Hatton', serif;
+    -webkit-animation:vibrate-3 30s linear infinite reverse both;animation:vibrate-3 30s linear infinite reverse both;
+}
+.la19-parallax h2{
+    z-index: 1;
+    font-weight: 400;
+}
+.la19-parallax p{
+    width: 25%;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+/*style left side*/
+.la19-parallax div:first-of-type{
+    text-align: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.la19-parallax div:first-of-type > img{
+    height: 64%;
+    width: 50%;
+    object-fit: cover;
+}
+
+.smonica div:first-of-type{
+    background: url(../images/la/santa-monic-background.jpg) bottom/cover;
+}
+.smonica h2, .smonica p{
+    color: #4F4CDB;
+}
+.smonica h2{
+    font-size: calc(2rem + 1.5vw);
+    top: 11%;
+}
+
+.melrose div:first-of-type{
+    background: #F4F3E1;
+}
+.melrose h2, .melrose p{
+    color: #EA7F8F;
+}
+.melrose h2{
+    font-size: calc(3rem + 1.5vw);
+    top: 13.1%;
+}
+
+.downtown div:first-of-type{
+    background: url(../images/la/downtown-bg.jpg) bottom/cover;
+}
+.downtown h2, .downtown p{
+    color: white;
+}
+.downtown h2{
+    font-size: calc(3rem + 1.5vw);
+    bottom: 13.5%;
+}
+
+/*style right side*/
+.la19-parallax div:last-of-type{
+    position: relative;
+    transition: 1.1s cubic-bezier(0, 0.55, 0.45, 1);
+    height: auto;
+    width: 50%;
+    padding: 5rem 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+}
+.la19-parallax div:last-of-type span{
+    width: 50%;
+    margin-bottom: 3rem;
+}
+.la19-parallax div:last-of-type span:last-of-type{
+    margin-bottom: 15rem;
+}
+.la19-parallax div:last-of-type img{
+    width: 100%;
+    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    transform-origin: right;
+}
+
+@media (hover: hover) and (pointer: fine){
+    .la19-parallax div:last-of-type span:hover img{
+        transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+        transform: scale(1.5);
+    }
+}
+/*End of LA19*/
+
 @media only screen and (max-width: 1366px){
-    .parallax h3{
+    .parallax > p{
         bottom: 1%;
     }
 }
 @media only screen and (max-width: 856px){
-    .parallax h3{
-        position: static;
-        padding: 2rem 1.5rem 1.5rem 1.5rem;
-        width: auto;
-        font-size: 9px;
-    }
-    
     nav div > a{
         font-size: calc(0.6rem + 0.75vh + 1.65vw);
         padding: 1rem 0 1rem 1rem;
@@ -751,6 +904,46 @@ nav.dropdown > div > span{
     }
     nav.dropdown > div > span{
         transform: rotate(180deg);
+        transform-origin: center;
+    }
+    
+    .parallax > p{
+        position: static;
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+        width: auto;
+        font-size: 9px;
+    }
+    
+    .la19-parallax {
+        flex-flow: column nowrap;
+    }
+    .la19-parallax div{
+        width: 100%!important;
+    }
+    .la19-parallax p{
+        bottom: 15.5%;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+    .la19-parallax div:first-of-type{
+        position: relative;
+    }
+    .la19-parallax div:first-of-type img{
+        width: 60%;
+    }
+    .downtown p{
+        bottom: 0;
+        top: 16.5%;
+    }
+    .la19-parallax div:last-of-type{
+        align-items: center;
+    }
+    .la19-parallax div:last-of-type span{
+        width: 90%;
+    }
+    .la19-parallax div:last-of-type img{
+        width: 100%;
         transform-origin: center;
     }
 }

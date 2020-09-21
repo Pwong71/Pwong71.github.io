@@ -34,8 +34,8 @@ wrapper {
     z-index: 6;
     position: fixed;
     mix-blend-mode: hard-light;
-    width: calc(3rem + 1vw);
-    height: calc(4rem + 1vh);
+    width: calc(1.88rem + 2vw);
+    height: calc(2.5rem + 2vh);
     margin: calc(1rem + 5vw) 0 0 calc(1rem + 6vw);
     background: url(../images/smiley.png) center/contain no-repeat;
     opacity: 0;
@@ -46,20 +46,20 @@ wrapper {
 #skip-button::after{
     content: "";
     position: fixed;
-    left: calc(4rem + 7vw + 1rem);
-    top: calc(2.5rem + 5vw + 0.5vh);
-    width: 10rem;
+    left: calc(2.88rem + 8vw + 1rem);
+    top: calc(2.25rem + 5vw + 1vh - 8px);
+    width: 8rem;
     height: 21px;
     background: url(../images/arrow.png) center/contain no-repeat;
 }
 #skip-button::before{
     content: "Click to skip!";
     position: fixed;
-    left: calc(4rem + 7vw + 2.5rem);
-    top: calc(2.5rem + 5vw + 0.5vh - 0.5rem);
+    left: calc(2.88rem + 8vw + 2rem);
+    top: calc(2.25rem + 5vw + 1vh - 12px);
     white-space: nowrap;
     font-family: 'IBM PLex Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: bold;
     letter-spacing: 0.15rem;
 }
@@ -118,7 +118,7 @@ body.loading #butts{
     top: 0;
 }
 body.loading #skip-button{
-    opacity: 1;
+    animation: butt-ani 3s steps(1, end) forwards;
 }
 body.load-ease #butts{
     transition: 0.8s cubic-bezier(0.33, 1, 0.68, 1);
