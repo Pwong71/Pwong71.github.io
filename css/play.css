@@ -733,6 +733,9 @@ nav.dropdown > div > span{
 /*Start of LA19*/
 #la19{
     overflow-x: hidden;
+    background-image: url(../images/la/la-bg.jpg);
+    background-position: top;
+    background-size: 100% 110vh;
 }
 #la19 nav{
     opacity: 0;
@@ -746,7 +749,6 @@ nav.dropdown > div > span{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(../images/la/la-bg.jpg) center/cover;
 }
 #la19-intro img{
     height: 70%;
@@ -797,6 +799,7 @@ nav.dropdown > div > span{
     font-weight: 400;
 }
 .la19-parallax p{
+    z-index: 1;
     width: 25%;
     left: 0;
     font-size: 1.5rem;
@@ -817,6 +820,7 @@ nav.dropdown > div > span{
     height: 64%;
     width: 50%;
     object-fit: cover;
+    -webkit-animation:vibrate-3 60s linear infinite reverse both;animation:vibrate-3 60s linear infinite reverse both;
 }
 
 .smonica div:first-of-type{
@@ -855,14 +859,14 @@ nav.dropdown > div > span{
 /*style right side*/
 .la19-parallax div:last-of-type{
     position: relative;
-    transition: 1.1s cubic-bezier(0, 0.55, 0.45, 1);
     height: auto;
     width: 50%;
-    padding: 5rem 5%;
+    padding: 6% 5%;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
 }
+body.slow-parallax .la19-parallax div:last-of-type{transition: 1.1s cubic-bezier(0, 0.55, 0.45, 1);}
 .la19-parallax div:last-of-type span{
     width: 50%;
     margin-bottom: 3rem;

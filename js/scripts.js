@@ -15,6 +15,12 @@ if (document.querySelector('#summer19')){
     var rellax = new Rellax('#chipo-parallax span');
     var rellax = new Rellax('#charles-parallax span');
 }
+//initiate/refresh parallax set cover size to inner browser height
+if (document.querySelector('#la19')){
+    var rellaxLA = new Rellax('.la19-parallax div:last-of-type', {speed: 2.5, center: true,});
+    adjustPage = () => {document.querySelector('#la19-intro').style.setProperty('height', window.innerHeight + 'px');document.body.classList.remove('slow-parallax');setTimeout(() => {document.body.classList.add('slow-parallax');}, 200);}; adjustPage();
+    window.addEventListener('resize', () => { rellaxLA.refresh(); adjustPage();});
+};
 
 const side = document.querySelector('.side');
 let sideItem = document.querySelectorAll('.side > span');
