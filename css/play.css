@@ -173,7 +173,6 @@ nav.dropdown > div > span{
     overflow: hidden;
     border-right: 3px solid transparent;
     white-space: nowrap;
-    margin: 0 auto;
 }
 
 @keyframes typing {from{ width: 0 } to{ width: calc(63vw + 1rem) }}
@@ -754,6 +753,30 @@ body.hidden #la19-intro{opacity: 0;}
     align-items: center;
     justify-content: center;
 }
+
+#la19-intro h1{
+    position: absolute;
+    font-family: 'Hatton', serif;
+    font-weight: 200;
+    font-size: 12vw;
+    color: #FE628B;
+    animation:
+    typing2 3s steps(30, end),
+    cursor2 .75s step-end 3;
+    z-index: 1;
+    top: 27%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-right: 3px solid transparent;
+    white-space: nowrap; 
+}
+
+@keyframes typing2 {from{ width: 0 } to{ width: 78vw }}
+@keyframes cursor2 {
+  from, to { border-color: #FE628B }
+  50% { border-color: transparent; }
+}
+
 #la19-intro img{
     height: 70%;
     width: 75%;
