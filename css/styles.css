@@ -718,28 +718,11 @@ hr{
     max-height: 750px;
 }
 
-.carousel-3{
+.carousel-3, .carousel-4, .carousel-5{
     width: 100%;
     max-width: 100%;
-    max-height: auto;
     height: auto;
     margin-bottom: 15vh;
-}
-
-.carousel-4{
-    width: 100%;
-    max-width: 100%;
-    max-height: auto;
-    height: auto;
-    margin-bottom: 15vh;
-}
-
-.carousel-5{
-    width: 100%;
-    max-width: 100%;
-    max-height: auto;
-    height: auto;
-    margin-bottom: 5vh;
 }
 
 .carousel-cell{
@@ -769,7 +752,7 @@ hr{
 } 
 
 .carousel-5 .flickity-button{
-    top: 104%;
+    top: 106.5%;
 }
 
 .next{
@@ -801,7 +784,7 @@ hr{
 }
 
 .carousel-5 .indicator{
-    top: 102%;
+    top: 105%;
 }
 /*end of carousel*/
 
@@ -1200,8 +1183,12 @@ footer h3{
     .title{
         top: 3rem;
     }
+    .title h1{
+        font-size: calc(6.5vw + 0.5rem)!important;
+    }
     .front-img{
-        width: 80%;
+        width: 85%;
+        align-self: center;
     }
     .casestudy{
         grid-template-columns: 1fr;
@@ -1211,7 +1198,7 @@ footer h3{
         overflow-x: hidden;
         transition: .4s linear;
         margin: 0;
-        padding: 4.2rem 2.5rem 0 2.5rem;
+        padding: 4.2rem 2rem 0 2rem;
         top: -4.2rem;
         z-index: 1;
         flex-flow: row nowrap;
@@ -1233,32 +1220,35 @@ footer h3{
     }
     .side > span{
         text-align: left;
-        font-size: 13px;
+        font-size: 13.5px;
         width: auto;
-        margin: 1.1rem 0.5rem 1.1rem 0.5rem;
+        margin: 1.2rem 0.5rem 1.2rem 0.5rem;
     }
     .side > span a{
         position: relative;
     }
     .side > span a span{
         position: absolute;
-        left: 150%;
+        left: 140%;
         white-space: nowrap;
         transition: all 0.7s cubic-bezier(0.85, 0, 0.15, 1);
-        transform: scale(0);
-        transform-origin: top;
+        transform-origin: left;
+        transform: scaleX(0); opacity: 0;
     }
     .side > span.active a span{
-        transform: scale(1);
+        transform: scaleX(1); opacity: 1;
     }
+    
     .content{
         width: auto;
         grid-column: 1/2;
         padding: 150px 2.5rem 0 2.5rem;
     }
-    
     .content p{
         width: auto;
+    }
+    .content img {
+        width: 100%!important;
     }
     
     .main-carousel{
@@ -1377,11 +1367,16 @@ footer h3{
         right: 7%;
     }
     
+    .title hr {
+        width: 85%;
+    }
+    
     .wrapper1{
         padding: calc(5vw + 50px) 1.5rem 0 1.5rem;
     }
     .side {
-        padding: 4.2rem 1.5rem 0 1.5rem;
+        padding: 3.5rem 1rem 0 1rem;
+        top: -3.5rem;
     }
     .content{
         padding: 150px 1.5rem 0 1.5rem;
@@ -1394,19 +1389,25 @@ footer h3{
         display: flex;
         flex-flow: column nowrap;
     }
-    
-    #two p:first-of-type{
-        width: auto;
-    }
-    
     #two >*{
         width: auto;
     }
     #two p:first-of-type{
         align-self: flex-start;
+        width: auto;
     }
     #four h3:last-of-type{
         margin-top: 400vh;
+    }
+    .main-carousel {
+        width: calc(100vw - 3rem);
+        height: calc(126vw - 3rem);
+    }
+    .carousel-2 {
+        height: calc(133vw - 3rem);
+    }
+    .carousel-3, .carousel-4, .carousel-5{
+        height: auto;
     }
     #one-l{
         padding-bottom: 300vh;

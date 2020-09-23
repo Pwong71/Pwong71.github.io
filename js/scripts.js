@@ -19,6 +19,7 @@ if (document.querySelector('#summer19')){
 if (document.querySelector('#la19')){
     var rellaxLA = new Rellax('.la19-parallax div:last-of-type', {speed: 3, center: true,});
     document.querySelector('#la19-intro').style.setProperty('height', window.innerHeight + 'px');
+    window.addEventListener('resize', () => {document.querySelector('#la19-intro').style.setProperty('height', window.innerHeight + 'px');});
 };
 
 const side = document.querySelector('.side');
