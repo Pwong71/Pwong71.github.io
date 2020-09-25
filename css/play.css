@@ -179,7 +179,7 @@ nav.dropdown > div > span{
 @keyframes typing-small {from{ width: 0 } to{ width: calc(16vw + 1rem) }}
 
 @keyframes cursor {
-  from, to { border-color: #ef5252 }
+  from, to { border-color: #fbfdc4 }
   50% { border-color: transparent; }
 }
 
