@@ -145,7 +145,7 @@ nav.dropdown > div > span{
     height: 100vh;
     text-align: center;
     font-family: 'Hatton', serif;
-    color: #ef5252;
+    color: #fbfdc4;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -467,6 +467,7 @@ nav.dropdown > div > span{
     font-size: 0.6rem;
     line-height: 1rem;
     font-weight: bolder;
+    width: 30%;
 }
 #summer19-intro div{
     margin-bottom: 5%;
@@ -1116,6 +1117,11 @@ body.hidden #la19-intro{opacity: 0;}
     }
     .bg-text:last-of-type{
         top: calc(72.7%);
+    }
+    
+    #summer19-intro p{
+        width: 65%;
+        font-size: 9px;
     }
     
     #chipo-parallax {

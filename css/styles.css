@@ -15,9 +15,10 @@ body {
 }
 
 @keyframes bg-transition{
-    0%{background-color: azure;}
-    50%{background-color: #d1d1c5;}
-    100%{background-color: #ffd8c9;}
+    25%{background-color: white;}
+    50%{background-color: #f0f0f0;}
+    75%{background-color: #d1d1c5;}
+    100%{background-color: #ffcfcb;}
 }
 
 #index{
@@ -1346,6 +1347,8 @@ footer h3{
     }
 }
 @media only screen and (max-width: 560px){
+    
+    
     nav div > a{
         font-size: 1rem;
         padding: 1rem 0 1rem 1rem;
@@ -1366,6 +1369,11 @@ footer h3{
     .work a h1{
         right: 7%;
     }
+    
+    .somerb::before, .inspace::before, .remixtype::before, .infodes1::before{
+        font-size: 11px;
+        right: -20px;
+}
     
     .title hr {
         width: 85%;
@@ -1416,14 +1424,27 @@ footer h3{
         grid-template-columns: repeat(2, auto);
         height: 300vh;
     }
+    
     footer h2{
-        font-size: 45px;
+        font-size: 40px;
     }
+    
     footer h2:last-of-type{
-        font-size: 30px;
+        font-size: 25px;
+        line-height: 2rem;
     }
+    
+    footer h3{
+        font-size: .8rem;
+    }
+    
+    footer a{
+        font-size: 15px;
+        line-height: 1.3rem;
+    }
+    
     footer p{
-        font-size: 1rem;
+        font-size: .8rem;
         line-height: 1.6rem;
     }
 }
