@@ -17,7 +17,7 @@ body {
 @keyframes bg-transition{
     25%{background-color: white;}
     50%{background-color: #f0f0f0;}
-    75%{background-color: #d1d1c5;}
+    75%{background-color: #d6d5c6;}
     100%{background-color: #ffcfcb;}
 }
 
