@@ -73,8 +73,8 @@ wrapper {
     top: -110%; left: 0;
     width: 100%; height: 100%;
     display: flex; align-items: flex-end;
-    background: #E5E4DA url(../images/butts/noise.jpg) center/50%;
-    background-blend-mode: hard-light;
+    background: #E5E4DA url(../images/butts/noise.jpg) center/100%;
+    background-blend-mode: overlay;
     animation: butt-color 3s steps(1, end) 0.5s forwards;
 }
 #butts h1{
