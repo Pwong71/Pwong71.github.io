@@ -66,17 +66,15 @@ wrapper {
 }
 
 #butts{
-    box-sizing: border-box;
-    padding: 0 10% 7% 10%;
     z-index: 3;
     position: fixed;
     top: -110%; left: 0;
     width: 100%; height: 100%;
-    display: flex; align-items: flex-end;
     background: #E5E4DA url(../images/butts/noise.jpg) center/100%;
     background-blend-mode: overlay;
     animation: butt-color 3s steps(1, end) 0.5s forwards;
 }
+
 #butts h1{
     position: absolute;
     text-align: right;
@@ -89,27 +87,29 @@ wrapper {
 #butts h1 span:nth-of-type(2){animation: butt-text 0.8s steps(1, end) 0.5s forwards;}
 #butts h1 span:nth-of-type(3){animation: butt-text 1.5s steps(1, end) 0.5s forwards;}
 #butts h1 span:nth-of-type(4){animation: butt-text 2.3s steps(1, end) 0.5s forwards;}
-#butts > div{
+
+#butts img {
+    box-sizing: border-box;
+    padding: 0 10% 7% 10%;
+    position: absolute;
+    left: 0; bottom: 0;
     width: 100%; height: 50%;
-    background: url(../images/butts/butt1.png) bottom right/contain no-repeat;
-    animation: butt-img 3s steps(1, end) 0.5s forwards;
+    object-fit: contain;
+    object-position: bottom right;
 }
+#butts img:not(:first-of-type){opacity: 0}
+#butts img:first-of-type{animation: disappear 0.75s steps(1, end) 0.5s forwards;}
+#butts img:nth-of-type(2){animation: disappear 0.75s steps(1, end) 1.25s forwards;}
+#butts img:nth-of-type(3){animation: disappear 0.75s steps(1, end) 2s forwards;}
+#butts img:nth-of-type(4){animation: disappear 0.75s steps(1, end) 2.75s forwards;}
+#butts img:nth-of-type(5){animation: appear 0s steps(1, end) 3.5s forwards;}
 
 @keyframes butt-color {
     0% {background-color: #E5E4DA} 25% {background-color: #E2AEA9} 50% {background-color: #94A353} 75% {background-color: #99B2DD} 100% {background-color: #1A1A1A}
 }
-@keyframes butt-img {
-    0% {background-image: url(../images/butts/butt1.png)}
-    25% {background-image: url(../images/butts/butt2.png)}
-    50% {background-image: url(../images/butts/butt3.png)}
-    75% {background-image: url(../images/butts/butt4.png)}
-    100% {background-image: url(../images/butts/butt5.png)}
-}
 @keyframes butt-text{from {opacity: 0} to {opacity: 1}}
 @keyframes disappear{from {opacity: 1} to {opacity: 0}}
-@keyframes slide-up {
-    0% {transform: translateY(0);} 100%{transform: translateY(-100%);}
-}
+@keyframes appear{from {opacity: 0} to {opacity: 1}}
 
 body.loading #butts{
     top: 0;
@@ -1149,8 +1149,8 @@ footer h3{
 }
 
 @media only screen and (max-width: 856px){
-    #butts div{
-        background-position: bottom center;
+    #butts img{
+        object-position: bottom center;
     }
     
     nav div > a{
