@@ -38,7 +38,7 @@ animationClean = () => {
     setTimeout(() => {
         bodyScrollLock.enableBodyScroll(document.body);
         document.body.classList.remove('loading');
-    }, 3800);
+    }, 4300);
 }
 //handle landing butts animation
 if (pagePath == '/' || pagePath == '/index.html') {

@@ -66,66 +66,62 @@ wrapper {
 }
 
 #butts{
+    box-sizing: border-box;
+    padding: 0 10% 7% 10%;
     z-index: 3;
-    width: 100%;
-    height: 100vh;
     position: fixed;
-    top: -120%;
-    left: 0;
+    top: -110%; left: 0;
+    width: 100%; height: 100%;
+    display: flex; align-items: flex-end;
+    background: #E5E4DA url(../images/butts/noise.jpg) center/50%;
+    background-blend-mode: hard-light;
+    animation: butt-color 3s steps(1, end) 0.5s forwards;
 }
-#butts img{
+#butts h1{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: bottom right;
+    text-align: right;
+    font-family: 'Hatton', serif;
+    font-size: calc(1rem + 2vh + 1.2vw); font-weight: 200;
+    top: 35%; right: 5%;
+    animation: disappear 3.5s steps(1, end) forwards;
 }
-#butts img:not(:last-of-type){
-    animation: butt-ani 0.6s steps(1, end) forwards;
-}
-#butts img:first-of-type{
-    z-index: 4;
-    animation-delay: 0.6s;
-}
-#butts img:nth-of-type(2){
-    z-index: 3;
-    animation-delay: 1.2s;
-}
-#butts img:nth-of-type(3){
-    z-index: 2;
-    animation-delay: 1.8s;
-}
-#butts img:nth-of-type(4){
-    z-index: 1;
-    animation-delay: 2.4s;
+#butts h1 span:not(:first-of-type){opacity: 0;}
+#butts h1 span:nth-of-type(2){animation: butt-text 0.8s steps(1, end) 0.5s forwards;}
+#butts h1 span:nth-of-type(3){animation: butt-text 1.5s steps(1, end) 0.5s forwards;}
+#butts h1 span:nth-of-type(4){animation: butt-text 2.3s steps(1, end) 0.5s forwards;}
+#butts > div{
+    width: 100%; height: 50%;
+    background: url(../images/butts/butt1.png) bottom right/contain no-repeat;
+    animation: butt-img 3s steps(1, end) 0.5s forwards;
 }
 
-@keyframes butt-ani {
-    from {opacity: 1}
-    to {opacity: 0}
+@keyframes butt-color {
+    0% {background-color: #E5E4DA} 25% {background-color: #E2AEA9} 50% {background-color: #94A353} 75% {background-color: #99B2DD} 100% {background-color: #1A1A1A}
 }
+@keyframes butt-img {
+    0% {background-image: url(../images/butts/butt1.png)}
+    25% {background-image: url(../images/butts/butt2.png)}
+    50% {background-image: url(../images/butts/butt3.png)}
+    75% {background-image: url(../images/butts/butt4.png)}
+    100% {background-image: url(../images/butts/butt5.png)}
+}
+@keyframes butt-text{from {opacity: 0} to {opacity: 1}}
+@keyframes disappear{from {opacity: 1} to {opacity: 0}}
 @keyframes slide-up {
-    0% {
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(-100%);
-    }
+    0% {transform: translateY(0);} 100%{transform: translateY(-100%);}
 }
 
 body.loading #butts{
     top: 0;
 }
 body.loading #skip-button{
-    animation: butt-ani 3s steps(1, end) forwards;
+    animation: disappear 3.5s steps(1, end) forwards;
 }
 body.load-ease #butts{
     transition: 0.8s cubic-bezier(0.33, 1, 0.68, 1);
 }
 body.loading, body.loading nav, body.loading nav div ul{
-    animation-delay: 4.2s;
+    animation-delay: 4.3s;
 }
 
 /*START of navbar*/
@@ -1153,14 +1149,9 @@ footer h3{
 }
 
 @media only screen and (max-width: 856px){
-    #butts img{
-        object-position: center;
+    #butts div{
+        background-position: bottom center;
     }
-    #butts img:first-of-type{content: url(../images/butt1-square-extended.jpg);}
-    #butts img:nth-of-type(2){content: url(../images/butt2-square-extended.jpg);}
-    #butts img:nth-of-type(3){content: url(../images/butt3-square-extended.jpg);}
-    #butts img:nth-of-type(4){content: url(../images/butt4-square-extended.jpg);}
-    #butts img:last-child{content: url(../images/butt5-square-extended.jpg);}
     
     nav div > a{
         font-size: calc(0.6rem + 0.75vh + 1.65vw);
@@ -1305,8 +1296,7 @@ footer h3{
     }
     footer{
         grid-template-columns: 1fr;
-        align-content: flex-end;
-        padding: 0 0 12% 0;
+        padding: 0 0 0 0;
     }
     footer > div {
         justify-self: center!important;
@@ -1346,9 +1336,7 @@ footer h3{
         height: 40vh;
     }
 }
-@media only screen and (max-width: 560px){
-    
-    
+@media only screen and (max-width: 560px){  
     nav div > a{
         font-size: 1rem;
         padding: 1rem 0 1rem 1rem;
@@ -1373,7 +1361,7 @@ footer h3{
     .somerb::before, .inspace::before, .remixtype::before, .infodes1::before{
         font-size: 11px;
         right: -20px;
-}
+    }
     
     .title hr {
         width: 85%;
@@ -1427,22 +1415,18 @@ footer h3{
     
     footer h2{
         font-size: 40px;
-    }
-    
+    } 
     footer h2:last-of-type{
         font-size: 25px;
         line-height: 2rem;
     }
-    
     footer h3{
         font-size: .8rem;
     }
-    
     footer a{
         font-size: 15px;
         line-height: 1.3rem;
     }
-    
     footer p{
         font-size: .8rem;
         line-height: 1.6rem;
