@@ -101,22 +101,22 @@ nav div li:last-of-type{
 }
 
 @media (hover: hover) and (pointer: fine){
-    nav > div:hover > ul{
+    nav > div > span:hover + ul{
         z-index: 3;
         opacity: 1;
         transform: scaleY(1);
     }
-    nav > div:hover > span{
+    nav > div > span:hover{
         transform: rotate(180deg);
         transform-origin: center;
     }
 }
 @media (hover: none), (pointer: coarse){
-    nav > div:hover > ul{
+    nav > div > span:hover + ul{
         opacity: 0;
         transform: scaleY(0);
     }
-    nav > div:hover > span{
+    nav > div > span:hover + ul{
         transform: rotate(0);
     }
 }
