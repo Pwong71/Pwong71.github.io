@@ -41,10 +41,10 @@ animationClean = () => {
     }, 4300);
 }
 //handle landing butts animation
-if (pagePath == '/' || pagePath == '/index.html') {
+if (pagePath == '/play.html') {
     if (currentSession.getItem("animation") == 'played'){
         //play animation again if index is reloaded
-        if (currentSession.getItem("lastURL") == '/' || currentSession.getItem("lastURL") == '/index.html') {
+        if (currentSession.getItem("lastURL") == '/play.html') {
             animationClean();
         } else {
             document.body.classList.remove('loading', 'load-ease');
@@ -61,6 +61,7 @@ if (pagePath == '/' || pagePath == '/index.html') {
 };
 //store the current page path
 currentSession.setItem("lastURL", pagePath);
+console.log(currentSession.getItem("animation"))
     
 //dropdown click event
 navBar.querySelector('span').addEventListener('click', () => {

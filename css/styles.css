@@ -366,7 +366,6 @@ nav.dropdown > div > span{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    mix-blend-mode: multiply;
     margin: 6rem 1rem;
 }
 /*END of Index*/
