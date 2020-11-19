@@ -234,6 +234,7 @@ nav div li:last-of-type{
         transform-origin: center;
     }
 }
+/*
 @media (hover: none), (pointer: coarse){
     nav > div > span:hover + ul{
         opacity: 0;
@@ -243,10 +244,11 @@ nav div li:last-of-type{
         transform: rotate(0);
     }
 }
+*/
 nav.dropdown > div > ul{
     z-index: 3;
-    opacity: 1;
-    transform: scaleY(1);
+    opacity: 1!important;
+    transform: scaleY(1)!important;
 }
 nav.dropdown > div > span{
     transform: rotate(180deg);
