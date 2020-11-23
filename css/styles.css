@@ -223,36 +223,25 @@ nav div li:last-of-type{
     border-bottom: none;
 }
 
-@media (hover: hover) and (pointer: fine){
-    nav > div > span:hover + ul{
-        z-index: 3;
-        opacity: 1;
-        transform: scaleY(1);
-    }
-    nav > div > span:hover{
-        transform: rotate(180deg);
-        transform-origin: center;
-    }
-}
-/*
-@media (hover: none), (pointer: coarse){
-    nav > div > span:hover + ul{
-        opacity: 0;
-        transform: scaleY(0);
-    }
-    nav > div > span:hover + ul{
-        transform: rotate(0);
-    }
-}
-*/
 nav.dropdown > div > ul{
     z-index: 3;
-    opacity: 1!important;
-    transform: scaleY(1)!important;
+    opacity: 1;
+    transform: scaleY(1);
 }
 nav.dropdown > div > span{
     transform: rotate(180deg);
     transform-origin: center;
+}
+
+@media (hover: hover) and (pointer: fine){
+    nav > div > span:hover{
+        cursor: url(../images/hover.png) 16 16, auto;
+        transform: scaleX(2) scaleY(1.25);
+    }
+    nav.dropdown > div > span:hover{
+        cursor: url(../images/hover.png) 16 16, auto;
+        transform: rotate(180deg) scaleX(2) scaleY(1.25);
+    }
 }
 /*END of navbar*/
 
