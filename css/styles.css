@@ -163,6 +163,10 @@ nav, nav div ul{
     background-color: #eeeeee;
 }
 
+#infodes2 nav, #infodes2 nav div ul{
+    background-color: ghostwhite;
+}
+
 #play nav, #play nav div ul{
     background-color: transparent;
 }
@@ -365,7 +369,7 @@ nav.dropdown > div > span{
 }
 /*END of Index*/
 
-#comdes, #inspace, #remixtype, #infodes1{
+#comdes, #inspace, #remixtype, #infodes1, #infodes2{
     box-sizing: border-box;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 15px;
@@ -388,6 +392,10 @@ nav.dropdown > div > span{
 
 #infodes1{
     background-color: #eeeeee;
+}
+
+#infodes2{
+    background-color: ghostwhite;
 }
 
 body.darken .casestudy{
@@ -422,6 +430,10 @@ body.darken .links{
 
 #infodes1 .wrapper1{
     background-color: #eeeeee;
+}
+
+#infodes2 .wrapper1{
+    background-color: ghostwhite;
 }
 
 .front-img{
@@ -461,6 +473,10 @@ body.darken .links{
     content: "Information Design";
 }
 
+.infodes2::before{
+    content: "Information Design";
+}
+
 .title-wrap{
     margin-top: calc(2vw + 10px);
     height: auto;
@@ -482,6 +498,10 @@ body.darken .links{
     background-color: #eeeeee;
 }
 
+#infodes2 .title{
+    background-color: ghostwhite;
+}
+
 .title h1{
     font-family: 'Hatton', serif;
     font-weight: 500;
@@ -495,6 +515,10 @@ body.darken .links{
 
 #infodes1 .title h1{
     font-size: calc(0.5rem + 2.7vw);
+}
+
+#infodes2 .title h1{
+    font-size: calc(1rem + 2.6vw);
 }
 
 .title p{
@@ -518,7 +542,11 @@ hr{
 }
 
 #infodes1 hr{
-    width: calc(110px + 15vw);
+    width: calc(100px + 15vw);
+}
+
+#infodes2 hr{
+    width: calc(75px + 15vw);
 }
 
 .title-wrap a{
@@ -613,6 +641,7 @@ hr{
     font-weight: 400;
     line-height: 55px;
     margin-bottom: 30px;
+    width: 90%;
 }
 
 .content h3{
@@ -621,7 +650,7 @@ hr{
 }
 
 .content p{
-    width: 80%;
+    width: 85%;
     line-height: 30px;
     margin-bottom: 40px;
 }
