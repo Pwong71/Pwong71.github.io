@@ -395,7 +395,7 @@ nav.dropdown > div > span{
 }
 
 #infodes2{
-    background-color: ghostwhite;
+    background-color: white;
 }
 
 body.darken .casestudy{
@@ -433,7 +433,7 @@ body.darken .links{
 }
 
 #infodes2 .wrapper1{
-    background-color: ghostwhite;
+    background-color: white;
 }
 
 .front-img{
@@ -499,7 +499,7 @@ body.darken .links{
 }
 
 #infodes2 .title{
-    background-color: ghostwhite;
+    background-color: white;
 }
 
 .title h1{
@@ -581,6 +581,10 @@ hr{
 
 #infodes1 .casestudy{
     background-color: #eeeeee;
+}
+
+#infodes2 .casestudy{
+    background-color: white;
 }
 
 .side{
@@ -863,6 +867,10 @@ hr{
 
 #infodes1 .links{
     background-color: #eeeeee;
+}
+
+#infodes2 .links{
+    background-color: white;
 }
 
 .links h1{
