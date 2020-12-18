@@ -164,7 +164,7 @@ nav, nav div ul{
 }
 
 #infodes2 nav, #infodes2 nav div ul{
-    background-color: ghostwhite;
+    background-color: white;
 }
 
 #play nav, #play nav div ul{
@@ -449,7 +449,7 @@ body.darken .links{
     object-position: top;
 }
 
-.somerb::before, .inspace::before, .remixtype::before, .infodes1::before{
+.somerb::before, .inspace::before, .remixtype::before, .infodes1::before, .infodes2::before{
     position: absolute;
     display: inline-block;
     font-size: 13px;
@@ -500,6 +500,7 @@ body.darken .links{
 
 #infodes2 .title{
     background-color: white;
+    margin-top: 20px;
 }
 
 .title h1{
@@ -518,7 +519,7 @@ body.darken .links{
 }
 
 #infodes2 .title h1{
-    font-size: calc(1rem + 2.6vw);
+    font-size: calc(1rem + 2vw);
 }
 
 .title p{
@@ -734,6 +735,16 @@ hr{
     max-height: 875px;
 }
 
+/*
+.main-carousel2{
+    margin-bottom: 25vh;
+    width: 35vw;
+    max-width: 682.5px;
+    height: 40vw;
+    max-height: 875px;
+}
+*/
+
 .carousel-2{
     margin-bottom: 5vh;
     width: 37vw;
@@ -761,6 +772,12 @@ hr{
     top: 101.5%;
     background: none;
 }
+
+/*
+.main-carousel2 .flicity-button{
+    top: 115%;
+}
+*/
 
 .carousel-2 .flickity-button{
     top: 101.5%;
@@ -794,6 +811,12 @@ hr{
     left: 0;
     right: 0;
 }
+
+/*
+.main-carousel2 .indicator{
+    top: 115%;
+}
+*/
 
 .carousel-2 .indicator{
     top: 100%;
