@@ -500,7 +500,6 @@ body.darken .links{
 
 #infodes2 .title{
     background-color: white;
-    margin-top: 20px;
 }
 
 .title h1{
@@ -951,6 +950,10 @@ hr{
 
 #info-heritage::before{
     content: "Visualization: Toronto Neighborhoods";
+}
+
+#info-foodlabel::before{
+    content: "The Insufficiencies Of Food Labelling";
 }
 
 .links a img{
