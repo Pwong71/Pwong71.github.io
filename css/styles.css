@@ -930,6 +930,10 @@ hr{
     background-color: white;
 }
 
+#laika .links{
+    background-color: white;
+}
+
 .links h1{
     flex: 1 0 100%;
     font-family: "Hatton", serif;
