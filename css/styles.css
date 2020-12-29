@@ -1123,6 +1123,10 @@ img.modal-active{
     margin-bottom: 100px;
 }
 /*END of Info Des*/
+#infodes2 video{
+    width: 100%;
+    padding-top: 56.25%;
+}
 
 footer{
     visibility: hidden;
@@ -1302,6 +1306,9 @@ footer h3{
     }
     #infodes1 .side{
         background-color: #eeeeee;
+    }
+    #infodes2 .side, #laika .side{
+        background-color: white;
     }
     body.darken .side{
         opacity: 0;

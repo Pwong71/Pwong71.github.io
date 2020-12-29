@@ -7,21 +7,6 @@ window.addEventListener('load', () => {
     ScrollReveal().reveal('.links div', {distance: '100px', origin: 'left', duration: 500, reset: true});
 });
 window.addEventListener('DOMContentLoaded', () => {
-//initiate parallax library
-if (document.querySelector('.parallax span')){
-    var rellax = new Rellax('.parallax span');
-} 
-if (document.querySelector('#summer19')){
-    var rellax = new Rellax('#chipo-parallax span');
-    var rellax = new Rellax('#charles-parallax span');
-}
-//initiate/refresh parallax set cover size to inner browser height
-if (document.querySelector('#la19')){
-    var rellaxLA = new Rellax('.la19-parallax div:last-of-type', {speed: 3, center: true,});
-    document.querySelector('#la19-intro').style.setProperty('height', window.innerHeight + 'px');
-    window.addEventListener('resize', () => {document.querySelector('#la19-intro').style.setProperty('height', window.innerHeight + 'px');});
-};
-
 const side = document.querySelector('.side');
 let sideItem = document.querySelectorAll('.side > span');
 const caseStudy = document.querySelector('.casestudy');
@@ -30,7 +15,25 @@ let oldScroll = 0;
 let navBar = document.querySelector('nav');
 const pagePath = window.location.pathname;
 let currentSession = window.sessionStorage;
-let indexButts = document.querySelector('#butts');    
+let indexButts = document.querySelector('#butts');
+const aboutCollages = document.querySelectorAll('.collage');
+//initiate parallax library
+if (document.querySelector('.parallax span')){
+    var rellax = new Rellax('.parallax span');
+} 
+if (document.querySelector('#summer19')){
+    var rellax = new Rellax('#chipo-parallax span');
+    var rellax = new Rellax('#charles-parallax span');
+}
+if (document.querySelector('#about')){
+    var rellaxAb = new Rellax('.collage img', {speed: -0.5, center: true});
+}
+//initiate/refresh parallax set cover size to inner browser height
+if (document.querySelector('#la19')){
+    var rellaxLA = new Rellax('.la19-parallax div:last-of-type', {speed: 3, center: true,});
+    document.querySelector('#la19-intro').style.setProperty('height', window.innerHeight + 'px');
+    window.addEventListener('resize', () => {document.querySelector('#la19-intro').style.setProperty('height', window.innerHeight + 'px');});
+};
 
 //clean up when animation finishes
 animationClean = () => {
@@ -61,7 +64,6 @@ if (pagePath == '/play.html') {
 };
 //store the current page path
 currentSession.setItem("lastURL", pagePath);
-console.log(currentSession.getItem("animation"))
     
 //dropdown click event
 navBar.querySelector('span').addEventListener('click', () => {
@@ -82,14 +84,14 @@ window.onscroll = () => {
         if (side && (window.matchMedia('screen and (max-width:856px)').matches)) {side.style.top = "0px";} else if (side) {side.style.top = "";};
     }
     //hide the navbar in play case studies
-    if (document.querySelector('#newyork') || document.querySelector('#summer19') || document.querySelector('#la19')){
+    if (document.querySelector('#newyork') || document.querySelector('#summer19') || document.querySelector('#la19') || document.querySelector('#about')){
         if (document.documentElement.scrollTop < window.innerHeight || window.scrollY < window.innerHeight){
             navBar.style.opacity = '0';
         } else {
             navBar.style.opacity = '1';
         }
     }
-    //return true if content is within viewport
+    //return true if content out of viewport
     contentBounds = (x, y, z) => {
         return ((x.getBoundingClientRect().top >= (window.innerHeight/y || document.documentElement.clientHeight/y) && x.getBoundingClientRect().bottom > 0) || ((x.getBoundingClientRect().bottom <= window.innerHeight/z) && x.getBoundingClientRect().top < 0))
     }
@@ -120,6 +122,15 @@ window.onscroll = () => {
             document.querySelector('footer').style.visibility = "hidden";
         };
     };
+    if (aboutCollages){
+        aboutCollages.forEach(collage => {
+            if (contentBounds(collage, 2, 5)){
+                collage.classList.remove('visible');
+            } else {
+                collage.classList.add('visible');
+            }
+        })
+    }
     //change nav bar color when charles case study is in view
     let summerCase = document.querySelector('#charles-parallax');
     if (summerCase){
