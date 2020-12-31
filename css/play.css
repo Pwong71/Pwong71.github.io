@@ -906,6 +906,25 @@ body.hidden #la19-intro{opacity: 0;}
 }
 /*End of LA19*/
 
+/*Start of Pandemic*/
+#pandemic nav{
+    opacity: 0;
+}
+
+#pandemic_video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+}
+
+#pandemic diary{
+    background-color: antiquewhite;
+    margin-top: 100vh;
+    
+}
+/*End of Pandemic*/
+
 @media only screen and (max-width: 1366px){
     .parallax > p{
         bottom: 1%;
