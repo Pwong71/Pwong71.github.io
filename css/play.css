@@ -916,13 +916,28 @@ body.hidden #la19-intro{opacity: 0;}
     right: 0;
     bottom: 0;
     width: 100vw;
+    z-index: 1;
 }
 
-#pandemic diary{
+#pandemic .diary{
     background-color: antiquewhite;
-    margin-top: 100vh;
-    
+    white-space: nowrap;
+    overflow-x: scroll; 
 }
+
+.diary span{
+    position: relative;
+    display: inline-block;
+}
+
+.diary span:first-of-type{
+    width: calc
+}
+
+
+
+
+
 /*End of Pandemic*/
 
 @media only screen and (max-width: 1366px){
