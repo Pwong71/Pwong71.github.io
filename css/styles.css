@@ -1158,7 +1158,7 @@ footer h2{
     font-family: "Telegraf", sans-serif;
     font-size: 55px;
     font-weight: 400;
-    line-height: 70px;
+    line-height: 50px;
     text-align: right;
 }
 
@@ -1167,7 +1167,7 @@ footer h2 span{
 }
 
 footer h2:last-of-type{
-    font-family: "Hatton", serif;
+    font-family: "Telegraf", sans-serif;
     font-weight: 500;
     font-size: 36px;
 }
@@ -1181,7 +1181,7 @@ footer > div:last-of-type{
 
 footer p{
     font-size: 18px; 
-    line-height: 30px;
+    line-height: 25px;
 }
 
 footer a{
@@ -1392,12 +1392,21 @@ footer h3{
     }
     .links div{
         margin-bottom: 5rem;
+        margin-left: 5.2rem;
     }
     .links div a::before{
         right: 0;
+        font-size: 12px;
+        margin-left: 1rem;
     }
+    
+    .links h3{
+        font-size: 12px;
+    }
+    
     .links a img{
         width: 90%;
+        margin-bottom: 5px;
     }
     footer{
         grid-template-columns: 1fr;
@@ -1473,8 +1482,8 @@ footer h3{
         right: -20px;
     }
     
-    .title hr {
-        width: 85%;
+    #comdes hr, #inspace hr, #remixtype hr, #infodes1 hr, #laika hr, #infodes2 hr{
+        width: 100%;
     }
     
     .wrapper1{
@@ -1490,7 +1499,17 @@ footer h3{
     .content h1{
         font-size: 2rem;
         line-height: 2.5rem;
+        width: 100%;
     }
+    
+    .content h3{
+        width: 100%;
+    }
+    
+    .content p{
+        width: 100%;
+    }
+    
     #two {
         display: flex;
         flex-flow: column nowrap;
@@ -1524,7 +1543,8 @@ footer h3{
     }
     
     footer h2{
-        font-size: 40px;
+        font-size: 35px;
+        line-height: 40px;
     } 
     footer h2:last-of-type{
         font-size: 25px;
@@ -1532,13 +1552,18 @@ footer h3{
     }
     footer h3{
         font-size: .8rem;
+        margin: 0 0 0 20px;
+        line-height: 1rem;
     }
     footer a{
         font-size: 15px;
-        line-height: 1.3rem;
+        line-height: 1rem;
+        margin-left: 20px;
     }
     footer p{
         font-size: .8rem;
-        line-height: 1.6rem;
+        line-height: 1.2rem;
+        margin-left: 20px;
+        width: 95%;
     }
 }
