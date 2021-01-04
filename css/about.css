@@ -92,14 +92,20 @@
     align-items: center; justify-content: center;
 }
 .collage p{
-    width: calc(15rem + 22%);
+    width: calc(16rem + 22%);
     font-family: 'Hatton', sans-serif;
     font-weight: 300;
-    font-size: calc(1rem + 0.6vw);
+    font-size: calc(1rem + 0.5vw);
     line-height: 2.5rem;
 }
 .collage p span{
     white-space: nowrap;
+}
+
+.about-2 p{
+    font-size: calc(0.5rem + 0.5vw);
+    width: calc(8rem + 22%);
+    line-height: 1.5rem;
 }
 
 .about-2 img:nth-of-type(2){
