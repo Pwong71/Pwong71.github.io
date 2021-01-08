@@ -942,20 +942,39 @@ body.hidden #la19-intro{opacity: 0;}
 
 /*Start of collage*/
 
+#collage p{
+    width: 80%;
+    font-family: 'Telegraf', sans-serif;
+    font-weight: 100;
+    font-size: 72px;
+    margin: 0 auto;
+    margin-top: 7%;
+    line-height: 90px;
+    text-align: center;
+}
+
 .collages img:first-of-type{
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    width: 50%;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    
 }
 
 .collages img:nth-of-type(2){
-    position: absolute;
-    top: 70%;
-    right: 5%;
-    width: 35%;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20vh;
 }
 
+.collages img:nth-of-type(3){
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20vh;
+}
 
 
 /*End of collage*/
@@ -1214,5 +1233,18 @@ body.hidden #la19-intro{opacity: 0;}
     #charles-parallax span:first-of-type{
         margin: calc(300px + 0vw + 109vh) 0 30vh 0;
         width: 40%;
+    }
+    
+    #collage p{
+        margin-top: 15%;
+        width: 75%;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    
+    #collage img{
+        width: 80%;
+        margin-bottom: 10vh;
+        margin-top: 10vh;
     }
 }
