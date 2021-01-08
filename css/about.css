@@ -109,7 +109,7 @@
     line-height: 1.5rem;
     z-index: 3;
     left: 70%;
-    bottom: 8%;
+    top: 12%;
 }
 
 .about-2 img:nth-of-type(2){
@@ -124,7 +124,7 @@
 }
 .about-2 img:nth-of-type(4){
     z-index: 1;
-    right: 7%; top: 7.5%;
+    right: 7%; top: 30.5%;
     width: calc(3rem + 10%);
 }
 .about-2 img:nth-of-type(5){
@@ -240,7 +240,7 @@
 }
 .about-5 img:nth-of-type(4){
     z-index: 1;
-    right: 7%; bottom: 29%;
+    right: 5%; bottom: 29%;
     width: calc(9rem + 17%);
 }
 @media only screen and (max-width: 700px){

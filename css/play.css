@@ -940,6 +940,26 @@ body.hidden #la19-intro{opacity: 0;}
 
 /*End of Pandemic*/
 
+/*Start of collage*/
+
+.collages img:first-of-type{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 50%;
+}
+
+.collages img:nth-of-type(2){
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    width: 35%;
+}
+
+
+
+/*End of collage*/
+
 @media only screen and (max-width: 1366px){
     .parallax > p{
         bottom: 1%;
