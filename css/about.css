@@ -233,28 +233,182 @@
     right: 5%; bottom: 29%;
     width: calc(9rem + 17%);
 }
-@media only screen and (max-width: 700px){
-    .about-5 img:nth-of-type(4){
-        bottom: 5%;
+@media only screen and (max-width: 1024px){
+    .about-1 img:first-of-type{
         width: 50%;
     }
-}
-.about-5 img:nth-of-type(5){
-    right: 35%; top: 2%;
-    width: calc(0.5rem + 5%);
-}
-.about-5 img:nth-of-type(6){
-    top: 0; right: 10%;
-    width: calc(8rem + 11%);
-}
-.about-5 img:nth-of-type(7){
-    right: 3.5%; bottom: 5%;
-    width: calc(2.75rem + 9%);
-}
-.about-5 img:nth-of-type(8){
-    left: 2%; bottom: 25%;
-    width: calc(2.5rem + 5%);
-}
+    .about-1 img:nth-of-type(2){
+        top: 10%;
+        width: 20%;
+    }
+    .about-1 img:nth-of-type(4){
+        top: 10%;
+        left: 5%;
+        width: 50%;
+    }
+    .about-1 img:nth-of-type(3){
+        top: -10%;
+        width: 50%;
+    }
+    .about-1 img:nth-of-type(6){
+        top: 5%;
+        width: 40%;
+    }
+    .about-1 img:nth-of-type(9){
+        bottom: 15%;
+        width: 30%;
+    }
+    .about-1 img:nth-of-type(10){
+        bottom: 5%;
+        left: 10%;
+        width: 30%;
+    }
+    .about-2 img:first-of-type{
+        width: 50%;
+    }
+    .about-2 img:nth-of-type(2){
+        top: 15%;
+        width: 55%;
+        left: 15%;
+    }
+    .about-2 img:nth-of-type(3){
+        top: 27%;
+        width: 20%;
+    }
+    .about-2 img:nth-of-type(4){
+        top: 15%;
+        width: 15%;
+    }
+    .about-2 img:nth-of-type(5){
+        top: 35%;
+        width: 10%;
+        right: 13%;
+    }
+    .about-2 img:nth-of-type(6){
+        bottom: 5%;
+        width: 55%;
+    }
+    .about-2 img:nth-of-type(8){
+        top: 50%;
+        width: 20%;
+        left: 3%;
+    }
+    .about-2 img:nth-of-type(9){
+        top: 10%;
+        width: 10%;
+    }
+    .about-2 img:nth-of-type(10){
+        bottom: 20%;
+        right: 0;
+        width: 35%;
+    }
+    .about-3 img:first-of-type{
+        width: 50%;
+    }
+    .about-3 img:nth-of-type(2){
+        width: 10%;
+        right: 20%;
+        top: 22%;
+    }
+    .about-3 img:nth-of-type(4){
+        width: 30%;
+        top: 5%;
+        left: 8%;
+        z-index: 1;
+    }
+    .about-3 img:nth-of-type(5){
+        width: 60%;
+        left: 2%;
+        top: 15%;
+    }
+    .about-3 img:nth-of-type(6){
+        width: 60%;
+        right: 0;
+        bottom: 5%;
+    }
+    .about-3 img:nth-of-type(7){
+        width: 55%;
+        right: 0;
+        top: 0;
+    }
+    .about-3 img:nth-of-type(8){
+        width: 40%;
+       bottom: 15%;
+        left: -20%;
+    }
+    .about-3 img:nth-of-type(3){
+        width: 25%;
+        right: 5%;
+        z-index: -1;
+    }
+    .about-3 img:nth-of-type(9){
+        width: 15%;
+        bottom: 0%;
+        z-index: 1;
+    }
+    .about-4 img:first-of-type{
+        width: 50%;
+    }
+    .about-4 img:nth-of-type(2){
+        width: 60%;
+        top: 0;
+    }
+    .about-4 img:nth-of-type(3){
+        width: 50%;
+        bottom: 10%;
+    }
+    .about-4 img:nth-of-type(4){
+        width: 30%;
+       left: 28%;
+        bottom: 5%;
+    }
+    .about-4 img:nth-of-type(5){
+        width: 24%;
+        top: 10%;
+    }
+    .about-4 img:nth-of-type(6){
+        width: 20%;
+        top: 20%;
+        left: 0;
+    }
+    .about-5 img:first-of-type{
+        width: 50%;
+        bottom: 10%;
+    }
+    .about-5 img:nth-of-type(2){
+        width: 35%;
+        left: 5%;
+        bottom: 5%;
+    }
+    .about-5 img:nth-of-type(3){
+        width: 40%;
+        right: -10%;
+        top: 8%;
+    }
+    .about-5 img:nth-of-type(4){
+        width: 35%;
+        bottom: 2%;
+        left: 26%;
+    }
+    .about-5 img:nth-of-type(5){
+        width: 10%;
+        left: 18%;
+        top: 30%;
+        z-index: 1;
+    }
+    .about-5 img:nth-of-type(6){
+        width: 25%;
+        left: 3%;
+        top: 0;
+    }
+    .about-5 img:nth-of-type(7){
+        width: 20%;
+        right: 10%;
+        bottom: 2%;
+    }
+    .about-5 img:nth-of-type(8){
+        opacity: 0;
+    }
 
 @media only screen and (max-width: 560px){
     .about-1 img:nth-of-type(2){
