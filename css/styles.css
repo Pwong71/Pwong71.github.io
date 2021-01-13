@@ -1446,6 +1446,9 @@ footer h3{
     .work a:last-of-type img{
         margin: 0rem 0rem 2rem 3rem;
     }
+    .work a:last-of-type h1{
+        right: -5%;
+    }
     
     .work a h1{
         right: 9%;
