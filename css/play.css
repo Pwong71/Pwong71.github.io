@@ -40,6 +40,10 @@ nav{
     background-color: white;
 }
 
+#pandemic nav, #pandemic nav div ul{
+    background-color: #F4F1EC;
+}
+
 /*
 nav.charles-nav, nav.charles-nav div ul{
     background-color: #c5d3c7!important;
@@ -939,7 +943,6 @@ body.hidden #la19-intro{opacity: 0;}
 
 .diary section{
     flex-shrink: 0;
-    background-color: #F4F1EC;
     position: relative;
     height: 100%;
 }

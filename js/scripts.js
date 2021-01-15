@@ -85,7 +85,7 @@ window.onscroll = () => {
     }
     //hide the navbar in play case studies
     if (document.querySelector('#newyork') || document.querySelector('#summer19') || document.querySelector('#la19') || document.querySelector('#about') || document.querySelector('#pandemic')){
-        if (document.documentElement.scrollTop < window.innerHeight || window.scrollY < window.innerHeight){
+        if (document.documentElement.scrollTop < (window.innerHeight / 3) || window.scrollY < (window.innerHeight/ 3)){
             navBar.style.opacity = '0';
         } else {
             navBar.style.opacity = '1';
