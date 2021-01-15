@@ -119,3 +119,68 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('NeueMachina-Ultrabold.eot');
+    src: url('NeueMachina-Ultrabold.eot?#iefix') format('embedded-opentype'),
+        url('NeueMachina-Ultrabold.woff2') format('woff2'),
+        url('NeueMachina-Ultrabold.woff') format('woff'),
+        url('NeueMachina-Ultrabold.ttf') format('truetype'),
+        url('NeueMachina-Ultrabold.svg#NeueMachina-Ultrabold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('NeueMachina-Black.eot');
+    src: url('NeueMachina-Black.eot?#iefix') format('embedded-opentype'),
+        url('NeueMachina-Black.woff2') format('woff2'),
+        url('NeueMachina-Black.woff') format('woff'),
+        url('NeueMachina-Black.ttf') format('truetype'),
+        url('NeueMachina-Black.svg#NeueMachina-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('NeueMachina-Light.eot');
+    src: url('NeueMachina-Light.eot?#iefix') format('embedded-opentype'),
+        url('NeueMachina-Light.woff2') format('woff2'),
+        url('NeueMachina-Light.woff') format('woff'),
+        url('NeueMachina-Light.ttf') format('truetype'),
+        url('NeueMachina-Light.svg#NeueMachina-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('NeueMachina-Ultralight.eot');
+    src: url('NeueMachina-Ultralight.eot?#iefix') format('embedded-opentype'),
+        url('NeueMachina-Ultralight.woff2') format('woff2'),
+        url('NeueMachina-Ultralight.woff') format('woff'),
+        url('NeueMachina-Ultralight.ttf') format('truetype'),
+        url('NeueMachina-Ultralight.svg#NeueMachina-Ultralight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('NeueMachina-Regular.eot');
+    src: url('NeueMachina-Regular.eot?#iefix') format('embedded-opentype'),
+        url('NeueMachina-Regular.woff2') format('woff2'),
+        url('NeueMachina-Regular.woff') format('woff'),
+        url('NeueMachina-Regular.ttf') format('truetype'),
+        url('NeueMachina-Regular.svg#NeueMachina-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

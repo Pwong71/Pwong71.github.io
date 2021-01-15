@@ -907,37 +907,195 @@ body.hidden #la19-intro{opacity: 0;}
 /*End of LA19*/
 
 /*Start of Pandemic*/
+#pandemic {
+    font-family: 'Neue Machina', sans-serif;
+}
 #pandemic nav{
     opacity: 0;
+    position: fixed;
+    width: 100%;
 }
 
-#pandemic_video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    z-index: 1;
-}
-
-#pandemic .diary{
-    background-color: antiquewhite;
-    white-space: nowrap;
-    overflow-x: scroll; 
-}
-
-.diary span{
+#pandemic-intro{
     position: relative;
-    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding-top: 56.25%;
+}
+#pandemic-intro video{
+    position: absolute;
+    width: 100%;
+    top: 0;
 }
 
-.diary span:first-of-type{
-    width: calc
+.diary{
+    height: 100vh; width: 100%;
+    background-color: #F4F1EC;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
+.diary section{
+    flex-shrink: 0;
+    background-color: #F4F1EC;
+    position: relative;
+    height: 100%;
+}
+.diary section *{
+    position: absolute;
+}
+.diary section h1{
+    font-size: 3rem;
+    font-weight: 300;
+}
+.diary section p{
+    line-height: 1.4rem;
+}
 
+.diary > section:first-of-type{
+    width: 100vw;
+}
+.diary > section:first-of-type h1{
+    top: 9%; left: calc(1vw + 5.5%);
+}
+.diary > section:first-of-type p:first-of-type{
+    top: 18%; left: calc(1vw + 5.5%);
+    width: 37%;
+}
+.diary > section:first-of-type p:last-of-type{
+    bottom: 9%; left: calc(1vw + 5.5%);
+}
+.diary > section:first-of-type img:first-of-type{
+    bottom: 9%; right: 45%;
+    width: 13.35%;
+}
+.diary > section:first-of-type img:last-of-type{
+    bottom: 9%; right: 9%;
+    width: 32%;
+}
 
+.diary > section:nth-of-type(2){
+    width: 100vw;
+}
+.diary > section:nth-of-type(2) div{
+    position: relative;
+    height: 100%; width: 60%;
+    left: 0;
+}
+.diary > section:nth-of-type(2) div img{
+    height: 39%;
+    left: 0; right: 0; top: 0; bottom: 0;
+    margin: auto;
+}
+.diary > section:nth-of-type(2) div p{
+    width: 56%;
+    left: 0; right: 0; bottom: 9%;
+    margin: auto;
+}
+.diary > section:nth-of-type(2) > img{
+    object-fit: cover;
+    width: 40%; height: 100%;
+    right: 0; top: 0;
+}
 
+.diary > section:nth-of-type(3){
+    width: 80%;
+}
+.diary > section:nth-of-type(3) img{
+    right: 0;
+    height: 62%;
+}
+.diary > section:nth-of-type(3) p{
+    left: 9%; bottom: 9%;
+    width: 33%;
+}
 
+.diary > section:nth-of-type(4){
+    width: 50%;
+    margin: 0 30vw 0 0;
+}
+.diary > section:nth-of-type(4) img{
+    bottom: 0; right: 0;
+    width: 42%;
+}
+.diary > section:nth-of-type(4) p{
+    width: 82%;
+    left: 0; right: 0; top: 9%;
+    margin: auto;
+}
+
+.diary > section:nth-of-type(5){
+    width: 90%;
+}
+.diary > section:nth-of-type(5) img:first-of-type{
+    width: 33%;
+    top: 9%;
+}
+.diary > section:nth-of-type(5) img:last-of-type{
+    width: 17%; height: 100%;
+    object-fit: contain; object-position: top;
+    left: 36.5%;
+    border-left: 0.05rem solid rgba(0, 0, 0, 0.05);
+}
+.diary > section:nth-of-type(5) p{
+    bottom: 9%; right: 9%;
+    width: 28%;
+}
+
+.diary > section:nth-of-type(6){
+    width: 100%;
+    background-image: url(../images/pandemic/annie9.jpg);
+    background-size: cover; background-position: top center;
+}
+.diary > section:nth-of-type(6) p{
+    right: 5%; top: 9%;
+    width: 23%;
+}
+
+.diary > section:nth-of-type(7){
+    margin: 0 7vw;
+    width: 100%;
+    display: flex;
+}
+.diary > section:nth-of-type(7) img{
+    width: 57%;
+    left: 9%; top: 0; bottom: 0; margin: auto;
+}
+.diary > section:nth-of-type(7) p{
+    position: static;
+    width: 22%; height: auto;
+    align-self: center;
+    margin: 0 9% 0 auto;
+}
+
+.diary > section:nth-of-type(8){
+    width: 70%;
+}
+.diary > section:nth-of-type(8) img{
+    height: 80%; width: 48.5%;
+    object-fit: cover;
+    left: 9%;
+}
+.diary > section:nth-of-type(8) p{
+    right: 9%; top: 9%;
+    width: 29.5%;
+}
+
+.diary > section:last-of-type{
+    width: 100%;
+}
+.diary > section:last-of-type img{
+    height: 57%;
+    right: 9%; top: 9%;
+}
+.diary > section:last-of-type p{
+    display: flex;
+    width: 22%; height: 25%;
+    min-width: 17rem;
+    bottom: 5%; right: 9%;
+}
 /*End of Pandemic*/
 
 /*Start of collage*/
@@ -959,7 +1117,6 @@ body.hidden #la19-intro{opacity: 0;}
     margin: 0 auto;
     margin-top: 20vh;
     margin-bottom: 20vh;
-    
 }
 
 .collages img:nth-of-type(2){
@@ -975,7 +1132,6 @@ body.hidden #la19-intro{opacity: 0;}
     margin: 0 auto;
     margin-bottom: 20vh;
 }
-
 
 /*End of collage*/
 
@@ -1040,6 +1196,31 @@ body.hidden #la19-intro{opacity: 0;}
     .la19-parallax div:last-of-type img{
         width: 100%;
         transform-origin: center;
+    }
+    
+    .diary > section:first-of-type, .diary > section:nth-of-type(2), .diary > section:nth-of-type(6), .diary > section:nth-of-type(7), .diary > section:last-of-type{
+        width: 200vw;
+    }
+    .diary > section:nth-of-type(3){
+        width: 160vw;
+    }
+    .diary > section:nth-of-type(4){
+        width: 100vw;
+    }
+    .diary > section:nth-of-type(5){
+        width: 180vw;
+    }
+    .diary > section:nth-of-type(8){
+        width: 140vw;
+        margin: 0 20vw 0 0;
+    }
+    .diary > section:nth-of-type(7) img{
+        width: 50%;
+        height: 50%;
+        object-fit: cover; object-position: 10%;
+    }
+    .diary > section:nth-of-type(7) p{
+        width: 27%;
     }
 }
 @media only screen and (max-width: 560px){

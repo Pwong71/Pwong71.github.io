@@ -84,7 +84,7 @@ window.onscroll = () => {
         if (side && (window.matchMedia('screen and (max-width:856px)').matches)) {side.style.top = "0px";} else if (side) {side.style.top = "";};
     }
     //hide the navbar in play case studies
-    if (document.querySelector('#newyork') || document.querySelector('#summer19') || document.querySelector('#la19') || document.querySelector('#about')){
+    if (document.querySelector('#newyork') || document.querySelector('#summer19') || document.querySelector('#la19') || document.querySelector('#about') || document.querySelector('#pandemic')){
         if (document.documentElement.scrollTop < window.innerHeight || window.scrollY < window.innerHeight){
             navBar.style.opacity = '0';
         } else {
