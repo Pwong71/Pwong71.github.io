@@ -277,10 +277,10 @@
         line-height: 28px;
     }
     .about-2 img:nth-of-type(2){
-        top: 17%;
+        top: 20%;
     }
     .about-2 img:nth-of-type(4){
-        top: 14%;
+        top: 17%;
     }
     .about-2 img:nth-of-type(5){
         top: 50%;
@@ -309,7 +309,8 @@
         bottom: 25%;
     }
      .about-3 img:nth-of-type(4){
-        top: 5%;
+        top: 3%;
+         z-index: 1;
     }
      .about-3 img:nth-of-type(5){
         top: 20%;
