@@ -17,8 +17,8 @@ body {
 @keyframes bg-transition{
     25%{background-color: white;}
     50%{background-color: #f0f0f0;}
-    75%{background-color: #d6d5c6;}
-    100%{background-color: #ffe0eb;}
+    75%{background-color: #e3e2d4;}
+    100%{background-color: #eaeaea;}
 }
 
 #index{
@@ -995,6 +995,10 @@ hr{
 
 #info-foodlabel::before{
     content: "The Insufficiencies Of Food Labelling";
+}
+
+#laika-type::before{
+     content: "Custom Type"
 }
 
 .links a img{
