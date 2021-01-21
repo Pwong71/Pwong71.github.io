@@ -162,7 +162,7 @@
 }
 .about-3 img:nth-of-type(4){
     left: 12%; top: 23.5%;
-    width: calc(7rem + 13%);
+    width: calc(8rem + 13%);
 }
 .about-3 img:nth-of-type(5){
     z-index: -1;
@@ -170,7 +170,7 @@
     width: calc(12rem + 20%);
 }
 .about-3 img:nth-of-type(6){
-    right: 3%; bottom: 26.5%;
+    right: 3%; bottom: 23.5%;
     width: calc(14rem + 40%);
 }
 .about-3 img:nth-of-type(7){
@@ -231,8 +231,8 @@
 }
 .about-5 img:nth-of-type(4){
     z-index: 1;
-    right: 5%; bottom: 22%;
-    width: calc(9rem + 17%);
+    right: 7%; bottom: 22%;
+    width: calc(8rem + 17%);
 }
 .about-5 img:nth-of-type(5){
     right: 35%; top: 2%;

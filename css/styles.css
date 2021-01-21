@@ -16,9 +16,9 @@ body {
 
 @keyframes bg-transition{
     25%{background-color: white;}
-    50%{background-color: #f0f0f0;}
-    75%{background-color: #e3e2d4;}
-    100%{background-color: #eaeaea;}
+    50%{background-color: #ebebeb;}
+    75%{background-color: #e2e0d9;}
+    100%{background-color: #ffffff;}
 }
 
 #index{
@@ -1140,7 +1140,7 @@ footer{
     justify-items: center;
     width: 100%;
     margin: 0 auto; 
-    background-color: #b8c9b2;
+    background-color: #f49ca6;
     position: fixed;
     bottom: 0;
     z-index: -1;
